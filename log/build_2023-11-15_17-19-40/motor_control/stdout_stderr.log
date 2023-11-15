@@ -1,0 +1,35 @@
+running egg_info
+writing ../build/motor_control/motor_control.egg-info/PKG-INFO
+writing dependency_links to ../build/motor_control/motor_control.egg-info/dependency_links.txt
+writing entry points to ../build/motor_control/motor_control.egg-info/entry_points.txt
+writing requirements to ../build/motor_control/motor_control.egg-info/requires.txt
+writing top-level names to ../build/motor_control/motor_control.egg-info/top_level.txt
+reading manifest file '../build/motor_control/motor_control.egg-info/SOURCES.txt'
+writing manifest file '../build/motor_control/motor_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying motor_control/motor_controller.py -> /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control
+copying motor_control/__init__.py -> /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control
+copying motor_control/motor_publisher.py -> /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control
+copying motor_control/motor_subscriber.py -> /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control
+running install
+running install_lib
+copying /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control/motor_controller.py -> /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control
+copying /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control/__init__.py -> /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control
+copying /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control/motor_publisher.py -> /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control
+copying /home/cambria/dev_ws/src/build/motor_control/build/lib/motor_control/motor_subscriber.py -> /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control
+byte-compiling /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control/motor_controller.py to motor_controller.cpython-38.pyc
+byte-compiling /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control/motor_publisher.py to motor_publisher.cpython-38.pyc
+byte-compiling /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control/motor_subscriber.py to motor_subscriber.cpython-38.pyc
+running install_data
+copying resource/motor_control -> /home/cambria/dev_ws/src/install/motor_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/cambria/dev_ws/src/install/motor_control/share/motor_control
+running install_egg_info
+removing '/home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../build/motor_control/motor_control.egg-info to /home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages/motor_control-0.0.0-py3.8.egg-info
+running install_scripts
+Installing motor_controller script to /home/cambria/dev_ws/src/install/motor_control/lib/motor_control
+Installing motor_publisher script to /home/cambria/dev_ws/src/install/motor_control/lib/motor_control
+Installing motor_subscriber script to /home/cambria/dev_ws/src/install/motor_control/lib/motor_control
+writing list of installed files to '/home/cambria/dev_ws/src/build/motor_control/install.log'

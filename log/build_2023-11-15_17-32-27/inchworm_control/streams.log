@@ -1,0 +1,33 @@
+[0.075s] Invoking command in '/home/cambria/dev_ws/src/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cambria/dev_ws/src/install/motor_control:/home/cambria/dev_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/dev_ws/src/build/inchworm_control -- -j4 -l4
+[0.136s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.189s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.189s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.619s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[0.619s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[0.659s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.669s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.900s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.990s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.023s] CMake Error at CMakeLists.txt:25 (find_package):
+[1.023s]   By not providing "Findinchworm_control.lewansoul_servo_bus.cmake" in
+[1.024s]   CMAKE_MODULE_PATH this project has asked CMake to find a package
+[1.024s]   configuration file provided by "inchworm_control.lewansoul_servo_bus", but
+[1.024s]   CMake did not find one.
+[1.024s] 
+[1.025s]   Could not find a package configuration file provided by
+[1.025s]   "inchworm_control.lewansoul_servo_bus" with any of the following names:
+[1.025s] 
+[1.025s]     inchworm_control.lewansoul_servo_busConfig.cmake
+[1.026s]     inchworm_control.lewansoul_servo_bus-config.cmake
+[1.026s] 
+[1.026s]   Add the installation prefix of "inchworm_control.lewansoul_servo_bus" to
+[1.026s]   CMAKE_PREFIX_PATH or set "inchworm_control.lewansoul_servo_bus_DIR" to a
+[1.027s]   directory containing one of the above files.  If
+[1.027s]   "inchworm_control.lewansoul_servo_bus" provides a separate development
+[1.027s]   package or SDK, be sure it has been installed.
+[1.027s] 
+[1.028s] 
+[1.028s] -- Configuring incomplete, errors occurred!
+[1.028s] See also "/home/cambria/dev_ws/src/build/inchworm_control/CMakeFiles/CMakeOutput.log".
+[1.036s] make: *** [Makefile:748: cmake_check_build_system] Error 1
+[1.040s] Invoked command in '/home/cambria/dev_ws/src/build/inchworm_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cambria/dev_ws/src/install/motor_control:/home/cambria/dev_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/dev_ws/src/build/inchworm_control -- -j4 -l4

@@ -1,0 +1,232 @@
+[0.000000] (-) TimerEvent: {}
+[0.000876] (-) JobUnselected: {'identifier': 'motor_control'}
+[0.001610] (inchworm_control) JobQueued: {'identifier': 'inchworm_control', 'dependencies': OrderedDict()}
+[0.001984] (inchworm_control) JobStarted: {'identifier': 'inchworm_control'}
+[0.074691] (inchworm_control) JobProgress: {'identifier': 'inchworm_control', 'progress': 'cmake'}
+[0.076684] (inchworm_control) JobProgress: {'identifier': 'inchworm_control', 'progress': 'build'}
+[0.078898] (inchworm_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cambria/dev_ws/src/build/inchworm_control', '--', '-j4', '-l4'], 'cwd': '/home/cambria/dev_ws/src/build/inchworm_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cambria'), ('SSH_AGENT_PID', '1982'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cambria/dev_ws/src/install/inchworm_control/lib:/home/cambria/dev_ws/install/inchworm_control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/cambria'), ('OLDPWD', '/home/cambria/dev_ws/src/inchworm_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1808'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4314'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/cambria/dev_ws/src/install:/home/cambria/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cambria'), ('JOURNAL_STREAM', '8:45637'), ('_', '/home/cambria/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cambria'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/cambria/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/cambria-Lenovo-G580:@/tmp/.ICE-unix/2019,unix/cambria-Lenovo-G580:/tmp/.ICE-unix/2019'), ('INVOCATION_ID', '1e56508f38f74caf923c386e7dda814a'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cambria/dev_ws/src/install/motor_control:/home/cambria/dev_ws/src/install/inchworm_control:/home/cambria/dev_ws/install/motor_control:/home/cambria/dev_ws/install/inchworm_control:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:081193ad-5178-4bff-9cbf-75acbd7490d2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cambria/dev_ws/src/build/inchworm_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages:/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages:/home/cambria/dev_ws/install/inchworm_control/lib/python3.8/site-packages:/home/cambria/dev_ws/install/motor_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/cambria/dev_ws/src/install/inchworm_control:/home/cambria/dev_ws/install/inchworm_control:/home/cambria/dev_ws/src/install/motor_control:/home/cambria/dev_ws/install/motor_control:/opt/ros/foxy')]), 'shell': False}
+[0.099457] (-) TimerEvent: {}
+[0.139362] (inchworm_control) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.199542] (-) TimerEvent: {}
+[0.216284] (inchworm_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.216641] (inchworm_control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.299654] (-) TimerEvent: {}
+[0.400045] (-) TimerEvent: {}
+[0.500425] (-) TimerEvent: {}
+[0.600828] (-) TimerEvent: {}
+[0.620091] (inchworm_control) StdoutLine: {'line': b'-- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)\n'}
+[0.620593] (inchworm_control) StdoutLine: {'line': b'-- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)\n'}
+[0.664080] (inchworm_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.670797] (inchworm_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.700964] (-) TimerEvent: {}
+[0.801449] (-) TimerEvent: {}
+[0.897421] (inchworm_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.901535] (-) TimerEvent: {}
+[1.000302] (inchworm_control) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[1.001638] (-) TimerEvent: {}
+[1.102139] (-) TimerEvent: {}
+[1.202805] (-) TimerEvent: {}
+[1.303410] (-) TimerEvent: {}
+[1.403841] (-) TimerEvent: {}
+[1.439825] (inchworm_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[1.503981] (-) TimerEvent: {}
+[1.604427] (-) TimerEvent: {}
+[1.690506] (inchworm_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[1.704569] (-) TimerEvent: {}
+[1.805073] (-) TimerEvent: {}
+[1.888890] (inchworm_control) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.905231] (-) TimerEvent: {}
+[2.005620] (-) TimerEvent: {}
+[2.106116] (-) TimerEvent: {}
+[2.206608] (-) TimerEvent: {}
+[2.253102] (inchworm_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.306732] (-) TimerEvent: {}
+[2.407189] (-) TimerEvent: {}
+[2.412695] (inchworm_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.472285] (inchworm_control) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[2.472874] (inchworm_control) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[2.507313] (-) TimerEvent: {}
+[2.528919] (inchworm_control) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.529434] (inchworm_control) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[2.529752] (inchworm_control) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[2.607475] (-) TimerEvent: {}
+[2.617915] (inchworm_control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.647499] (inchworm_control) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[2.651588] (inchworm_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.654145] (inchworm_control) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[2.670790] (inchworm_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.680615] (inchworm_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.707620] (-) TimerEvent: {}
+[2.768887] (inchworm_control) StdoutLine: {'line': b'-- Generating done\n'}
+[2.774987] (inchworm_control) StdoutLine: {'line': b'-- Build files have been written to: /home/cambria/dev_ws/src/build/inchworm_control\n'}
+[2.807806] (-) TimerEvent: {}
+[2.840523] (inchworm_control) StdoutLine: {'line': b'[  3%] Built target inchworm_control__cpp\n'}
+[2.841295] (inchworm_control) StdoutLine: {'line': b'[ 12%] Built target inchworm_control__rosidl_generator_c\n'}
+[2.893775] (inchworm_control) StdoutLine: {'line': b'[ 32%] Built target inchworm_control__rosidl_typesupport_cpp\n'}
+[2.894208] (inchworm_control) StdoutLine: {'line': b'[ 32%] Built target inchworm_control__rosidl_typesupport_introspection_c\n'}
+[2.897837] (inchworm_control) StdoutLine: {'line': b'[ 41%] Built target inchworm_control__rosidl_typesupport_introspection_cpp\n'}
+[2.902816] (inchworm_control) StdoutLine: {'line': b'[ 51%] Built target inchworm_control__rosidl_typesupport_fastrtps_cpp\n'}
+[2.908593] (-) TimerEvent: {}
+[2.942173] (inchworm_control) StdoutLine: {'line': b'[ 61%] Built target inchworm_control__rosidl_typesupport_c\n'}
+[2.954217] (inchworm_control) StdoutLine: {'line': b'[ 70%] Built target inchworm_control__rosidl_typesupport_fastrtps_c\n'}
+[2.997934] (inchworm_control) StdoutLine: {'line': b'[ 70%] Built target inchworm_control\n'}
+[3.008730] (-) TimerEvent: {}
+[3.042826] (inchworm_control) StdoutLine: {'line': b'[ 74%] Built target inchworm_control__py\n'}
+[3.088285] (inchworm_control) StdoutLine: {'line': b'[ 80%] Built target inchworm_control__python\n'}
+[3.108872] (-) TimerEvent: {}
+[3.141891] (inchworm_control) StdoutLine: {'line': b'[ 93%] Built target inchworm_control__rosidl_typesupport_c__pyext\n'}
+[3.142310] (inchworm_control) StdoutLine: {'line': b'[ 93%] Built target inchworm_control__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.147761] (inchworm_control) StdoutLine: {'line': b'[100%] Built target inchworm_control__rosidl_typesupport_introspection_c__pyext\n'}
+[3.166327] (inchworm_control) CommandEnded: {'returncode': 0}
+[3.209087] (-) TimerEvent: {}
+[3.263594] (inchworm_control) JobProgress: {'identifier': 'inchworm_control', 'progress': 'install'}
+[3.286840] (inchworm_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cambria/dev_ws/src/build/inchworm_control'], 'cwd': '/home/cambria/dev_ws/src/build/inchworm_control', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cambria'), ('SSH_AGENT_PID', '1982'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/cambria/dev_ws/src/install/inchworm_control/lib:/home/cambria/dev_ws/install/inchworm_control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/cambria'), ('OLDPWD', '/home/cambria/dev_ws/src/inchworm_control'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1808'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '4314'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/cambria/dev_ws/src/install:/home/cambria/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cambria'), ('JOURNAL_STREAM', '8:45637'), ('_', '/home/cambria/.local/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'cambria'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/cambria/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/cambria-Lenovo-G580:@/tmp/.ICE-unix/2019,unix/cambria-Lenovo-G580:/tmp/.ICE-unix/2019'), ('INVOCATION_ID', '1e56508f38f74caf923c386e7dda814a'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/cambria/dev_ws/src/install/motor_control:/home/cambria/dev_ws/src/install/inchworm_control:/home/cambria/dev_ws/install/motor_control:/home/cambria/dev_ws/install/inchworm_control:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:081193ad-5178-4bff-9cbf-75acbd7490d2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/cambria/dev_ws/src/build/inchworm_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/cambria/dev_ws/src/install/motor_control/lib/python3.8/site-packages:/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages:/home/cambria/dev_ws/install/inchworm_control/lib/python3.8/site-packages:/home/cambria/dev_ws/install/motor_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/cambria/dev_ws/src/install/inchworm_control:/home/cambria/dev_ws/install/inchworm_control:/home/cambria/dev_ws/src/install/motor_control:/home/cambria/dev_ws/install/motor_control:/opt/ros/foxy')]), 'shell': False}
+[3.304154] (inchworm_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.304889] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/ament_index/resource_index/rosidl_interfaces/inchworm_control\n'}
+[3.305265] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control\n'}
+[3.305516] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg\n'}
+[3.305741] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/thruple.h\n'}
+[3.306015] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.306234] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[3.306642] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.h\n'}
+[3.306860] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.h\n'}
+[3.307125] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.c\n'}
+[3.307341] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.h\n'}
+[3.307716] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/library_path.sh\n'}
+[3.308019] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/library_path.dsv\n'}
+[3.308236] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_generator_c.so\n'}
+[3.308498] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control\n'}
+[3.308755] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg\n'}
+[3.309138] (-) TimerEvent: {}
+[3.309435] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.309723] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[3.309938] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_c.h\n'}
+[3.310162] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_c.so\n'}
+[3.310418] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control\n'}
+[3.310677] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg\n'}
+[3.311174] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.311571] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[3.311785] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.312044] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/dds_fastrtps\n'}
+[3.312259] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.312473] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control\n'}
+[3.312725] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg\n'}
+[3.312938] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.313214] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[3.313489] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.c\n'}
+[3.313756] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_c.h\n'}
+[3.313975] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_c.so\n'}
+[3.314200] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_c.so\n'}
+[3.314429] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control\n'}
+[3.314699] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg\n'}
+[3.314976] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.315248] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[3.315512] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.hpp\n'}
+[3.315779] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__traits.hpp\n'}
+[3.316046] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.hpp\n'}
+[3.316312] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__builder.hpp\n'}
+[3.316595] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/thruple.hpp\n'}
+[3.316858] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control\n'}
+[3.317124] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg\n'}
+[3.317386] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[3.317598] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.317834] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.cpp\n'}
+[3.318045] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_cpp.so\n'}
+[3.318254] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_cpp.so\n'}
+[3.318467] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/pythonpath.sh\n'}
+[3.318676] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/pythonpath.dsv\n'}
+[3.318886] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py\n'}
+[3.374803] (inchworm_control) StdoutLine: {'line': b"Compiling '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...\n"}
+[3.381730] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg\n'}
+[3.382286] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple_s.c\n'}
+[3.382529] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/__init__.py\n'}
+[3.382853] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple.py\n'}
+[3.383089] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.384347] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.386487] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[3.388105] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/libinchworm_control__python.so\n'}
+[3.388987] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/msg/Thruple.idl\n'}
+[3.389491] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/msg/Thruple.msg\n'}
+[3.390184] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control\n'}
+[3.390818] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_walking.py\n'}
+[3.391405] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_controller.py\n'}
+[3.391974] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus\n'}
+[3.392256] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus/lewansoul_servo_bus.py\n'}
+[3.392530] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build\n'}
+[3.392809] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build/.built_by\n'}
+[3.393088] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build/COLCON_IGNORE\n'}
+[3.393438] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg\n'}
+[3.393710] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/Thruple.msg\n'}
+[3.393980] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log\n'}
+[3.394248] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest_build\n'}
+[3.394518] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/COLCON_IGNORE\n'}
+[3.394786] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00\n'}
+[3.395050] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/events.log\n'}
+[3.395350] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/logger_all.log\n'}
+[3.395622] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest\n'}
+[3.395889] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py\n'}
+[3.396155] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_publisher.py\n'}
+[3.396421] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_subscriber.py\n'}
+[3.396688] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install\n'}
+[3.396952] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.sh\n'}
+[3.397278] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_ps1.py\n'}
+[3.397574] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.ps1\n'}
+[3.397842] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_sh.py\n'}
+[3.398109] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.sh\n'}
+[3.398334] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.zsh\n'}
+[3.399083] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/.colcon_install_layout\n'}
+[3.399321] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/COLCON_IGNORE\n'}
+[3.399557] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.bash\n'}
+[3.399781] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.bash\n'}
+[3.400001] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.zsh\n'}
+[3.400227] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.ps1\n'}
+[3.409279] (-) TimerEvent: {}
+[3.451739] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control'...\n"}
+[3.452114] (inchworm_control) StdoutLine: {'line': b"Compiling '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...\n"}
+[3.452358] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build'...\n"}
+[3.452587] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install'...\n"}
+[3.452809] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus'...\n"}
+[3.453033] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log'...\n"}
+[3.453290] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00'...\n"}
+[3.453516] (inchworm_control) StdoutLine: {'line': b"Listing '/home/cambria/dev_ws/src/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg'...\n"}
+[3.459038] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/inchworm_control/motor_controller.py\n'}
+[3.459688] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/lib/inchworm_control/motor_walking.py\n'}
+[3.460084] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/ament_index/resource_index/package_run_dependencies/inchworm_control\n'}
+[3.460420] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/ament_index/resource_index/parent_prefix_path/inchworm_control\n'}
+[3.460846] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.sh\n'}
+[3.461127] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.dsv\n'}
+[3.461605] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/path.sh\n'}
+[3.461957] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/environment/path.dsv\n'}
+[3.462306] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/local_setup.bash\n'}
+[3.462582] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/local_setup.sh\n'}
+[3.462904] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/local_setup.zsh\n'}
+[3.463242] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/local_setup.dsv\n'}
+[3.463582] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/package.dsv\n'}
+[3.463829] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/ament_index/resource_index/packages/inchworm_control\n'}
+[3.464156] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport.cmake\n'}
+[3.464498] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.464748] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.465019] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.465457] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport.cmake\n'}
+[3.465723] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.466085] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cppExport.cmake\n'}
+[3.466585] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.467037] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.467429] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport.cmake\n'}
+[3.467814] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.468430] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake-extras.cmake\n'}
+[3.468855] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.469342] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.469632] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.469862] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.470092] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.470344] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.470571] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig.cmake\n'}
+[3.470795] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig-version.cmake\n'}
+[3.471015] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/cambria/dev_ws/src/install/inchworm_control/share/inchworm_control/package.xml\n'}
+[3.472618] (inchworm_control) CommandEnded: {'returncode': 0}
+[3.509718] (-) TimerEvent: {}
+[3.610341] (-) TimerEvent: {}
+[3.716133] (-) TimerEvent: {}
+[3.749989] (inchworm_control) JobEnded: {'identifier': 'inchworm_control', 'rc': 0}
+[3.751749] (-) EventReactorShutdown: {}
