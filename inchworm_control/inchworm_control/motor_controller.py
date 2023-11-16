@@ -6,7 +6,7 @@ from std_msgs.msg import Float32
 import sys
 import os
 
-from .lewansoul_servo_bus import ServoBus
+from inchworm_control.lewansoul_servo_bus.lewansoul_servo_bus import ServoBus
 from time import sleep 
 
 class MotorController(Node):
