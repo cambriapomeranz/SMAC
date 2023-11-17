@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+<robot name="inchworm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="idx" default="1" />
+
+  <!-- End effector attached to world -->
+  <link name="iw_foot_bottom_$(arg idx)">
+    <inertial>
+      <mass value="0.151" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.035 0.0425 0" rpy="1.57 0 0" />
+      <geometry>
+        <mesh filename="ee.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.113 0.321 0.678 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.05463" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Link attached to EE -->
+  <link name="iw_ankle_bottom_$(arg idx)">
+    <inertial>
+      <mass value="0.151" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.02 -0.065 0.055" rpy="0 3.14159 0" />
+      <geometry>
+        <mesh filename="ankle_bottom.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.113 0.321 0.678 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.08 0.08" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- First big link -->
+  <link name="iw_beam_bottom_$(arg idx)">
+    <origin xyz="0 0 0" rpy="0 0 3.14" />
+    <inertial>
+      <mass value="0.151" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.185 -0.03 0.03325" rpy="0 3.14 0" />
+      <geometry>
+        <mesh filename="beam_bottom.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.113 0.321 0.678 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.05 0.08" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Second big link -->
+  <link name="iw_beam_top_$(arg idx)">
+    <inertial>
+      <mass value="0.151" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="0.02 0.0575 -0.04325" rpy="0 0 3.14" />
+      <geometry>
+        <mesh filename="beam_top.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.113 0.321 0.678 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0825 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.05 0.08" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="iw_ankle_top_$(arg idx)">
+    <inertial>
+      <mass value="0.151" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.065 -0.02 0.05" rpy="3.14 0 1.57" />
+      <geometry>
+        <mesh filename="ankle_top.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.113 0.321 0.678 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.08" />
+      </geometry>
+    </collision>
+  </link>
+
+  
+  <link name="iw_foot_top_$(arg idx)">
+    <inertial>
+      <mass value="0.151" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03"/>
+    </inertial>
+    <visual>
+      <origin xyz="-0.035 0.0425 0" rpy="1.57 0 0" />
+      <geometry>
+        <mesh filename="ee.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.113 0.321 0.678 1.0" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.05463" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="iw_root_$(arg idx)" />
+
+  <joint name="foot_to_root_$(arg idx)" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+
+    <parent link="iw_root_$(arg idx)" />
+    <child  link="iw_foot_bottom_$(arg idx)" />
+
+    <limit lower="0" upper="0" effort="10" velocity="10" />
+  </joint>
+
+  <joint name="iw_ankle_foot_bottom_$(arg idx)" type="revolute">
+    <origin xyz="0 0.0075 0.109" rpy="1.57 0 0" />
+
+    <parent link="iw_foot_bottom_$(arg idx)" />
+    <child  link="iw_ankle_bottom_$(arg idx)" />
+
+    <axis xyz="0 -1 0" />
+    <limit effort="10" velocity="1.0" lower="-3.14" upper="3.14" />
+    <dynamics damping="5.0"  friction="0.25" />
+  </joint>
+
+  <transmission name="t1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="iw_ankle_foot_bottom_$(arg idx)">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="iw_beam_ankle_bottom_$(arg idx)" type="revolute">
+    <origin xyz="0 0 0.0165" rpy="0 0 1.57" />
+
+    <parent link="iw_ankle_bottom_$(arg idx)" />
+    <child  link="iw_beam_bottom_$(arg idx)" />
+
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="1.0" lower="-0.785" upper="3.14" />
+    <dynamics damping="5.0"  friction="0.25" />
+  </joint>
+
+  <transmission name="t2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="iw_beam_ankle_bottom_$(arg idx)">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="iw_mid_joint_$(arg idx)" type="revolute">
+    <origin xyz="0.165 0 -0.001" rpy="3.14 0 3.14" />
+
+    <parent link="iw_beam_bottom_$(arg idx)" />
+    <child  link="iw_beam_top_$(arg idx)" />
+
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="1.0" lower="-0.785" upper="3.14" />
+    <dynamics damping="5.0"  friction="0.25" />
+  </joint>
+
+  <transmission name="t3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="iw_mid_joint_$(arg idx)">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <joint name="iw_beam_ankle_top_$(arg idx)" type="revolute">
+    <origin xyz="-0.165 0 0" rpy="3.14159 0 0" />
+
+    <parent link="iw_beam_top_$(arg idx)" />
+    <child  link="iw_ankle_top_$(arg idx)" />
+
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="1.0" lower="-0.785" upper="3.14" />
+    <dynamics damping="5.0"  friction="0.25" />
+  </joint>
+
+  <transmission name="t4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="iw_beam_ankle_top_$(arg idx)">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  
+  <joint name="iw_ankle_foot_top_$(arg idx)" type="revolute">
+    <origin xyz="-0.109 0 -0.008" rpy="0 1.57 0" />
+
+    <parent link="iw_ankle_top_$(arg idx)" />
+    <child  link="iw_foot_top_$(arg idx)" />
+
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="1.0" lower="-3.14" upper="3.14" />
+    <dynamics damping="5.0"  friction="0.25" />
+  </joint>
+
+  <transmission name="t5">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="iw_ankle_foot_top_$(arg idx)">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <!-- <gazebo reference="foot_to_root">
+    <preserveFixedJoint>true</preserveFixedJoint>
+  </gazebo> -->
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/inchworm</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="iw_ankle_foot_bottom_$(arg idx)">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+      </ode>
+    </physics>
+  </gazebo>
+
+  <gazebo reference="iw_beam_ankle_bottom_$(arg idx)">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+      </ode>
+    </physics>
+  </gazebo>
+
+  <gazebo reference="iw_mid_joint_$(arg idx)">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+      </ode>
+    </physics>
+  </gazebo>
+
+  <gazebo reference="iw_beam_ankle_top_$(arg idx)">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+      </ode>
+    </physics>
+  </gazebo>
+
+  <gazebo reference="iw_ankle_foot_top_$(arg idx)">
+    <physics>
+      <ode>
+        <implicit_spring_damper>1</implicit_spring_damper>
+      </ode>
+    </physics>
+  </gazebo>
+
+  <gazebo reference="iw_foot_bottom_$(arg idx)">
+    <material>
+      Gazebo/Indigo
+    </material>
+  </gazebo>
+
+  <gazebo reference="iw_ankle_bottom_$(arg idx)">
+    <material>
+      Gazebo/Indigo
+    </material>
+  </gazebo>
+
+  <gazebo reference="iw_beam_bottom_$(arg idx)">
+    <material>
+      Gazebo/Indigo
+    </material>
+  </gazebo>
+
+  <gazebo reference="iw_beam_top_$(arg idx)">
+    <material>
+      Gazebo/Indigo
+    </material>
+  </gazebo>
+
+  <gazebo reference="iw_ankle_top_$(arg idx)">
+    <material>
+      Gazebo/Indigo
+    </material>
+  </gazebo>
+
+  <gazebo reference="iw_foot_top_$(arg idx)">
+    <material>
+      Gazebo/Indigo
+    </material>
+  </gazebo>
+</robot>

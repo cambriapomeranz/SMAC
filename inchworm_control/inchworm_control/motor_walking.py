@@ -9,43 +9,43 @@ from inchworm_control.msg import Thruple
 class MotorWalking(Node):
     def __init__(self):
         super().__init__('motor_walking')
-        self.publisher_ = self.create_publisher(Thruple, 'motor_command', 10)
-        timer_period = 5  # seconds
+        self.publisher_ = self.create_publisher(Float32, 'motor_command', 10)
+        timer_period = 3  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.step = -1
-
-    def timer_callback(self):
         self.get_logger().info('Node starting')
 
+    def timer_callback(self):
+        
         # Home motors to step 0 position
         if self.step == -1:  
-            msg = Thruple()
-            msg.motor1 = 30.0
-            msg.motor2 = 60.0
-            msg.motor3 = 90.0
+            msg = Float32()
+            msg.data = 0.0
+            # msg.motor2 = 60.0
+            # msg.motor3 = 90.0
             self.publisher_.publish(msg)
-            # self.get_logger().info('Publishing: "%s"' % msg.data)
-            self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
-            self.step = 0 
+            self.get_logger().info('Publishing: "%s"' % msg.data)
+            # self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
+            self.step = 10 
         # Move from step 0 to step 1
         elif self.step == 0:
-            msg = Thruple()
-            msg.motor1 = 60.0
-            msg.motor2 = 60.0
-            msg.motor3 = 90.0
+            msg = Float32()
+            msg.data = 60.0
+            # msg.motor2 = 60.0
+            # msg.motor3 = 90.0
             self.publisher_.publish(msg)
-            # self.get_logger().info('Publishing: "%s"' % msg.data)
-            self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
+            self.get_logger().info('Publishing: "%s"' % msg.data)
+            # self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
             self.step = 1  # Update the instance variable, not a local variable
         # Move from step 1 to step 2
         elif self.step == 1:
-            msg = Thruple()
-            msg.motor1 = 90.0
-            msg.motor2 = 60.0
-            msg.motor3 = 90.0
+            msg = Float32()
+            msg.data = 90.0
+            # msg.motor2 = 60.0
+            # msg.motor3 = 90.0
             self.publisher_.publish(msg)
-            # self.get_logger().info('Publishing: "%s"' % msg.data)
-            self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
+            self.get_logger().info('Publishing: "%s"' % msg.data)
+            # self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
             self.step = 2  # Update the instance variable, not a local variable
         	
 def main(args=None):

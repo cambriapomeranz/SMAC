@@ -21,6 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'motor_controller = inchworm_control.motor_controller:main'
+            'motor_walking = inchworm_control.motor_walking:main'
+            'motor_publishing = inchworm_control.motor_publishing:main'
         ],
     },
 )

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="shingle">
+  <link name="shingle">
+    <inertial>
+      <mass value="0.0551" />
+      <inertia ixx="3.8554e-03" ixy="9.4075e-03" ixz="1.709e-03" iyy="4.445e-03" iyz="1.2246e-03" izz="2.5729e-03" />
+    </inertial>
+    <collision name="collision1">
+      <origin xyz="-0.0929128 -0.014478 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.01 0.235" />
+      </geometry>
+    </collision>
+    <collision name="collision2">
+      <origin xyz="-0.04508 0 0" rpy="0 0 1.728216842" />
+      <geometry>
+        <box size="0.0075 0.17 0.235" />
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <origin xyz="-0.13716 -0.022117 -0.127"/>
+      <geometry>
+        <mesh filename="package://inchworm_description/media/Demo_Shingle.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+  </link>
+</robot>

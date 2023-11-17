@@ -50,8 +50,12 @@ ament_python_install_package(${PROJECT_NAME})
 install(PROGRAMS
   inchworm_control/motor_controller.py
   inchworm_control/motor_walking.py 
+  inchworm_control/motor_publisher.py 
   DESTINATION lib/${PROJECT_NAME}
 )
+
+# install(DIRECTORY launch
+#   DESTINATION share/${PROJECT_NAME})
 
 # install(PROGRAMS
 #   inchworm_control/motor_controller.py
