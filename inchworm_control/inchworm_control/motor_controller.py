@@ -22,6 +22,7 @@ class MotorController(Node):
         self.subscription  # prevent unused variable warning
 
         # Initialize your servo bus here
+        # /dev/ttyUSB0 is for Cambria's laptop
         self.servo_bus = ServoBus('/dev/ttyUSB0')  # Adjust your port
         self.get_logger().info('Node starting')
 
