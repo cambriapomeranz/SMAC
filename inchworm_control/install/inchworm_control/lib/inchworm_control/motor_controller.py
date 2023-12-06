@@ -30,7 +30,6 @@ class MotorController(Node):
 
         # Initialize your servo bus here
         # /dev/ttyUSB0 is for Cambria's laptop
-        # /de is port of RP
         self.servo_bus = ServoBus('/dev/ttyUSB0')  # Adjust your port
         self.get_logger().info('Node starting')
 

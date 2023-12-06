@@ -1,0 +1,6 @@
+{
+  "package_name": "inchworm_control",
+  "non_idl_tuples": [
+    "/home/cambria/dev_ws/src/inchworm_control:inchworm_control/msg/Thruple.msg"
+  ]
+}
