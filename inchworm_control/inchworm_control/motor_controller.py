@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from inchworm_control.ik import inverseKinematicsMQP
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32
@@ -7,11 +8,11 @@ import sys
 import os
 
 # for servo
-import RPi.GPIO as GPIO
-import time
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(11,GPIO.OUT)
-servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+# import RPi.GPIO as GPIO
+# import time
+# GPIO.setmode(GPIO.BOARD)
+# GPIO.setup(11,GPIO.OUT)
+# servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
 
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
@@ -34,7 +35,7 @@ class MotorController(Node):
         self.servo_bus = ServoBus('/dev/ttyUSB0')  # Adjust your port
         self.get_logger().info('Node starting')
 
-        servo1.start(0)
+        # servo1.start(0)
 
     def listener_callback(self, msg):
         # Extract the target position from the message
@@ -44,10 +45,25 @@ class MotorController(Node):
         try:
             angle = 0
             # command to move servo, angle of 180 is open, 0 closed
-            servo1.ChangeDutyCycle(2+(angle/18))
-            time.sleep(0.5)
-            servo1.ChangeDutyCycle(0)
-            # [v, w, x, yself, z]
+            # servo1.ChangeDutyCycle(2+(angle/18))
+            # time.sleep(0.5)
+            # servo1.ChangeDutyCycle(0)
+            # [v, w, x, yself, z]\
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,0)
+
+            theta3 *= -1
+
+            theta2 -= 83.28
+            theta3 += 18.92
+            theta4 += 3.84
+
+            theta2 *= -1
+
+
+            self.get_logger().info('Motor 2 calculated: "%f"' % theta2)
+            self.get_logger().info('Motor 3 calculated: "%f"' % theta3)
+            self.get_logger().info('Motor 4 calculated: "%f"' % theta4)
 
             self.get_logger().info('trying rn:')
 
@@ -59,24 +75,20 @@ class MotorController(Node):
             servo_2 = self.servo_bus.get_servo(servo_id2)
             servo_3 = self.servo_bus.get_servo(servo_id3)
 
-            time_to_move = 1.0  
+            time_to_move = 5.0  
 
             # send command 
-            servo_1.move_time_write(-0.24, time_to_move)
-            servo_2.move_time_write(141.60, time_to_move)
-            servo_3.move_time_write(39.84, time_to_move)
+            # servo_1.move_time_write(-0.24, time_to_move)
+            # servo_2.move_time_write(141.60, time_to_move)
+            # servo_3.move_time_write(39.84, time_to_move)
 
-            sleep(3)
+            # sleep(8)
 
-            servo_1.move_time_write(20.88, time_to_move)
-            servo_2.move_time_write(147.84, time_to_move)
-            servo_3.move_time_write(67.20, time_to_move)
-
+            servo_1.move_time_write(theta2, time_to_move)
+            servo_2.move_time_write(theta3, time_to_move)
+            servo_3.move_time_write(theta4, time_to_move)
             
-
-            
-            sleep(5)
-
+            sleep(8)
             # Optionally, read back the position to confirm
             current_position = servo_1.pos_read()
             self.get_logger().info('Motor 2 Moved to position: "%f"' % current_position)

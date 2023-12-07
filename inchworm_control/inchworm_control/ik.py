@@ -4,8 +4,8 @@ import random
 def inverseKinematicsMQP(Px, Py, Pz):
     L_base = 3.125  # base to joint 1
     L1 = 1          # Joint 1 to Joint 2
-    L2 = 6.432      # Joint 2 to Joint 3
-    L3 = 6.432      # Joint 3 to Joint 4
+    L2 = 6.625      # Joint 2 to Joint 3
+    L3 = 6.625      # Joint 3 to Joint 4
     L4 = 1          # Joint 4 to Joint 5
     L_endEffector = 3.125  # Joint 5 to EE
 
