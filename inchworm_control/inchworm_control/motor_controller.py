@@ -42,11 +42,14 @@ class MotorController(Node):
         self.get_logger().info('Received command to move to position: "%f"' % target_position)
 
         try:
-
+            angle = 0
             # command to move servo, angle of 180 is open, 0 closed
-            # servo1.ChangeDutyCycle(2+(angle/18))
-            # time.sleep(0.5)
-            # servo1.ChangeDutyCycle(0)
+            servo1.ChangeDutyCycle(2+(angle/18))
+            time.sleep(0.5)
+            servo1.ChangeDutyCycle(0)
+            # [v, w, x, yself, z]
+
+            self.get_logger().info('trying rn:')
 
             servo_id = 2  
             servo_id2 = 3
@@ -59,15 +62,15 @@ class MotorController(Node):
             time_to_move = 1.0  
 
             # send command 
-            servo_1.move_time_write(172.08, time_to_move)
-            servo_2.move_time_write(202.08, time_to_move)
-            servo_3.move_time_write(65.28, time_to_move)
+            servo_1.move_time_write(-0.24, time_to_move)
+            servo_2.move_time_write(141.60, time_to_move)
+            servo_3.move_time_write(39.84, time_to_move)
 
             sleep(3)
 
-            servo_1.move_time_write(152.40, time_to_move)
-            servo_2.move_time_write(221.40, time_to_move)
-            servo_3.move_time_write(30.00, time_to_move)
+            servo_1.move_time_write(20.88, time_to_move)
+            servo_2.move_time_write(147.84, time_to_move)
+            servo_3.move_time_write(67.20, time_to_move)
 
             
 
