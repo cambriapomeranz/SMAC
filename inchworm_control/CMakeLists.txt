@@ -54,10 +54,11 @@ install(PROGRAMS
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY
-  launch
-  DESTINATION share/${PROJECT_NAME}/
-)
+# commenting this out bc there is no file in launch directory
+# install(DIRECTORY
+#   launch
+#   DESTINATION share/${PROJECT_NAME}/
+# )
 
 install(DIRECTORY urdf
   DESTINATION share/${PROJECT_NAME}
