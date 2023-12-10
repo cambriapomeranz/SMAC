@@ -12,8 +12,26 @@ class MotorWalking(Node):
         self.publisher_ = self.create_publisher(Float32, 'motor_command', 10)
         timer_period = 3  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
+        # self.subscription = self.create_subscription(
+        #     Float32,
+        #     'motor_command',
+        #     self.listener_callback,
+        #     10)
         self.step = -1
         self.get_logger().info('Node starting')
+
+    # def listener_callback(self, msg):
+    #     # Extract the target position from the message
+    #     target_position = msg.data
+    #     self.get_logger().info('Received command to move to position: "%f"' % target_position)
+
+    #     try:
+    #         self.get_logger().info()
+
+
+    #     except Exception as e:
+    #         self.get_logger().error('Failed to move servo: "%s"' % str(e))
+
 
     def timer_callback(self):
         

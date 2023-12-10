@@ -8,11 +8,12 @@ import sys
 import os
 
 # for servo
-# import RPi.GPIO as GPIO
-# import time
-# GPIO.setmode(GPIO.BOARD)
-# GPIO.setup(11,GPIO.OUT)
-# servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11,GPIO.OUT)
+servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+servo2 = GPIO.PWM(13,50) # pin 11 for servo1, pulse 50Hz
 
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
@@ -43,69 +44,81 @@ class MotorController(Node):
         self.get_logger().info('Received command to move to position: "%f"' % target_position)
 
         try:
-            angle = 0
-            # command to move servo, angle of 180 is open, 0 closed
-            # servo1.ChangeDutyCycle(2+(angle/18))
-            # time.sleep(0.5)
-            # servo1.ChangeDutyCycle(0)
-            # [v, w, x, yself, z]\
-
-            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,0)
-
-            theta3 *= -1
-
-            theta2 -= 83.28
-            theta3 += 18.92
-            theta4 += 3.84
-
-            theta2 *= -1
-
-
-            self.get_logger().info('Motor 2 calculated: "%f"' % theta2)
-            self.get_logger().info('Motor 3 calculated: "%f"' % theta3)
-            self.get_logger().info('Motor 4 calculated: "%f"' % theta4)
-
-            self.get_logger().info('trying rn:')
-
-            servo_id = 2  
-            servo_id2 = 3
-            servo_id3 = 4
-
-            servo_1 = self.servo_bus.get_servo(servo_id)
+            servo_id1 = 1 
+            servo_id2 = 2  
+            servo_id3 = 3
+            servo_id4 = 4
+            # MOTOR CANNOT GO NEGATIVE  
+            servo_1 = self.servo_bus.get_servo(servo_id1)
             servo_2 = self.servo_bus.get_servo(servo_id2)
             servo_3 = self.servo_bus.get_servo(servo_id3)
+            servo_4 = self.servo_bus.get_servo(servo_id4)
 
-            time_to_move = 5.0  
+            time_to_move = 2.0  
+            # servo angle of 180 is open, 0 closed
+            angleOpen = 180
+            angleClose = 0
 
-            # send command 
-            # servo_1.move_time_write(-0.24, time_to_move)
-            # servo_2.move_time_write(141.60, time_to_move)
-            # servo_3.move_time_write(39.84, time_to_move)
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
+            theta4 += 20
 
-            # sleep(8)
+            servo1.ChangeDutyCycle(2+(angleClose/18))
+            servo2.ChangeDutyCycle(2+(angleOpen/18))
+            time.sleep(0.5)
+            servo1.ChangeDutyCycle(0)
+            servo2.ChangeDutyCycle(0)
 
-            servo_1.move_time_write(theta2, time_to_move)
-            servo_2.move_time_write(theta3, time_to_move)
-            servo_3.move_time_write(theta4, time_to_move)
+            servo_1.move_time_write(theta1, time_to_move)
+            servo_2.move_time_write(theta2, time_to_move)
+            servo_3.move_time_write(theta3, time_to_move)
+            servo_4.move_time_write(theta4, time_to_move)
             
-            sleep(8)
-            # Optionally, read back the position to confirm
-            current_position = servo_1.pos_read()
-            self.get_logger().info('Motor 2 Moved to position: "%f"' % current_position)
-            current_position2 = servo_2.pos_read()
-            self.get_logger().info('Motor 3 Moved to position: "%f"' % current_position2)
-            current_position3 = servo_3.pos_read()
-            self.get_logger().info('Motor 4 Moved to position: "%f"' % current_position3)
+            sleep(2)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,1)
+
+            servo_1.move_time_write(theta1, time_to_move)
+            servo_2.move_time_write(theta2, time_to_move)
+            servo_3.move_time_write(theta3, time_to_move)
+            servo_4.move_time_write(theta4, time_to_move)
             
-            # Publish the status
-            status_message = Float32()
-            status_message.data = current_position
-            self.publisher_.publish(status_message)
+            sleep(4)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
+
+            servo_1.move_time_write(theta1, time_to_move)
+            servo_2.move_time_write(theta2, time_to_move)
+            servo_3.move_time_write(theta3, time_to_move)
+            servo_4.move_time_write(theta4, time_to_move)
+            
+            sleep(4)
+
+            servo2.ChangeDutyCycle(2+(angleClose/18))
+            servo1.ChangeDutyCycle(2+(angleOpen/18))
+            time.sleep(0.5)
+            servo1.ChangeDutyCycle(0)
+            servo2.ChangeDutyCycle(0)
+    
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,5)
+
+            servo_1.move_time_write(theta1, time_to_move)
+            servo_2.move_time_write(theta2, time_to_move)
+            servo_3.move_time_write(theta3, time_to_move)
+            servo_4.move_time_write(theta4, time_to_move)
+            
+            sleep(4)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,0,5)
+
+            servo_1.move_time_write(theta1, time_to_move)
+            servo_2.move_time_write(theta2, time_to_move)
+            servo_3.move_time_write(theta3, time_to_move)
+            servo_4.move_time_write(theta4, time_to_move)
+            
+            sleep(4)
 
         except Exception as e:
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
-
-
 
 def main(args=None):
     rclpy.init(args=args)

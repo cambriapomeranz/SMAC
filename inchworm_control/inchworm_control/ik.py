@@ -49,6 +49,14 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta4 = math.degrees(-theta4)
         theta5 = math.degrees(theta5)
 
+        # adjusted for offset
+        theta3 *= -1
+        theta1 += 138.48
+        theta2 -= 83.28
+        theta3 += 25.92
+        theta4 += 10.08
+        theta2 *= -1
+
         return theta1, theta2, theta3, theta4, theta5
     
     if which_leg == 5: 
@@ -91,10 +99,15 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta4 = math.degrees(-theta4)
         theta5 = math.degrees(theta5)
 
-        return theta1, theta2, theta3, theta4, theta5
-    
+        # adjusted for offset
+        theta3 *= -1
+        theta1 += 138.48
+        theta2 -= 83.28
+        theta3 += 25.92
+        theta4 += 10.08
+        theta2 *= -1
 
-        return theta5, theta4, theta3, theta2, theta1
+        return theta1, theta2, theta3, theta4, theta5
    
     else:
       ValueError('error: please choose either leg 5 or leg 1')
