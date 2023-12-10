@@ -65,9 +65,11 @@ class MotorController(Node):
             theta4 += 20
 
             servo1.ChangeDutyCycle(2+(angleClose/18))
-            servo2.ChangeDutyCycle(2+(angleOpen/18))
             time.sleep(0.5)
             servo1.ChangeDutyCycle(0)
+
+            servo2.ChangeDutyCycle(2+(angleOpen/18))
+            time.sleep(0.5)
             servo2.ChangeDutyCycle(0)
 
             servo_1.move_time_write(theta1, time_to_move)
@@ -96,10 +98,12 @@ class MotorController(Node):
             sleep(4)
 
             servo2.ChangeDutyCycle(2+(angleClose/18))
+            time.sleep(0.5)
+            servo2.ChangeDutyCycle(0)
+
             servo1.ChangeDutyCycle(2+(angleOpen/18))
             time.sleep(0.5)
             servo1.ChangeDutyCycle(0)
-            servo2.ChangeDutyCycle(0)
     
             theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,5)
 
