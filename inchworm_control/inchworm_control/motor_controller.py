@@ -36,7 +36,8 @@ class MotorController(Node):
         self.servo_bus = ServoBus('/dev/ttyUSB0')  # Adjust your port
         self.get_logger().info('Node starting')
 
-        # servo1.start(0)
+        servo1.start(0)
+        servo2.start(0)
 
     def listener_callback(self, msg):
         # Extract the target position from the message
