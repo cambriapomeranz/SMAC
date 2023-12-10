@@ -12,6 +12,7 @@ import RPi.GPIO as GPIO
 import time
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11,GPIO.OUT)
+GPIO.setup(13,GPIO.OUT)
 servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
 servo2 = GPIO.PWM(13,50) # pin 11 for servo1, pulse 50Hz
 
