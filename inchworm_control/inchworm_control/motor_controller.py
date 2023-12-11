@@ -10,6 +10,8 @@ import os
 # for servo
 import RPi.GPIO as GPIO
 import time
+servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+servo2 = GPIO.PWM(13,50) # pin 11 for servo1, pulse 50Hz
 
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
@@ -32,8 +34,7 @@ class MotorController(Node):
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(11,GPIO.OUT)
         GPIO.setup(13,GPIO.OUT)
-        servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
-        servo2 = GPIO.PWM(13,50) # pin 11 for servo1, pulse 50Hz
+        
         servo1.start(0)
         servo2.start(0)
 
@@ -69,7 +70,7 @@ class MotorController(Node):
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
 
 
-# servo angle of 180 is open, 0 closed
+# servo angle of 180 is activated, 0 released
 def activate_servo(servo_id):
     servo_id.ChangeDutyCycle(2+(180/18))
     time.sleep(0.5)
