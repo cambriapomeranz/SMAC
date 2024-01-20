@@ -1,70 +1,28 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import Float32  # or whatever message type you need
+from std_msgs.msg import Float32, String  # or whatever message type you need
 from inchworm_control.msg import Thruple
 
-# this script is our first attempt at walking
-# it will home the robot into step 0, then publish msgs to move to step 1 then 2
 class MotorWalking(Node):
     def __init__(self):
         super().__init__('motor_walking')
-        self.publisher_ = self.create_publisher(Float32, 'motor_command', 10)
+        self.publisher_ = self.create_publisher(String, 'motor_command', 10)
         timer_period = 3  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
-        # self.subscription = self.create_subscription(
-        #     Float32,
-        #     'motor_command',
-        #     self.listener_callback,
-        #     10)
         self.step = -1
         self.get_logger().info('Node starting')
 
-    # def listener_callback(self, msg):
-    #     # Extract the target position from the message
-    #     target_position = msg.data
-    #     self.get_logger().info('Received command to move to position: "%f"' % target_position)
-
-    #     try:
-    #         self.get_logger().info()
-
-
-    #     except Exception as e:
-    #         self.get_logger().error('Failed to move servo: "%s"' % str(e))
-
-
     def timer_callback(self):
-        
         # Home motors to step 0 position
         if self.step == -1:  
-            msg = Float32()
-            msg.data = 0.0
-            # msg.motor2 = 60.0
-            # msg.motor3 = 90.0
+            msg = String()
+            msg.data = "step_forward"
+            # msg.data = "step_left"
             self.publisher_.publish(msg)
             self.get_logger().info('Publishing: "%s"' % msg.data)
-            # self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
+
             self.step = 10 
-        # Move from step 0 to step 1
-        elif self.step == 0:
-            msg = Float32()
-            msg.data = 60.0
-            # msg.motor2 = 60.0
-            # msg.motor3 = 90.0
-            self.publisher_.publish(msg)
-            self.get_logger().info('Publishing: "%s"' % msg.data)
-            # self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
-            self.step = 1  # Update the instance variable, not a local variable
-        # Move from step 1 to step 2
-        elif self.step == 1:
-            msg = Float32()
-            msg.data = 90.0
-            # msg.motor2 = 60.0
-            # msg.motor3 = 90.0
-            self.publisher_.publish(msg)
-            self.get_logger().info('Publishing: "%s"' % msg.data)
-            # self.get_logger().info('Publishing: "%s, %s, %s"' % (msg.motor1, msg.motor2, msg.motor3))
-            self.step = 2  # Update the instance variable, not a local variable
         	
 def main(args=None):
     rclpy.init(args=args)
