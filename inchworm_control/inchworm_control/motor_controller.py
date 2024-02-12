@@ -9,10 +9,10 @@ import sys
 import os
 
 # for servo
-# import RPi.GPIO as GPIO
-# import time
-# servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
-# servo2 = GPIO.PWM(13,50) # pin 13 for servo1, pulse 50Hz
+import RPi.GPIO as GPIO
+import time
+servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+servo2 = GPIO.PWM(13,50) # pin 13 for servo1, pulse 50Hz
 
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
@@ -35,12 +35,12 @@ class MotorController(Node):
         init_motors(self)
 
         # init servos
-        # GPIO.setmode(GPIO.BOARD)
-        # GPIO.setup(11,GPIO.OUT)
-        # GPIO.setup(13,GPIO.OUT)
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(11,GPIO.OUT)
+        GPIO.setup(13,GPIO.OUT)
         
-        # servo1.start(0)
-        # servo2.start(0)
+        servo1.start(0)
+        servo2.start(0)
 
         # MOTOR CANNOT GO NEGATIVE  
         
@@ -59,12 +59,14 @@ class MotorController(Node):
         try:
             # initial motor configs
             #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-           
+            activate_servo(servo2)
             if msg.data == 'step_forward':
                 step_forward(self)
+            
             elif msg.data == 'turn_left':
                 turn_left(self)
-                    
+
+            
         except Exception as e:
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
 
