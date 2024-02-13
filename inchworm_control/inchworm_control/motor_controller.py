@@ -61,7 +61,7 @@ class MotorController(Node):
             #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
             activate_servo(servo2)
             if msg.data == 'step_forward':
-                print("stepping forward")
+                self.get_logger().info("stepping forward")
                 step_forward(self)
             
             elif msg.data == 'turn_left':
