@@ -61,6 +61,7 @@ class MotorController(Node):
             #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
             activate_servo(servo2)
             if msg.data == 'step_forward':
+                print("stepping forward")
                 step_forward(self)
             
             elif msg.data == 'turn_left':
@@ -74,6 +75,7 @@ class MotorController(Node):
 # servo angle of 180 is activated, 0 released
 def activate_servo(servo_id):
     servo_id.ChangeDutyCycle(2+(180/18))
+    print("servo activated")
     time.sleep(0.5)
     servo_id.ChangeDutyCycle(0)
 
