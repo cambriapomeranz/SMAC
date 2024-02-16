@@ -51,6 +51,7 @@ install(PROGRAMS
   inchworm_control/motor_controller.py
   inchworm_control/motor_walking.py 
   inchworm_control/motor_publisher.py 
+  inchworm_control/step_publisher.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -59,7 +59,7 @@ class MotorController(Node):
         try:
             # initial motor configs
             #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-            
+            # going to have to maybe have to change to take in a tuple when runing block_simulation
             if msg.data == 'step_forward':
                 
                 self.get_logger().info("stepping forward") # not printing 
