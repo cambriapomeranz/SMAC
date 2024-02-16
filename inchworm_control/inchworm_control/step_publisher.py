@@ -20,7 +20,7 @@ class StepPublisher(Node):
         self.get_logger().info('Node starting')
 
         # get list of steps from block_simulation
-        steps = path_getter
+        steps = path_getter()
         print('steps',steps)
 
 
