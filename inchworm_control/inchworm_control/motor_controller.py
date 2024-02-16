@@ -11,11 +11,11 @@ import os
 # for servo
 import RPi.GPIO as GPIO
 import time
-servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
-servo2 = GPIO.PWM(13,50) # pin 13 for servo1, pulse 50Hz
+
 
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
+
 
 class MotorController(Node):
     def __init__(self):
@@ -32,15 +32,16 @@ class MotorController(Node):
         self.get_logger().info('Node starting')
 
         # init motors
-        init_motors(self)
+        self.init_motors()
 
         # init servos
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(11,GPIO.OUT)
         GPIO.setup(13,GPIO.OUT)
-        
-        servo1.start(0)
-        servo2.start(0)
+        self.servo1 = GPIO.PWM(11,50) # pin 11 for servo1, pulse 50Hz
+        self.servo2 = GPIO.PWM(13,50) # pin 13 for servo1, pulse 50Hz
+        self.servo1.start(0)
+        self.servo2.start(0)
 
         # MOTOR CANNOT GO NEGATIVE  
         
@@ -51,6 +52,51 @@ class MotorController(Node):
         # self.motor_5 = self.servo_bus.get_servo(5)
 
         # self.time_to_move = 2.0  
+    def init_motors(self):
+        self.motor_1 = self.servo_bus.get_servo(1)
+        self.motor_2 = self.servo_bus.get_servo(2)
+        self.motor_3 = self.servo_bus.get_servo(3)
+        self.motor_4 = self.servo_bus.get_servo(4)
+        self.motor_5 = self.servo_bus.get_servo(5)
+
+        self.time_to_move = 2
+
+    def move_to(self, theta1, theta2, theta3, theta4):
+        # print(theta1, theta2, theta3, theta4, theta5)
+        self.motor_1.move_time_write(theta1, self.time_to_move)
+        self.motor_2.move_time_write(theta2, self.time_to_move)
+        self.motor_3.move_time_write(theta3, self.time_to_move)
+        self.motor_4.move_time_write(theta4, self.time_to_move)
+        # self.motor_5.move_time_write(theta5, self.time_to_move)
+        sleep(2)
+
+
+    def step_forward(self):
+        print('step 1')
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
+        theta4 += 40
+        activate_servo(self.servo1)
+        self.move_to(theta1, theta2, theta3, theta4)
+
+        print("step 2")
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,1)
+        theta4 += 20
+        self.move_to(theta1, theta2, theta3, theta4)
+
+        print("step 3")
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
+        theta4 += 20
+        self.move_to(theta1, theta2, theta3, theta4)
+        activate_servo(self.servo2)
+
+    def turn_left(self):
+        print('stepping left')
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
+        theta4 += 50
+        self.move_to(theta1, theta2, theta3, theta4)
+
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
+        self.move_to(theta1, theta2, theta3, theta4)
 
     def listener_callback(self, msg):
         target_position = msg.data
@@ -59,14 +105,13 @@ class MotorController(Node):
         try:
             # initial motor configs
             #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-            
+            release_servo(self.servo1)
+            release_servo(self.servo2)
             if msg.data == 'step_forward':
-                
-                self.get_logger().info("stepping forward") # not printing 
-                step_forward(self)
+                self.step_forward()
             
             elif msg.data == 'turn_left':
-                turn_left(self)
+                self.turn_left()
 
             
         except Exception as e:
@@ -75,25 +120,18 @@ class MotorController(Node):
 
 # servo angle of 180 is activated, 0 released
 def activate_servo(servo_id):
-    servo_id.ChangeDutyCycle(2+(180/18))
+    servo_id.ChangeDutyCycle(2+(0/18))
     print("servo activated")
     time.sleep(0.5)
     servo_id.ChangeDutyCycle(0)
 
 def release_servo(servo_id):
-    servo_id.ChangeDutyCycle(2+(0/18))
+    print('Releasing')
+    servo_id.ChangeDutyCycle(2+(180/18))
     time.sleep(0.5)
     servo_id.ChangeDutyCycle(0)
 
-def move_to(self, theta1, theta2, theta3, theta4):
-    # print(theta1, theta2, theta3, theta4, theta5)
-    self.motor_1.move_time_write(theta1, self.time_to_move)
-    self.motor_2.move_time_write(theta2, self.time_to_move)
-    self.motor_3.move_time_write(theta3, self.time_to_move)
-    self.motor_4.move_time_write(theta4, self.time_to_move)
-    # self.motor_5.move_time_write(theta5, self.time_to_move)
 
-    sleep(2)
 
 def main(args=None):
     rclpy.init(args=args)
