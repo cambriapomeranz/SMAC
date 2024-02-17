@@ -1,11 +1,13 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 package_name = 'inchworm_control'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name],
+    # packages=[package_name],
+
+    packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -22,7 +24,8 @@ setup(
         'console_scripts': [
             'motor_controller = inchworm_control.motor_controller:main'
             'motor_walking = inchworm_control.motor_walking:main'
-            'motor_publishing = inchworm_control.motor_publishing:main'            
+            'motor_publishing = inchworm_control.motor_publishing:main'
+            'step_publisher = inchworm_control.step_publisher:main'            
         ],
     },
 )
