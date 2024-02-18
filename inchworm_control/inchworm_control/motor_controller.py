@@ -107,10 +107,12 @@ class MotorController(Node):
             #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
             release_servo(self.servo1)
             release_servo(self.servo2)
-            if msg.data == 'step_forward':
+            if msg.data == 'STEP_FORWARD':
+                print("stepping forward")
                 self.step_forward()
             
-            elif msg.data == 'turn_left':
+            elif msg.data == 'STEP_LEFT':
+                print("stepping left")
                 self.turn_left()
 
             
