@@ -243,6 +243,9 @@ def show_structures():
         for block in misc_blocks:
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], 'misc')
+        else:
+            delete_cube(block[0], block[1], block[2])
+            spawn_cube(block[0], block[1], block[2], 'misc')
     return found_structures, misc_blocks
 
 # Voxel (block) properties

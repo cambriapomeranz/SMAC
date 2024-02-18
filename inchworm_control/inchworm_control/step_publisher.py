@@ -3,6 +3,8 @@ import rclpy
 import os
 from rclpy.node import Node
 from std_msgs.msg import Float32, String  # or whatever message type you need
+import ast
+
 # import sys
 # sys.path.append("~/MQP/dev_ws/src/inchworm_control/block_simulation")
 # import minecraft_sim
@@ -35,7 +37,6 @@ class StepPublisher(Node):
     def listener_callback(self, msg):
         step_status = msg.data
         self.get_logger().info('Received step status "%s' % msg.data)
-        print('steps when recieved a msg: ', self.steps)
         try:
             if msg.data == 0.0:
                 self.get_logger().info("movement complete")
@@ -43,6 +44,7 @@ class StepPublisher(Node):
                 # if holding block is true, it is holding a block for this step
                 #TODO: have it publish entire tuple
                 step = self.steps.pop(0)[0]
+                self.get_logger().info(step)
                 self.publisher_.publish(step)
                 self.get_logger().info('Publishing: "%s"' % msg.data)
             elif msg.data == 1.0:
@@ -50,14 +52,26 @@ class StepPublisher(Node):
 
         except Exception as e:
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
- 	
+    
 def read_file_callback(self):
-        try:
-            with open(self.file_path, 'r') as file:
-                file_content = file.read()
-                return file_content
-        except Exception as e:
-            self.get_logger().error('Failed to read file: %s', str(e))
+    try:
+        with open(self.file_path, 'r') as file:
+            file_content = file.readlines()  # Read lines from file
+            steps = []
+            for line in file_content:
+                # Parse the string representation of the tuple
+                step_tuple = eval(line.strip())  # Convert string to tuple
+                # Convert the boolean value from string to bool
+                # Ensure proper boolean conversion regardless of case
+                step_tuple = (step_tuple[0], str(step_tuple[1]).strip().lower() == 'true')
+                steps.append(step_tuple)
+            return steps
+    except Exception as e:
+        self.get_logger().error('Failed to read file: %s', str(e))
+        return []
+
+
+
     
 def main(args=None):
     rclpy.init(args=args)

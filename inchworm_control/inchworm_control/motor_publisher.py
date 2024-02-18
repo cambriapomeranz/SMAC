@@ -1,7 +1,7 @@
+#!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32  # or whatever message type you need
-
 
 class MotorPublisher(Node):
     def __init__(self):
