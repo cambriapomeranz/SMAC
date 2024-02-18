@@ -1,0 +1,171 @@
+[0.087s] Invoking command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control -- -j4 -l4
+[0.208s] [  3%] Built target inchworm_control__cpp
+[0.215s] [ 12%] Built target inchworm_control__rosidl_generator_c
+[0.288s] [ 25%] Built target inchworm_control__rosidl_typesupport_introspection_cpp
+[0.288s] [ 32%] Built target inchworm_control__rosidl_typesupport_fastrtps_cpp
+[0.290s] [ 41%] Built target inchworm_control__rosidl_typesupport_cpp
+[0.347s] [ 51%] Built target inchworm_control__rosidl_typesupport_introspection_c
+[0.352s] [ 61%] Built target inchworm_control__rosidl_typesupport_c
+[0.357s] [ 70%] Built target inchworm_control__rosidl_typesupport_fastrtps_c
+[0.401s] [ 70%] Built target inchworm_control
+[0.448s] [ 74%] Built target inchworm_control__py
+[0.506s] [ 80%] Built target inchworm_control__python
+[0.564s] [ 87%] Built target inchworm_control__rosidl_typesupport_introspection_c__pyext
+[0.567s] [ 93%] Built target inchworm_control__rosidl_typesupport_fastrtps_c__pyext
+[0.572s] [100%] Built target inchworm_control__rosidl_typesupport_c__pyext
+[0.596s] Invoked command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control -- -j4 -l4
+[0.734s] Invoking command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control
+[0.754s] -- Install configuration: ""
+[0.754s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/ament_index/resource_index/rosidl_interfaces/inchworm_control
+[0.755s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control
+[0.755s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[0.756s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/thruple.h
+[0.756s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_c__visibility_control.h
+[0.757s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[0.757s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.h
+[0.758s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.h
+[0.758s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.c
+[0.759s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.h
+[0.759s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/library_path.sh
+[0.759s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/library_path.dsv
+[0.760s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_generator_c.so
+[0.760s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control
+[0.761s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[0.761s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.761s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[0.761s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_c.h
+[0.762s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_c.so
+[0.762s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control
+[0.763s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[0.763s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.763s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[0.764s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_cpp.hpp
+[0.764s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/dds_fastrtps
+[0.764s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_cpp.so
+[0.764s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control
+[0.765s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[0.765s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.765s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[0.766s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.c
+[0.767s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_c.h
+[0.767s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_c.so
+[0.767s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_c.so
+[0.768s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control
+[0.769s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[0.769s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.769s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[0.770s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.hpp
+[0.771s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__traits.hpp
+[0.771s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.hpp
+[0.771s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__builder.hpp
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/thruple.hpp
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_cpp.hpp
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.cpp
+[0.772s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_cpp.so
+[0.773s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_cpp.so
+[0.773s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/pythonpath.sh
+[0.773s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/pythonpath.dsv
+[0.773s] -- Installing: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py
+[0.855s] Compiling '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...
+[0.863s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg
+[0.863s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple_s.c
+[0.864s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/__init__.py
+[0.864s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple.py
+[0.865s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+[0.866s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+[0.869s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+[0.873s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/libinchworm_control__python.so
+[0.873s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/msg/Thruple.idl
+[0.873s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/msg/Thruple.msg
+[0.874s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control
+[0.874s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_walking.py
+[0.874s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/ik.py
+[0.875s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_controller.py
+[0.875s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus
+[0.876s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg
+[0.876s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/Thruple.msg
+[0.876s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log
+[0.876s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest_build
+[0.877s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49
+[0.877s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49/events.log
+[0.877s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49/logger_all.log
+[0.877s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/COLCON_IGNORE
+[0.878s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00
+[0.878s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/events.log
+[0.878s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/logger_all.log
+[0.879s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest
+[0.879s] -- Installing: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py
+[0.879s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_publisher.py
+[0.879s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_subscriber.py
+[0.880s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts
+[0.880s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts/movement_command.py
+[0.880s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus.py
+[0.880s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install
+[0.881s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.sh
+[0.881s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_ps1.py
+[0.881s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.ps1
+[0.881s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_sh.py
+[0.882s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.sh
+[0.882s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.zsh
+[0.882s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/.colcon_install_layout
+[0.882s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/COLCON_IGNORE
+[0.883s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.bash
+[0.883s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.bash
+[0.883s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.zsh
+[0.883s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.ps1
+[0.884s] -- Installing: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/step_publisher.py
+[0.955s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control'...
+[0.955s] Compiling '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...
+[0.956s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build'...
+[0.956s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install'...
+[0.956s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus'...
+[0.957s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log'...
+[0.957s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00'...
+[0.957s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49'...
+[0.957s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg'...
+[0.958s] Listing '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts'...
+[0.958s] Compiling '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/step_publisher.py'...
+[0.964s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/inchworm_control/motor_controller.py
+[0.964s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/inchworm_control/motor_walking.py
+[0.965s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/inchworm_control/motor_publisher.py
+[0.965s] -- Installing: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/inchworm_control/step_publisher.py
+[0.965s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/urdf
+[0.966s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/urdf/r2d2.rviz
+[0.966s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/urdf/one_inchworm.urdf
+[0.966s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/ament_index/resource_index/package_run_dependencies/inchworm_control
+[0.967s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/ament_index/resource_index/parent_prefix_path/inchworm_control
+[0.967s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.sh
+[0.967s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.dsv
+[0.968s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/path.sh
+[0.968s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/environment/path.dsv
+[0.968s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.bash
+[0.968s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.sh
+[0.969s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.zsh
+[0.969s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.dsv
+[0.969s] -- Installing: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.dsv
+[0.970s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/ament_index/resource_index/packages/inchworm_control
+[0.970s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport.cmake
+[0.970s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport-noconfig.cmake
+[0.970s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport.cmake
+[0.971s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.971s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport.cmake
+[0.971s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport-noconfig.cmake
+[0.975s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cppExport.cmake
+[0.975s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport.cmake
+[0.976s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.976s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport.cmake
+[0.976s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport-noconfig.cmake
+[0.976s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake-extras.cmake
+[0.977s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.977s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_libraries-extras.cmake
+[0.977s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_targets-extras.cmake
+[0.977s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.978s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.978s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.978s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig.cmake
+[0.978s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig-version.cmake
+[0.978s] -- Up-to-date: /home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.xml
+[0.987s] Invoked command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control

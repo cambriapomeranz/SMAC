@@ -1,0 +1,121 @@
+[0.996s] DEBUG:colcon:Command line arguments: ['/home/cambria/.local/bin/colcon', 'build']
+[0.996s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f246c7da430>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f246c7da430>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f246c776e50>)
+[1.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[1.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[1.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[1.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[1.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[1.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[1.118s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cambria/MQP/dev_ws/src/inchworm_control'
+[1.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[1.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[1.156s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'inchworm_control'
+[1.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[1.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[1.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[1.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[1.156s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[1.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[1.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.250s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/cambria/MQP/dev_ws/src/inchworm_control/install
+[1.259s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/cambria/MQP/dev_ws/install
+[1.270s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 272 installed packages in /opt/ros/foxy
+[1.292s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.405s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_args' from command line to 'None'
+[1.405s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_target' from command line to 'None'
+[1.406s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.407s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_clean_cache' from command line to 'False'
+[1.407s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_clean_first' from command line to 'False'
+[1.407s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_force_configure' from command line to 'False'
+[1.407s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'ament_cmake_args' from command line to 'None'
+[1.407s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'catkin_cmake_args' from command line to 'None'
+[1.407s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.407s] DEBUG:colcon.colcon_core.verb:Building package 'inchworm_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control', 'merge_install': False, 'path': '/home/cambria/MQP/dev_ws/src/inchworm_control', 'symlink_install': False, 'test_result_base': None}
+[1.412s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.449s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cambria/MQP/dev_ws/src/inchworm_control' with build type 'ament_cmake'
+[1.450s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cambria/MQP/dev_ws/src/inchworm_control'
+[1.474s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.474s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.474s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.541s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control -- -j4 -l4
+[2.060s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control -- -j4 -l4
+[2.199s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control
+[2.458s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(inchworm_control)
+[2.465s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/cambria/MQP/dev_ws/src/inchworm_control/build/inchworm_control
+[2.498s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control' for CMake module files
+[2.500s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control' for CMake config files
+[2.503s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'cmake_prefix_path')
+[2.521s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.ps1'
+[2.523s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.dsv'
+[2.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.sh'
+[2.526s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib'
+[2.527s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'ld_library_path_lib')
+[2.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.ps1'
+[2.545s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.dsv'
+[2.546s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.sh'
+[2.546s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/bin'
+[2.547s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/pkgconfig/inchworm_control.pc'
+[2.547s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages'
+[2.547s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'pythonpath')
+[2.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.ps1'
+[2.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.dsv'
+[2.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.sh'
+[2.576s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/bin'
+[2.594s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.ps1'
+[2.595s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.dsv'
+[2.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.sh'
+[2.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.bash'
+[2.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.zsh'
+[2.601s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/colcon-core/packages/inchworm_control)
+[2.729s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(inchworm_control)
+[2.749s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control' for CMake module files
+[2.751s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control' for CMake config files
+[2.754s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'cmake_prefix_path')
+[2.770s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.ps1'
+[2.771s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.dsv'
+[2.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.sh'
+[2.773s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib'
+[2.773s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'ld_library_path_lib')
+[2.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.ps1'
+[2.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.dsv'
+[2.793s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.sh'
+[2.794s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/bin'
+[2.794s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/pkgconfig/inchworm_control.pc'
+[2.795s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/lib/python3.8/site-packages'
+[2.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'pythonpath')
+[2.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.ps1'
+[2.812s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.dsv'
+[2.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.sh'
+[2.814s] Level 1:colcon.colcon_core.environment:checking '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/bin'
+[2.828s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.ps1'
+[2.829s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.dsv'
+[2.830s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.sh'
+[2.831s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.bash'
+[2.832s] INFO:colcon.colcon_core.shell:Creating package script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/inchworm_control/package.zsh'
+[2.833s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control/share/colcon-core/packages/inchworm_control)
+[2.833s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.834s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.835s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.835s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.862s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.862s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.862s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.898s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.918s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/local_setup.ps1'
+[2.920s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cambria/MQP/dev_ws/src/inchworm_control/install/_local_setup_util_ps1.py'
+[2.923s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/setup.ps1'
+[2.937s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/local_setup.sh'
+[2.938s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cambria/MQP/dev_ws/src/inchworm_control/install/_local_setup_util_sh.py'
+[2.939s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/setup.sh'
+[2.952s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/local_setup.bash'
+[2.954s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/setup.bash'
+[2.968s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/local_setup.zsh'
+[2.969s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cambria/MQP/dev_ws/src/inchworm_control/install/setup.zsh'

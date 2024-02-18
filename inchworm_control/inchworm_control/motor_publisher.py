@@ -21,7 +21,7 @@ class MotorPublisher(Node):
             self.get_logger().info('Publishing: "%s"' % msg.data)
             self.logic = 2  # Update the instance variable, not a local variable
         elif self.logic == 2:
-            msg.data = 90.0
+            msg.data = 1.0
             self.publisher_.publish(msg)
             self.get_logger().info('Publishing: "%s"' % msg.data)
             self.logic = 1  # Update the instance variable, not a l

@@ -72,6 +72,7 @@ class MotorController(Node):
 
 
     def step_forward(self):
+        print('stepping forward')
         print('step 1')
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
         theta4 += 40
@@ -108,11 +109,9 @@ class MotorController(Node):
             release_servo(self.servo1)
             release_servo(self.servo2)
             if msg.data == 'STEP_FORWARD':
-                print("stepping forward")
                 self.step_forward()
             
             elif msg.data == 'STEP_LEFT':
-                print("stepping left")
                 self.turn_left()
 
             
