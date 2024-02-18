@@ -16,7 +16,7 @@ class MotorPublisher(Node):
 
         # Your motor command logic goes here
         if self.logic == 1:
-            msg.data = 30.0
+            msg.data = 0.0
             self.publisher_.publish(msg)
             self.get_logger().info('Publishing: "%s"' % msg.data)
             self.logic = 2  # Update the instance variable, not a local variable

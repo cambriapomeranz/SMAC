@@ -48,7 +48,6 @@ last_block_original_texture = None
 last_colored_block_2 = None
 last_block_original_texture_2 = None
 
-punch_sound = Audio("Assets/SFX/Punch_Sound.wav", loop = False, autoplay = False)
 window.exit_button.visible = False
 block_pick = 1
 index = 0
@@ -65,6 +64,7 @@ found_structures = []
 coords_to_spawn = []
 misc_blocks = []
 complete_steps = []
+path_steps = None 
 
 
 number = 0 
@@ -109,6 +109,7 @@ def update():
        # test_structure =  [((10, 1, 12), (10, 1, 11), (10, 1, 10), (10, 2, 10), (10, 2, 11),(10, 3, 10))]
         print("leftover blocks: ", misc_blocks)
         coords_to_spawn, path_steps , goal= dev_total_path_steps(found_structures, misc_blocks)
+        step_getter(path_steps)
         print("coords_to_spawn:")
         print(coords_to_spawn)
 
@@ -220,10 +221,14 @@ def update():
         key_9_pressed = False
 
 
-def step_getter():
-     global path_steps
-     complete_steps = copy.deepcopy(path_steps)
-     return complete_steps
+def step_getter(steps):
+    complete_steps = copy.deepcopy(steps)
+    file_path = "steps.txt"
+    
+    with open(file_path, 'w') as file:
+        for step in complete_steps:
+            file.write(f"{step}\n")
+    
 
 # Searches for known structures and changes the color of strucutres found 
 def show_structures():
@@ -258,7 +263,6 @@ class Voxel(Button):
     def input(self,key):
         if self.hovered:
             if key == "left mouse down":
-                punch_sound.play()
                 voxel = Voxel(position = self.position + mouse.normal, texture = smart_block_texture) 
                 # only add blocks above field
                 if(voxel.position[1] > 0):
@@ -266,7 +270,6 @@ class Voxel(Button):
                     # print(new_voxel.position)
                 print(blocks_placed)
             if key == "right mouse down":
-                punch_sound.play()
                 try: 
                     blocks_placed.remove(self.position)
                 except Exception as e: 

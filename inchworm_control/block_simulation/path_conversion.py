@@ -3,12 +3,6 @@ from enum import Enum
 from path_planning import *
 from config import BD_LOC, CURRENT_LOC, CURRENT_ORIENTATION, InchwormOrientation
 
-complete_steps = []
-
-# def step_getter():
-#     global complete_steps
-#     return complete_steps
-
 # Converts the list of coords from bfs to a list of inchworm movements
 def convert_path_coords_to_steps(grid, path_start, path_end):
     global CURRENT_LOC, CURRENT_ORIENTATION
@@ -505,12 +499,10 @@ def dev_total_path_coords(structures):
     return complete_path
 
 
-
 # return: 
 # -list of all the path coords for all the structures like [[(x1, y1, z1), (x2, y2, z2), ...], [(x1, y1, z1), (x2, y2, z2), ...], ...]
 # -list of all the steps to build all the structures like [STEP_FORWARD, STEP_LEFT, ...]
 def dev_total_path_steps(structures, misc_blocks):
-    global complete_steps
     grid = initialize_grid_with_structures(20)
     update_grid_with_structure(grid, BD_LOC)
     complete_path = []
