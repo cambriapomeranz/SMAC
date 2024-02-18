@@ -5,9 +5,9 @@ from config import BD_LOC, CURRENT_LOC, CURRENT_ORIENTATION, InchwormOrientation
 
 complete_steps = []
 
-def step_getter():
-    global complete_steps
-    return complete_steps
+# def step_getter():
+#     global complete_steps
+#     return complete_steps
 
 # Converts the list of coords from bfs to a list of inchworm movements
 def convert_path_coords_to_steps(grid, path_start, path_end):
@@ -516,7 +516,6 @@ def dev_total_path_steps(structures, misc_blocks):
     complete_path = []
     complete_steps = []
     list_of_goals = []
-
 
     for structure in structures:
         # get path coords for each coord in the structure

@@ -12,6 +12,7 @@ from search import search
 from path_conversion import * 
 from config import BD_LOC
 import time
+import copy 
 
 app = Ursina()
 
@@ -63,6 +64,8 @@ blocks_placed = []
 found_structures = []
 coords_to_spawn = []
 misc_blocks = []
+complete_steps = []
+
 
 number = 0 
 
@@ -71,7 +74,7 @@ prev_point = [1, 0, 1]
 
 # Updates every frame
 def update():
-    global blocks_placed, block_pick, key_9_pressed, key_6_pressed, key_p_pressed, key_n_pressed, coords_to_spawn, last_colored_block, last_block_original_texture, last_colored_block_2, last_block_original_texture_2, found_structures, misc_blocks, prev_point, point, placed_block, spawned, spawn_x, spawn_y, spawn_z, goal, number 
+    global blocks_placed, block_pick, key_9_pressed, key_6_pressed, key_p_pressed, key_n_pressed, coords_to_spawn, last_colored_block, last_block_original_texture, last_colored_block_2, last_block_original_texture_2, found_structures, misc_blocks, prev_point, point, placed_block, spawned, spawn_x, spawn_y, spawn_z, goal, number , path_steps
 
     if held_keys["1"]: block_pick = 1
     if held_keys["2"]: block_pick = 2
@@ -215,6 +218,12 @@ def update():
     # Reset the flag when '9' is no longer held down
     if not held_keys["9"]:
         key_9_pressed = False
+
+
+def step_getter():
+     global path_steps
+     complete_steps = copy.deepcopy(path_steps)
+     return complete_steps
 
 # Searches for known structures and changes the color of strucutres found 
 def show_structures():

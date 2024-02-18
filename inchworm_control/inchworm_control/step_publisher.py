@@ -8,8 +8,7 @@ from std_msgs.msg import Float32, String  # or whatever message type you need
 import sys
 # sys.path.append("/block_simulation/path_conversion")
 sys.path.append("~/MQP/dev_ws/src/inchworm_control/block_simulation")
-import path_conversion
-
+import minecraft_sim
 
 class StepPublisher(Node):
     def __init__(self):
@@ -26,7 +25,7 @@ class StepPublisher(Node):
         self.get_logger().info('Node starting')
 
         # get list of steps from block_simulation
-        steps = path_conversion.step_getter()
+        steps = minecraft_sim.step_getter()
 
         print('steps',steps)
 
@@ -35,7 +34,7 @@ class StepPublisher(Node):
     def listener_callback(self, msg):
         step_status = msg.data
         self.get_logger().info('Received step status "%s' % msg.data)
-
+        print('steps',minecraft_sim.step_getter())
         try:
             if msg.data == 'complete':
                 self.get_logger().info("movement complete")
