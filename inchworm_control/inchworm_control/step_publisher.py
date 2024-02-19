@@ -12,7 +12,7 @@ class StepPublisher(Node):
         # subscription to receive when a step is completed
         self.subscription = self.create_subscription(
             Float32,
-            'motor_status',
+            'step_status',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning

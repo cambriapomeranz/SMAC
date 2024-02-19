@@ -4,23 +4,17 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32, String
 from inchworm_control.scripts.movement_command import *
-
-import sys
-import os
-
 # for servo
 import RPi.GPIO as GPIO
 import time
 
-
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
-
 
 class MotorController(Node):
     def __init__(self):
         super().__init__('motor_controller')
-        self.publisher_ = self.create_publisher(Float32, 'motor_status', 10)
+        self.publisher_ = self.create_publisher(Float32, 'step_status', 10)
         self.subscription = self.create_subscription(
             String,
             'motor_command',
@@ -42,16 +36,41 @@ class MotorController(Node):
         self.servo2 = GPIO.PWM(13,50) # pin 13 for servo1, pulse 50Hz
         self.servo1.start(0)
         self.servo2.start(0)
-
         # MOTOR CANNOT GO NEGATIVE  
-        
-        # self.motor_1 = self.servo_bus.get_servo(1)
-        # self.motor_2 = self.servo_bus.get_servo(2)
-        # self.motor_3 = self.servo_bus.get_servo(3)
-        # self.motor_4 = self.servo_bus.get_servo(4)
-        # self.motor_5 = self.servo_bus.get_servo(5)
 
-        # self.time_to_move = 2.0  
+        self.step_actions = {
+            'STEP_FORWARD': self.step_forward,
+            'STEP_LEFT': self.step_left,
+            'STEP_RIGHT': self.step_right,
+            'GRAB_UP_FORWARD': self.grab_up_forward, 
+            'PLACE_FORWARD': self.place_forward
+            # Add more mappings as needed
+        }
+
+    def listener_callback(self, msg):
+        self.get_logger().info('Received command to "%s' % msg.data)
+
+        try:
+            # initial motor configs
+            # print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
+            release_servo(self.servo1)
+            release_servo(self.servo2)
+            # get and deploy next step
+            action = self.step_actions.get(msg.data)
+            if action:
+                action()
+            else:
+                self.get_logger().warn('Unknown command: %s' % msg.data)
+            
+            # publish step status. 0.0 means step sucessful, 1.0 means step error
+            msg = Float32()
+            msg.data = 0.0
+            self.publisher_.publish(msg)
+            self.get_logger().info('Publishing: "%s"' % msg.data)
+            
+        except Exception as e:
+            self.get_logger().error('Failed to move servo: "%s"' % str(e))
+
     def init_motors(self):
         self.motor_1 = self.servo_bus.get_servo(1)
         self.motor_2 = self.servo_bus.get_servo(2)
@@ -70,10 +89,11 @@ class MotorController(Node):
         # self.motor_5.move_time_write(theta5, self.time_to_move)
         sleep(2)
 
-
+    # STEP DEFINITIONS 
     def step_forward(self):
         print('stepping forward')
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,1)
+        self.move_to(theta1, theta2, theta3, theta4)
 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
         theta4 += 20
@@ -87,9 +107,33 @@ class MotorController(Node):
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
         theta4 += 0
         self.move_to(theta1, theta2, theta3, theta4)
+
+
+##############!!!MIGHT NOT WORK FROM HERE, JUST CODING THE LOGIC!!!#################
+        
+        ## Take the back step 
+        # Take the step up 
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,5)
+        self.move_to(theta1, theta2, theta3, theta4)
+
+        # Take the step forward
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,5)
+        theta4 += 20
+        # Lock the servo 
+        activate_servo(self.servo1)
+
+        # Get ready to put the step down 
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,5)
+        theta4 += 20
+        self.move_to(theta1, theta2, theta3, theta4)
+
+        # Complete the step 
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,5)
+        theta4 += 0
+        self.move_to(theta1, theta2, theta3, theta4)
         # activate_servo(self.servo2)
 
-    def turn_left(self):
+    def step_left(self):
         print('stepping left')
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
         theta4 += 50
@@ -98,26 +142,14 @@ class MotorController(Node):
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
         self.move_to(theta1, theta2, theta3, theta4)
 
-    def listener_callback(self, msg):
-        target_position = msg.data
-        self.get_logger().info('Received command to "%s' % msg.data)
+    def step_right(self):
+        pass
 
-        try:
-            # initial motor configs
-            # print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-            release_servo(self.servo1)
-            release_servo(self.servo2)
-            if msg.data == 'STEP_FORWARD':
-                self.step_forward()
-                # print('here')
-            
-            elif msg.data == 'STEP_LEFT':
-                self.turn_left()
+    def grab_up_forward(self):
+        pass
 
-            
-        except Exception as e:
-            self.get_logger().error('Failed to move servo: "%s"' % str(e))
-
+    def place_forward(self):
+        pass
 
 # servo angle of 180 is activated, 0 released
 def activate_servo(servo_id):
