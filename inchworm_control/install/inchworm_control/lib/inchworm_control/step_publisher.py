@@ -3,13 +3,9 @@ import rclpy
 import os
 from rclpy.node import Node
 from std_msgs.msg import Float32, String  # or whatever message type you need
-import ast
-
-# import sys
-# sys.path.append("~/MQP/dev_ws/src/inchworm_control/block_simulation")
-# import minecraft_sim
 
 class StepPublisher(Node):
+
     def __init__(self):
         super().__init__('step_publisher')
         self.publisher_ = self.create_publisher(String, 'motor_command', 10)
@@ -23,21 +19,27 @@ class StepPublisher(Node):
         
         self.get_logger().info('Node starting')
 
-        # get list of steps from block_simulation
-        # self.steps =  minecraft_sim.complete_steps
-        self.file_path = '~/MQP/dev_ws/src/inchworm_control/block_simulation/steps.txt'
+        # FOR ROBOT_WS:
+        self.file_path =  'src/MQP/inchworm_control/block_simulation/steps.txt'
+        # FOR DEV_WS:
+        # self.file_path = '~/MQP/dev_ws/src/inchworm_control/block_simulation/steps.txt'
         self.file_path = os.path.expanduser(self.file_path)
-        # file_path = rclpy.get_param('~file_path', '~/MQP/dev_ws/src/inchworm_control/block_simulation/steps.txt')
-
-        # Read from file
-        self.steps = read_file_callback(self)
-
+        # Read and get steps from file
+        self.steps = read_file_callback(self)    
         print('steps FROM STEP_PUBLISHER', self.steps)
-    
+        
+        msg = String()
+        step = self.steps.pop(0)[0]
+        msg.data = step
+        self.publisher_.publish(msg)
+        self.get_logger().info('Publishing in INIT: "%s"' % step)
+
+
     def listener_callback(self, msg):
         step_status = msg.data
         self.get_logger().info('Received step status %s' % step_status)
         try:
+            # successful step
             if step_status == 0.0:
                 self.get_logger().info("movement complete")
                 # steps is a list of tuples like (<step type>, holding_block)
@@ -48,12 +50,14 @@ class StepPublisher(Node):
                 msg.data = step
                 self.publisher_.publish(msg)
                 self.get_logger().info('Publishing: "%s"' % step)
+            # step error
             elif step_status == 1.0:
                 self.get_logger().info("movement error")
 
         except Exception as e:
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
     
+# reads from a file and returns result
 def read_file_callback(self):
     try:
         with open(self.file_path, 'r') as file:
@@ -70,9 +74,6 @@ def read_file_callback(self):
     except Exception as e:
         self.get_logger().error('Failed to read file: %s', str(e))
         return []
-
-
-
     
 def main(args=None):
     rclpy.init(args=args)

@@ -73,22 +73,21 @@ class MotorController(Node):
 
     def step_forward(self):
         print('stepping forward')
-        print('step 1')
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,1)
+
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
-        theta4 += 40
+        theta4 += 20
         activate_servo(self.servo1)
         self.move_to(theta1, theta2, theta3, theta4)
-
-        print("step 2")
+        
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,1)
         theta4 += 20
         self.move_to(theta1, theta2, theta3, theta4)
 
-        print("step 3")
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
-        theta4 += 20
+        theta4 += 0
         self.move_to(theta1, theta2, theta3, theta4)
-        activate_servo(self.servo2)
+        # activate_servo(self.servo2)
 
     def turn_left(self):
         print('stepping left')
@@ -105,11 +104,12 @@ class MotorController(Node):
 
         try:
             # initial motor configs
-            #print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
+            # print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
             release_servo(self.servo1)
             release_servo(self.servo2)
             if msg.data == 'STEP_FORWARD':
                 self.step_forward()
+                # print('here')
             
             elif msg.data == 'STEP_LEFT':
                 self.turn_left()
@@ -131,8 +131,6 @@ def release_servo(servo_id):
     servo_id.ChangeDutyCycle(2+(180/18))
     time.sleep(0.5)
     servo_id.ChangeDutyCycle(0)
-
-
 
 def main(args=None):
     rclpy.init(args=args)

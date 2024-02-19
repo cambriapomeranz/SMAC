@@ -2,7 +2,7 @@
 
 # since this file is sourced use either the provided AMENT_CURRENT_PREFIX
 # or fall back to the destination set at configure time
-: ${AMENT_CURRENT_PREFIX:="/home/cambria/MQP/dev_ws/src/inchworm_control/install/inchworm_control"}
+: ${AMENT_CURRENT_PREFIX:="/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control"}
 if [ ! -d "$AMENT_CURRENT_PREFIX" ]; then
   if [ -z "$COLCON_CURRENT_PREFIX" ]; then
     echo "The compile time prefix path '$AMENT_CURRENT_PREFIX' doesn't " \
