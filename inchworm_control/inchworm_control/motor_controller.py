@@ -93,7 +93,7 @@ class MotorController(Node):
     def step_forward(self):
         print('stepping forward')
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,1)
-        self.move_to(theta1, theta2, theta3, theta4)
+        # self.move_to(theta1, theta2, theta3, theta4)
 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
         theta4 += 20
@@ -107,6 +107,15 @@ class MotorController(Node):
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
         theta4 += 0
         self.move_to(theta1, theta2, theta3, theta4)
+    
+    def turn_left(motor_controller: MotorController):
+        print('stepping left')
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
+        theta4 += 50
+        motor_controller.move_to(theta1, theta2, theta3, theta4)
+
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
+        motor_controller.move_to(theta1, theta2, theta3, theta4)
 
 
 ##############!!!MIGHT NOT WORK FROM HERE, JUST CODING THE LOGIC!!!#################

@@ -1,0 +1,6 @@
+{
+  "package_name": "inchworm_control",
+  "non_idl_tuples": [
+    "/home/ubuntu/robot_ws/src/MQP/inchworm_control:inchworm_control/msg/Thruple.msg"
+  ]
+}
