@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/robot_ws/src/MQP/build/inchworm_control
 include CMakeFiles/inchworm_control.dir/progress.make
 
 CMakeFiles/inchworm_control: /home/ubuntu/robot_ws/src/MQP/inchworm_control/inchworm_control/msg/Thruple.msg
+CMakeFiles/inchworm_control: /home/ubuntu/robot_ws/src/MQP/inchworm_control/inchworm_control/msg/Tuple.msg
 CMakeFiles/inchworm_control: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 CMakeFiles/inchworm_control: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 CMakeFiles/inchworm_control: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl

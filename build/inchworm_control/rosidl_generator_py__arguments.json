@@ -3,7 +3,8 @@
   "output_dir": "/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_py/inchworm_control",
   "template_dir": "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_adapter/inchworm_control:msg/Thruple.idl"
+    "/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_adapter/inchworm_control:msg/Thruple.idl",
+    "/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_adapter/inchworm_control:msg/Tuple.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/foxy/share/std_msgs/msg/Bool.idl",
@@ -54,6 +55,7 @@
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/foxy/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
     "/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_adapter/inchworm_control/msg/Thruple.idl",
+    "/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_adapter/inchworm_control/msg/Tuple.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Bool.idl",
     "/opt/ros/foxy/share/std_msgs/msg/Byte.idl",
     "/opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl",

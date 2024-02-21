@@ -57,8 +57,10 @@ inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchwo
 inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_introspection_c.c
 inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_c.c
 inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_thruple.py
+inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_tuple.py
 inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/msg/__init__.py
 inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_thruple_s.c
+inchworm_control__py/CMakeFiles/inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_tuple_s.c
 
 
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/rosidl_generator_py/rosidl_generator_py
@@ -75,6 +77,7 @@ rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_f
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/inchworm_control/msg/Thruple.idl
+rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/inchworm_control/msg/Tuple.idl
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -119,19 +122,27 @@ rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_c
 rosidl_generator_py/inchworm_control/msg/_thruple.py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/inchworm_control/msg/_thruple.py
 
+rosidl_generator_py/inchworm_control/msg/_tuple.py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/inchworm_control/msg/_tuple.py
+
 rosidl_generator_py/inchworm_control/msg/__init__.py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/inchworm_control/msg/__init__.py
 
 rosidl_generator_py/inchworm_control/msg/_thruple_s.c: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/inchworm_control/msg/_thruple_s.c
 
+rosidl_generator_py/inchworm_control/msg/_tuple_s.c: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/inchworm_control/msg/_tuple_s.c
+
 inchworm_control__py: inchworm_control__py/CMakeFiles/inchworm_control__py
 inchworm_control__py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c
 inchworm_control__py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_introspection_c.c
 inchworm_control__py: rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_c.c
 inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_thruple.py
+inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_tuple.py
 inchworm_control__py: rosidl_generator_py/inchworm_control/msg/__init__.py
 inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_thruple_s.c
+inchworm_control__py: rosidl_generator_py/inchworm_control/msg/_tuple_s.c
 inchworm_control__py: inchworm_control__py/CMakeFiles/inchworm_control__py.dir/build.make
 
 .PHONY : inchworm_control__py

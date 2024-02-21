@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/inchworm_control/msg/__init__.py"
   "../rosidl_generator_py/inchworm_control/msg/_thruple.py"
   "../rosidl_generator_py/inchworm_control/msg/_thruple_s.c"
+  "../rosidl_generator_py/inchworm_control/msg/_tuple.py"
+  "../rosidl_generator_py/inchworm_control/msg/_tuple_s.c"
   "CMakeFiles/inchworm_control__py"
 )
 

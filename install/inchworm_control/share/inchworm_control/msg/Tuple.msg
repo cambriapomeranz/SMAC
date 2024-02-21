@@ -1,0 +1,2 @@
+string step
+bool holding_block

@@ -42,6 +42,7 @@ endif()
 # Generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
   "inchworm_control/msg/Thruple.msg"
+  "inchworm_control/msg/Tuple.msg"
   DEPENDENCIES std_msgs
 )
 

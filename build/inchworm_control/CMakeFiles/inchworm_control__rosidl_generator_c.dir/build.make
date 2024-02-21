@@ -71,6 +71,7 @@ rosidl_generator_c/inchworm_control/msg/thruple.h: /opt/ros/foxy/share/rosidl_ge
 rosidl_generator_c/inchworm_control/msg/thruple.h: /opt/ros/foxy/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/inchworm_control/msg/thruple.h: /opt/ros/foxy/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/inchworm_control/msg/thruple.h: rosidl_adapter/inchworm_control/msg/Thruple.idl
+rosidl_generator_c/inchworm_control/msg/thruple.h: rosidl_adapter/inchworm_control/msg/Tuple.idl
 rosidl_generator_c/inchworm_control/msg/thruple.h: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/inchworm_control/msg/thruple.h: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/inchworm_control/msg/thruple.h: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -115,8 +116,23 @@ rosidl_generator_c/inchworm_control/msg/detail/thruple__struct.h: rosidl_generat
 rosidl_generator_c/inchworm_control/msg/detail/thruple__type_support.h: rosidl_generator_c/inchworm_control/msg/thruple.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/detail/thruple__type_support.h
 
+rosidl_generator_c/inchworm_control/msg/tuple.h: rosidl_generator_c/inchworm_control/msg/thruple.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/tuple.h
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.h: rosidl_generator_c/inchworm_control/msg/thruple.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.h
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__struct.h: rosidl_generator_c/inchworm_control/msg/thruple.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/detail/tuple__struct.h
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__type_support.h: rosidl_generator_c/inchworm_control/msg/thruple.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/detail/tuple__type_support.h
+
 rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c: rosidl_generator_c/inchworm_control/msg/thruple.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c: rosidl_generator_c/inchworm_control/msg/thruple.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c
 
 CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.o: CMakeFiles/inchworm_control__rosidl_generator_c.dir/flags.make
 CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.o: rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c
@@ -131,14 +147,29 @@ CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c -o CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.s
 
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o: CMakeFiles/inchworm_control__rosidl_generator_c.dir/flags.make
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o: rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o   -c /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c
+
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c > CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.i
+
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c -o CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.s
+
 # Object files for target inchworm_control__rosidl_generator_c
 inchworm_control__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.o"
+"CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.o" \
+"CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o"
 
 # External object files for target inchworm_control__rosidl_generator_c
 inchworm_control__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libinchworm_control__rosidl_generator_c.so: CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.o
+libinchworm_control__rosidl_generator_c.so: CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o
 libinchworm_control__rosidl_generator_c.so: CMakeFiles/inchworm_control__rosidl_generator_c.dir/build.make
 libinchworm_control__rosidl_generator_c.so: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 libinchworm_control__rosidl_generator_c.so: /opt/ros/foxy/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -158,7 +189,7 @@ libinchworm_control__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_
 libinchworm_control__rosidl_generator_c.so: /opt/ros/foxy/lib/librcpputils.so
 libinchworm_control__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libinchworm_control__rosidl_generator_c.so: CMakeFiles/inchworm_control__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libinchworm_control__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libinchworm_control__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/inchworm_control__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -174,7 +205,12 @@ CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/i
 CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.h
 CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/thruple__struct.h
 CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/thruple__type_support.h
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/tuple.h
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.h
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/tuple__struct.h
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/tuple__type_support.h
 CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c
+CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend: rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c
 	cd /home/ubuntu/robot_ws/src/MQP/build/inchworm_control && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/robot_ws/src/MQP/inchworm_control /home/ubuntu/robot_ws/src/MQP/inchworm_control /home/ubuntu/robot_ws/src/MQP/build/inchworm_control /home/ubuntu/robot_ws/src/MQP/build/inchworm_control /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/CMakeFiles/inchworm_control__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/inchworm_control__rosidl_generator_c.dir/depend
 

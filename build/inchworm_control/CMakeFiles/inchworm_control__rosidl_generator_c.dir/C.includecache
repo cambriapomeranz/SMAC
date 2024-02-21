@@ -20,6 +20,22 @@ string.h
 rcutils/allocator.h
 /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/rcutils/allocator.h
 
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c
+inchworm_control/msg/detail/tuple__functions.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/inchworm_control/msg/detail/tuple__functions.h
+assert.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+rcutils/allocator.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/rcutils/allocator.h
+rosidl_runtime_c/string_functions.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_generator_c/inchworm_control/msg/detail/rosidl_runtime_c/string_functions.h
+
 /opt/ros/foxy/include/rcutils/allocator.h
 stdbool.h
 -
@@ -60,6 +76,28 @@ rcutils/visibility_control_macros.h
 
 /opt/ros/foxy/include/rcutils/visibility_control_macros.h
 
+/opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/opt/ros/foxy/include/rosidl_runtime_c/string.h
+stddef.h
+-
+rosidl_runtime_c/primitives_sequence.h
+/opt/ros/foxy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
+
+/opt/ros/foxy/include/rosidl_runtime_c/string_functions.h
+stddef.h
+-
+rosidl_runtime_c/string.h
+/opt/ros/foxy/include/rosidl_runtime_c/rosidl_runtime_c/string.h
+rosidl_runtime_c/visibility_control.h
+/opt/ros/foxy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h
+
 /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 
 rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.h
@@ -81,6 +119,28 @@ stddef.h
 -
 stdint.h
 -
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/inchworm_control/msg/detail/rosidl_runtime_c/visibility_control.h
+inchworm_control/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/inchworm_control/msg/detail/inchworm_control/msg/rosidl_generator_c__visibility_control.h
+inchworm_control/msg/detail/tuple__struct.h
+rosidl_generator_c/inchworm_control/msg/detail/inchworm_control/msg/detail/tuple__struct.h
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+rosidl_runtime_c/string.h
+rosidl_generator_c/inchworm_control/msg/detail/rosidl_runtime_c/string.h
 
 rosidl_generator_c/inchworm_control/msg/rosidl_generator_c__visibility_control.h
 

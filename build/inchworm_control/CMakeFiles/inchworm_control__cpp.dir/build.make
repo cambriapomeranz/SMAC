@@ -58,6 +58,11 @@ CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/deta
 CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__struct.hpp
 CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__traits.hpp
 CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__type_support.hpp
+CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/tuple.hpp
+CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__builder.hpp
+CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__struct.hpp
+CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__traits.hpp
+CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__type_support.hpp
 CMakeFiles/inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/rosidl_generator_cpp__visibility_control.hpp
 
 
@@ -81,6 +86,7 @@ rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: /opt/ros/foxy/share/rosid
 rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: /opt/ros/foxy/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: /opt/ros/foxy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: rosidl_adapter/inchworm_control/msg/Thruple.idl
+rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: rosidl_adapter/inchworm_control/msg/Tuple.idl
 rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: /opt/ros/foxy/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: /opt/ros/foxy/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/inchworm_control/msg/thruple.hpp: /opt/ros/foxy/share/std_msgs/msg/ByteMultiArray.idl
@@ -128,12 +134,32 @@ rosidl_generator_cpp/inchworm_control/msg/detail/thruple__traits.hpp: rosidl_gen
 rosidl_generator_cpp/inchworm_control/msg/detail/thruple__type_support.hpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/inchworm_control/msg/detail/thruple__type_support.hpp
 
+rosidl_generator_cpp/inchworm_control/msg/tuple.hpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/inchworm_control/msg/tuple.hpp
+
+rosidl_generator_cpp/inchworm_control/msg/detail/tuple__builder.hpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/inchworm_control/msg/detail/tuple__builder.hpp
+
+rosidl_generator_cpp/inchworm_control/msg/detail/tuple__struct.hpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/inchworm_control/msg/detail/tuple__struct.hpp
+
+rosidl_generator_cpp/inchworm_control/msg/detail/tuple__traits.hpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/inchworm_control/msg/detail/tuple__traits.hpp
+
+rosidl_generator_cpp/inchworm_control/msg/detail/tuple__type_support.hpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/inchworm_control/msg/detail/tuple__type_support.hpp
+
 inchworm_control__cpp: CMakeFiles/inchworm_control__cpp
 inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/thruple.hpp
 inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__builder.hpp
 inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__struct.hpp
 inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__traits.hpp
 inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/thruple__type_support.hpp
+inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/tuple.hpp
+inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__builder.hpp
+inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__struct.hpp
+inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__traits.hpp
+inchworm_control__cpp: rosidl_generator_cpp/inchworm_control/msg/detail/tuple__type_support.hpp
 inchworm_control__cpp: CMakeFiles/inchworm_control__cpp.dir/build.make
 
 .PHONY : inchworm_control__cpp

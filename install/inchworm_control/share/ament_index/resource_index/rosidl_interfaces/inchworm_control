@@ -1,2 +1,4 @@
 msg/Thruple.idl
 msg/Thruple.msg
+msg/Tuple.idl
+msg/Tuple.msg

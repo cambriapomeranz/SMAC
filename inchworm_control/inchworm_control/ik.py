@@ -2,12 +2,17 @@ import math
 import random
 
 def inverseKinematicsMQP(Px, Py, Pz, which_leg):
+    # These calculations are in inches 
     L_base = 3.125  # base to joint 1
     L1 = 1          # Joint 1 to Joint 2
     L2 = 6.625      # Joint 2 to Joint 3
     L3 = 6.625      # Joint 3 to Joint 4
     L4 = 1          # Joint 4 to Joint 5
     L_endEffector = 3.125  # Joint 5 to EE
+
+
+
+
 
     if which_leg == 1: 
 
@@ -20,7 +25,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
 
         # Calculate the pose in the XZ-plane
         Wx = math.sqrt(Px**2 + Py**2)
-        Wz = Pz_adjusted
+        Wz = Pz_adjusted 
 
         # Joint 2 to the center of the wrist 
         D = math.sqrt(Wx**2 + Wz**2)
@@ -53,7 +58,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         # read motor positions and fill our accordingly
 
         #offset
-        theta1 += 139.68
+        theta1 += 138.48
         theta2 -= 76.8
         theta2 *= -1
         theta3 *= -1
@@ -74,7 +79,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
 
         # Calculate the pose in the XZ-plane
         Wx = math.sqrt(Px**2 + Py**2)
-        Wz = Pz_adjusted
+        Wz = Pz_adjusted 
 
         # Joint 2 to the center of the wrist 
         D = math.sqrt(Wx**2 + Wz**2)
@@ -115,18 +120,3 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
    
     else:
       ValueError('error: please choose either leg 5 or leg 1')
-
-# Generate random values for Px, Py, Pz
-Px = 6
-Py = 3
-Pz = 1
-
-# Call the function with random values
-try:
-    theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(Px, Py, Pz,5)
-    result = (theta1, theta2, theta3, theta4, theta5)
-    print(result)
-except ValueError as e:
-    result = str(e)
-
-result

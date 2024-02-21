@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from inchworm_control/inchworm_control/msg/Tuple.msg
+// generated code does not contain a copyright notice
+
+
+module inchworm_control {
+  module msg {
+    struct Tuple {
+      string step;
+
+      boolean holding_block;
+    };
+  };
+};

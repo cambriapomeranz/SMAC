@@ -26,11 +26,45 @@ rosidl_typesupport_c/visibility_control.h
 rosidl_typesupport_interface/macros.h
 /home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_interface/macros.h
 
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/tuple__type_support.cpp
+cstddef
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/cstddef
+rosidl_runtime_c/message_type_support_struct.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_runtime_c/message_type_support_struct.h
+inchworm_control/msg/rosidl_typesupport_c__visibility_control.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/inchworm_control/msg/rosidl_typesupport_c__visibility_control.h
+inchworm_control/msg/detail/tuple__struct.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/inchworm_control/msg/detail/tuple__struct.h
+rosidl_typesupport_c/identifier.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_c/identifier.h
+rosidl_typesupport_c/message_type_support_dispatch.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_c/message_type_support_dispatch.h
+rosidl_typesupport_c/type_support_map.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_c/type_support_map.h
+rosidl_typesupport_c/visibility_control.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_c/visibility_control.h
+rosidl_typesupport_interface/macros.h
+/home/ubuntu/robot_ws/src/MQP/build/inchworm_control/rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_interface/macros.h
+
 /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
 rosidl_runtime_c/visibility_control.h
 /opt/ros/foxy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h
 rosidl_typesupport_interface/macros.h
 /opt/ros/foxy/include/rosidl_runtime_c/rosidl_typesupport_interface/macros.h
+
+/opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/opt/ros/foxy/include/rosidl_runtime_c/string.h
+stddef.h
+-
+rosidl_runtime_c/primitives_sequence.h
+/opt/ros/foxy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h
 
 /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
 
@@ -59,6 +93,16 @@ stddef.h
 -
 stdint.h
 -
+
+rosidl_generator_c/inchworm_control/msg/detail/tuple__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+rosidl_runtime_c/string.h
+rosidl_generator_c/inchworm_control/msg/detail/rosidl_runtime_c/string.h
 
 rosidl_typesupport_c/inchworm_control/msg/rosidl_typesupport_c__visibility_control.h
 
