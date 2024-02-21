@@ -52,12 +52,15 @@ class MotorController(Node):
 
         try:
             # initial motor configs
+            # print("initial motor configs")
             # print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
             release_servo(self.servo1)
             release_servo(self.servo2)
+
             # get and deploy next step
             action = self.step_actions.get(msg.data)
             if action:
+                print(msg.data)
                 action()
             else:
                 self.get_logger().warn('Unknown command: %s' % msg.data)
@@ -90,57 +93,57 @@ class MotorController(Node):
         sleep(2)
 
     # STEP DEFINITIONS 
+
     def step_forward(self):
         print('stepping forward')
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,1)
+        # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,1)
         # self.move_to(theta1, theta2, theta3, theta4)
 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
+        ##move first 
+        # move up
+        # this first part currently does not act well because the servo does not fully actuate and the leg gets caught on the other leg
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,4,1)
         theta4 += 20
         activate_servo(self.servo1)
         self.move_to(theta1, theta2, theta3, theta4)
         
+        # move forward
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,1)
         theta4 += 20
         self.move_to(theta1, theta2, theta3, theta4)
 
+        # move down
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
         theta4 += 0
         self.move_to(theta1, theta2, theta3, theta4)
-    
-    def turn_left(motor_controller: MotorController):
-        print('stepping left')
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
-        theta4 += 50
-        motor_controller.move_to(theta1, theta2, theta3, theta4)
-
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
-        motor_controller.move_to(theta1, theta2, theta3, theta4)
-
-
-##############!!!MIGHT NOT WORK FROM HERE, JUST CODING THE LOGIC!!!#################
-        
-        ## Take the back step 
+        activate_servo(self.servo2)
+      
+        ## following leg
         # Take the step up 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0,0,2,5)
+        release_servo(self.servo1)
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6.2,0,4,5)
+        theta2 -= 30
         self.move_to(theta1, theta2, theta3, theta4)
 
         # Take the step forward
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,5)
-        theta4 += 20
-        # Lock the servo 
-        activate_servo(self.servo1)
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.6,0,2,5)
+        theta2 -= 20
+        self.move_to(theta1, theta2, theta3, theta4)
 
         # Get ready to put the step down 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,5)
-        theta4 += 20
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.6,0,0,5)
+        self.move_to(theta1, theta2, theta3, theta4)
+        activate_servo(self.servo1)
+
+    def turn_left(self):
+        print('stepping left')
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
+        theta4 += 50
         self.move_to(theta1, theta2, theta3, theta4)
 
-        # Complete the step 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,5)
-        theta4 += 0
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
         self.move_to(theta1, theta2, theta3, theta4)
-        # activate_servo(self.servo2)
+
 
     def step_left(self):
         print('stepping left')
@@ -163,12 +166,12 @@ class MotorController(Node):
 # servo angle of 180 is activated, 0 released
 def activate_servo(servo_id):
     servo_id.ChangeDutyCycle(2+(0/18))
-    print("servo activated")
+    # print("servo activated")
     time.sleep(0.5)
     servo_id.ChangeDutyCycle(0)
 
 def release_servo(servo_id):
-    print('Releasing')
+    # print('Releasing')
     servo_id.ChangeDutyCycle(2+(180/18))
     time.sleep(0.5)
     servo_id.ChangeDutyCycle(0)
@@ -179,6 +182,7 @@ def main(args=None):
     rclpy.spin(motor_controller)
     motor_controller.destroy_node()
     rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
