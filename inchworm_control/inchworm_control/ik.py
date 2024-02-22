@@ -49,6 +49,8 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta4 = math.degrees(-theta4)
         theta5 = math.degrees(theta5)
 
+        print(theta5)
+
         # adjusted for offset
         # read motor positions and fill our accordingly
 
@@ -59,7 +61,9 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta3 *= -1
         theta3 += 24.0
         theta4 += 13.92
+        theta5 -= 30.71
         
+        print(theta5)
 
         return theta1, theta2, theta3, theta4, theta5
     
@@ -110,23 +114,11 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta3 += 25.92
         theta4 += 10.08
         theta2 *= -1
+        theta5 -= 29.28
+        
 
         return theta1, theta2, theta3, theta4, theta5
    
     else:
       ValueError('error: please choose either leg 5 or leg 1')
 
-# Generate random values for Px, Py, Pz
-Px = 6
-Py = 3
-Pz = 1
-
-# Call the function with random values
-try:
-    theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(Px, Py, Pz,5)
-    result = (theta1, theta2, theta3, theta4, theta5)
-    print(result)
-except ValueError as e:
-    result = str(e)
-
-result
