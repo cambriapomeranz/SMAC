@@ -63,7 +63,7 @@ class MotorController(Node):
                 # print(msg.data)
                 action()
                 # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,0,1)
-                # theta5 = 90
+                # theta5 = 180
                 # print("")
                 # print("theta values", theta1, theta2, theta3, theta4, theta5)
                 # self.move_to(theta1, theta2, theta3, theta4, theta5)
@@ -156,9 +156,16 @@ class MotorController(Node):
         sleep(1)
 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
-        # theta5 += 40
+        theta5 += 90
         print("theta values", theta1, theta2, theta3, theta4, theta5)
         self.move_to(theta1, theta2, theta3, theta4,theta5)
+        release_servo(self.servo2)
+
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,0,1)
+        self.move_to(theta1, theta2, theta3, theta4,theta5)
+        activate_servo(self.servo2)
+
+
 
     def step_right(self):
         # still needs testing
