@@ -62,6 +62,13 @@ class MotorController(Node):
             if action:
                 # print(msg.data)
                 action()
+                # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,0,1)
+                # theta5 = 90
+                # print("")
+                # print("theta values", theta1, theta2, theta3, theta4, theta5)
+                # self.move_to(theta1, theta2, theta3, theta4, theta5)
+                # self.motor_5.move_time_write(theta5, self.time_to_move)
+
             else:
                 self.get_logger().warn('Unknown command: %s' % msg.data)
             
@@ -142,14 +149,15 @@ class MotorController(Node):
         release_servo(self.servo2)
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.3,0,3,1)
         theta4 += 30
-        print
+        # theta5 += 40
         print("theta values", theta1, theta2, theta3, theta4, theta5)
         self.move_to(theta1, theta2, theta3, theta4, theta5)
 
         sleep(1)
 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
-        theta5 += 40
+        # theta5 += 40
+        print("theta values", theta1, theta2, theta3, theta4, theta5)
         self.move_to(theta1, theta2, theta3, theta4,theta5)
 
     def step_right(self):
