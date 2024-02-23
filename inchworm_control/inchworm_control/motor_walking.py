@@ -17,7 +17,7 @@ class MotorWalking(Node):
         # Home motors to step 0 position
         if self.step == -1:  
             msg = String()
-            msg.data = "STEP_FORWARD"
+            msg.data = "STEP_LEFT"
             # msg.data = "step_left"
             self.publisher_.publish(msg)
             self.get_logger().info('Publishing: "%s"' % msg.data)

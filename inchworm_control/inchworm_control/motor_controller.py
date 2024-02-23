@@ -91,13 +91,13 @@ class MotorController(Node):
 
         self.time_to_move = 2
 
-    def move_to(self, theta1, theta2, theta3, theta4):
+    def move_to(self, theta1, theta2, theta3, theta4, theta5):
         # print(theta1, theta2, theta3, theta4, theta5)
         self.motor_1.move_time_write(theta1, self.time_to_move)
         self.motor_2.move_time_write(theta2, self.time_to_move)
         self.motor_3.move_time_write(theta3, self.time_to_move)
         self.motor_4.move_time_write(theta4, self.time_to_move)
-        # self.motor_5.move_time_write(theta5, self.time_to_move)
+        self.motor_5.move_time_write(theta5, self.time_to_move)
         sleep(2)
 
     # STEP DEFINITIONS 
@@ -180,13 +180,22 @@ class MotorController(Node):
         activate_servo(self.servo1)
 
     def step_left(self):
+        # still needs testing
         print('stepping left')
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
-        theta4 += 50
-        self.move_to(theta1, theta2, theta3, theta4)
+        activate_servo(self.servo1)
+        release_servo(self.servo2)
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.3,0,3,1)
+        theta4 += 30
+        # theta5 += 40
+        print("theta values", theta1, theta2, theta3, theta4, theta5)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
+
+        sleep(1)
 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,5,2,1)
-        self.move_to(theta1, theta2, theta3, theta4)
+        # theta5 += 40
+        print("theta values", theta1, theta2, theta3, theta4, theta5)
+        self.move_to(theta1, theta2, theta3, theta4,theta5)
 
     def step_right(self):
         pass
