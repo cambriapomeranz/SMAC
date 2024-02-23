@@ -3,13 +3,12 @@ import rclpy
 import os
 from rclpy.node import Node
 from std_msgs.msg import Float32, String  # or whatever message type you need
-from inchworm_control.msg import Tuple 
 
 class StepPublisher(Node):
 
     def __init__(self):
         super().__init__('step_publisher')
-        self.publisher_ = self.create_publisher(Tuple, 'motor_command', 10)
+        self.publisher_ = self.create_publisher(String, 'motor_command', 10)
         # subscription to receive when a step is completed
         self.subscription = self.create_subscription(
             Float32,
@@ -21,7 +20,7 @@ class StepPublisher(Node):
         self.get_logger().info('Node starting')
 
         # FOR ROBOT_WS:
-        self.file_path = '~/robot_ws/src/MQP/inchworm_control/block_simulation/steps.txt'
+        self.file_path = 'src/MQP/inchworm_control/block_simulation/steps.txt'
         # FOR DEV_WS:
         # self.file_path = '~/MQP/dev_ws/src/inchworm_control/block_simulation/steps.txt'
         self.file_path = os.path.expanduser(self.file_path)
@@ -29,12 +28,15 @@ class StepPublisher(Node):
         self.steps = read_file_callback(self)    
         print('steps FROM STEP_PUBLISHER', self.steps)
         
-        msg = Tuple()
-        step = self.steps.pop(0)
-        msg.step = step[0]
-        msg.holding_block = step[1]
+        msg = String()
+        step = self.steps.pop(0)[0]
+        holding_block = self.steps.pop(0)[1]
+        if holding_block:
+            step += "_BLOCK"
+        msg.data = step
         self.publisher_.publish(msg)
-        self.get_logger().info(f'Publishing in INIT: {step}')
+        self.get_logger().info('Publishing in INIT: "%s"' % step)
+
 
     def listener_callback(self, msg):
         step_status = msg.data
@@ -45,12 +47,15 @@ class StepPublisher(Node):
                 self.get_logger().info("movement complete")
                 # steps is a list of tuples like (<step type>, holding_block)
                 # if holding block is true, it is holding a block for this step
-                msg = Tuple()
-                step = self.steps.pop(0)
-                msg.step = step[0]
-                msg.holding_block = step[1]
+                #TODO: have it publish entire tuple
+                msg = String()
+                step = self.steps.pop(0)[0]
+                holding_block = self.steps.pop(0)[1]
+                if holding_block:
+                    step += "_BLOCK"
+                msg.data = step
                 self.publisher_.publish(msg)
-                self.get_logger().info(f'Publishing: {step}')
+                self.get_logger().info('Publishing: "%s"' % step)
             # step error
             elif step_status == 1.0:
                 self.get_logger().info("movement error")
@@ -67,10 +72,13 @@ def read_file_callback(self):
             for line in file_content:
                 # Parse the string representation of the tuple
                 step_tuple = eval(line.strip())  # Convert string to tuple
+                # Convert the boolean value from string to bool
+                # Ensure proper boolean conversion regardless of case
+                step_tuple = (step_tuple[0], str(step_tuple[1]).strip().lower() == 'true')
                 steps.append(step_tuple)
             return steps
     except Exception as e:
-        self.get_logger().error('Failed to read file: "%s"' % str(e))
+        self.get_logger().error('Failed to read file: %s', str(e))
         return []
     
 def main(args=None):
