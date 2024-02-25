@@ -59,7 +59,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
 
         #offset
         theta1 += 138.48
-        theta2 -= 76.8
+        theta2 -= 106.8
         theta2 *= -1
         theta3 *= -1
         theta3 += 24.0
@@ -111,7 +111,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         # adjusted for offset
         theta3 *= -1
         theta1 += 138.48
-        theta2 -= 83.28
+        theta2 -= 113.28 # added -30
         theta3 += 25.92
         theta4 += 10.08
         theta2 *= -1

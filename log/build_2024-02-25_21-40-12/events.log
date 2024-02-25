@@ -1,0 +1,252 @@
+[0.000000] (-) TimerEvent: {}
+[0.001309] (inchworm_control) JobQueued: {'identifier': 'inchworm_control', 'dependencies': OrderedDict()}
+[0.002125] (inchworm_control) JobStarted: {'identifier': 'inchworm_control'}
+[0.099341] (-) TimerEvent: {}
+[0.200906] (-) TimerEvent: {}
+[0.302329] (-) TimerEvent: {}
+[0.404627] (-) TimerEvent: {}
+[0.506714] (-) TimerEvent: {}
+[0.608087] (-) TimerEvent: {}
+[0.708817] (-) TimerEvent: {}
+[0.810956] (-) TimerEvent: {}
+[0.912515] (-) TimerEvent: {}
+[0.933531] (inchworm_control) JobProgress: {'identifier': 'inchworm_control', 'progress': 'cmake'}
+[0.936765] (inchworm_control) JobProgress: {'identifier': 'inchworm_control', 'progress': 'build'}
+[0.940254] (inchworm_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control', '--', '-j4', '-l4'], 'cwd': '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.106 36806 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib:/home/ubuntu/robot_ws/install/inchworm_control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-f51dafcf-6f94-4640-8f32-0f2fce245c96.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/ubuntu/robot_ws/src/MQP/install:/home/ubuntu/robot_ws/install:/home/ubuntu/robot_ws/src/MQP/inchworm_control/inchworm_control/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-74e1a8176d.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/ubuntu/robot_ws/src/MQP/install/motor_control:/home/ubuntu/robot_ws/src/MQP/install/inchworm_control:/home/ubuntu/robot_ws/install/motor_control:/home/ubuntu/robot_ws/install/inchworm_control:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.106 36806 192.168.1.112 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/robot_ws/src/MQP/install/motor_control/lib/python3.8/site-packages:/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages:/home/ubuntu/robot_ws/install/motor_control/lib/python3.8/site-packages:/home/ubuntu/robot_ws/install/inchworm_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control:/home/ubuntu/robot_ws/install/inchworm_control:/home/ubuntu/robot_ws/src/MQP/install/motor_control:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy')]), 'shell': False}
+[1.012813] (-) TimerEvent: {}
+[1.113963] (-) TimerEvent: {}
+[1.178231] (inchworm_control) StdoutLine: {'line': b'[  2%] Built target inchworm_control__cpp\n'}
+[1.194240] (inchworm_control) StdoutLine: {'line': b'[ 12%] Built target inchworm_control__rosidl_generator_c\n'}
+[1.214211] (-) TimerEvent: {}
+[1.297200] (inchworm_control) StdoutLine: {'line': b'[ 23%] Built target inchworm_control__rosidl_typesupport_cpp\n'}
+[1.312829] (inchworm_control) StdoutLine: {'line': b'[ 35%] Built target inchworm_control__rosidl_typesupport_introspection_cpp\n'}
+[1.314416] (-) TimerEvent: {}
+[1.317144] (inchworm_control) StdoutLine: {'line': b'[ 43%] Built target inchworm_control__rosidl_typesupport_introspection_c\n'}
+[1.329927] (inchworm_control) StdoutLine: {'line': b'[ 53%] Built target inchworm_control__rosidl_typesupport_fastrtps_cpp\n'}
+[1.402432] (inchworm_control) StdoutLine: {'line': b'[ 64%] Built target inchworm_control__rosidl_typesupport_c\n'}
+[1.414579] (-) TimerEvent: {}
+[1.463349] (inchworm_control) StdoutLine: {'line': b'[ 74%] Built target inchworm_control__rosidl_typesupport_fastrtps_c\n'}
+[1.514830] (-) TimerEvent: {}
+[1.552069] (inchworm_control) StdoutLine: {'line': b'[ 74%] Built target inchworm_control\n'}
+[1.615003] (-) TimerEvent: {}
+[1.645097] (inchworm_control) StdoutLine: {'line': b'[ 76%] Built target inchworm_control__py\n'}
+[1.715147] (-) TimerEvent: {}
+[1.780606] (inchworm_control) StdoutLine: {'line': b'[ 84%] Built target inchworm_control__python\n'}
+[1.815444] (-) TimerEvent: {}
+[1.916520] (inchworm_control) StdoutLine: {'line': b'[ 89%] Built target inchworm_control__rosidl_typesupport_c__pyext\n'}
+[1.917835] (-) TimerEvent: {}
+[1.921915] (inchworm_control) StdoutLine: {'line': b'[ 94%] Built target inchworm_control__rosidl_typesupport_introspection_c__pyext\n'}
+[1.926326] (inchworm_control) StdoutLine: {'line': b'[100%] Built target inchworm_control__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.971822] (inchworm_control) CommandEnded: {'returncode': 0}
+[2.018105] (-) TimerEvent: {}
+[2.119070] (-) TimerEvent: {}
+[2.219884] (-) TimerEvent: {}
+[2.320829] (-) TimerEvent: {}
+[2.409891] (inchworm_control) JobProgress: {'identifier': 'inchworm_control', 'progress': 'install'}
+[2.421498] (-) TimerEvent: {}
+[2.454111] (inchworm_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control'], 'cwd': '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'ubuntu'), ('SSH_CLIENT', '192.168.1.106 36806 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib:/home/ubuntu/robot_ws/install/inchworm_control/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('BROWSER', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/ubuntu'), ('TERM_PROGRAM_VERSION', '1.86.2'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-f51dafcf-6f94-4640-8f32-0f2fce245c96.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/node'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/ubuntu/robot_ws/src/MQP/install:/home/ubuntu/robot_ws/install:/home/ubuntu/robot_ws/src/MQP/inchworm_control/inchworm_control/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'ubuntu'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '6'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/ubuntu/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/remote-cli:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-74e1a8176d.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/home/ubuntu/robot_ws/src/MQP/install/motor_control:/home/ubuntu/robot_ws/src/MQP/install/inchworm_control:/home/ubuntu/robot_ws/install/motor_control:/home/ubuntu/robot_ws/install/inchworm_control:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.1.106 36806 192.168.1.112 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/ubuntu/robot_ws/src/MQP/install/motor_control/lib/python3.8/site-packages:/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages:/home/ubuntu/robot_ws/install/motor_control/lib/python3.8/site-packages:/home/ubuntu/robot_ws/install/inchworm_control/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control:/home/ubuntu/robot_ws/install/inchworm_control:/home/ubuntu/robot_ws/src/MQP/install/motor_control:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy')]), 'shell': False}
+[2.497552] (inchworm_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.498419] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/ament_index/resource_index/rosidl_interfaces/inchworm_control\n'}
+[2.499052] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control\n'}
+[2.499530] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg\n'}
+[2.500041] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[2.500511] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__functions.h\n'}
+[2.501026] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.h\n'}
+[2.501486] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.h\n'}
+[2.501976] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.h\n'}
+[2.502442] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__struct.h\n'}
+[2.502973] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__functions.c\n'}
+[2.503346] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.c\n'}
+[2.503698] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.h\n'}
+[2.504169] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.504500] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/tuple.h\n'}
+[2.504844] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/thruple.h\n'}
+[2.505331] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/library_path.sh\n'}
+[2.505790] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/library_path.dsv\n'}
+[2.506227] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_generator_c.so\n'}
+[2.506716] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control\n'}
+[2.507223] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg\n'}
+[2.507547] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.507957] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[2.508440] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_fastrtps_c.h\n'}
+[2.508758] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_c.h\n'}
+[2.509096] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_c.so\n'}
+[2.509540] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control\n'}
+[2.510015] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg\n'}
+[2.510579] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.511059] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[2.511501] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/dds_fastrtps\n'}
+[2.511858] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.512179] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.512679] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.513843] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control\n'}
+[2.514463] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg\n'}
+[2.515537] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[2.516085] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_c.h\n'}
+[2.516488] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.c\n'}
+[2.516821] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.c\n'}
+[2.517164] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_introspection_c.h\n'}
+[2.517624] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.517962] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_c.so\n'}
+[2.519525] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_c.so\n'}
+[2.520649] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control\n'}
+[2.521160] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg\n'}
+[2.521565] (-) TimerEvent: {}
+[2.522207] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[2.522895] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__builder.hpp\n'}
+[2.523422] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.hpp\n'}
+[2.523926] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.hpp\n'}
+[2.524458] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__traits.hpp\n'}
+[2.524901] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.hpp\n'}
+[2.525352] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__builder.hpp\n'}
+[2.525811] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__struct.hpp\n'}
+[2.526279] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__traits.hpp\n'}
+[2.526677] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.527074] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/tuple.hpp\n'}
+[2.527430] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/thruple.hpp\n'}
+[2.527981] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control\n'}
+[2.528683] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg\n'}
+[2.529075] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail\n'}
+[2.529418] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.530064] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.530638] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.cpp\n'}
+[2.531533] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.cpp\n'}
+[2.532013] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_cpp.so\n'}
+[2.532473] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_cpp.so\n'}
+[2.532890] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/pythonpath.sh\n'}
+[2.533312] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/pythonpath.dsv\n'}
+[2.533825] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py\n'}
+[2.621748] (-) TimerEvent: {}
+[2.663776] (inchworm_control) StdoutLine: {'line': b"Compiling '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...\n"}
+[2.684851] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg\n'}
+[2.685600] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_tuple_s.c\n'}
+[2.686246] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_tuple.py\n'}
+[2.686659] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple_s.c\n'}
+[2.687088] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple.py\n'}
+[2.687441] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/__init__.py\n'}
+[2.687970] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[2.690629] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[2.693409] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[2.695815] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/libinchworm_control__python.so\n'}
+[2.697085] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/msg/Thruple.idl\n'}
+[2.697611] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/msg/Tuple.idl\n'}
+[2.699734] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/msg/Thruple.msg\n'}
+[2.701621] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/msg/Tuple.msg\n'}
+[2.702376] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control\n'}
+[2.703080] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_walking.py\n'}
+[2.704256] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_controller.py\n'}
+[2.705112] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg\n'}
+[2.705568] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/Thruple.msg\n'}
+[2.706055] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/Tuple.msg\n'}
+[2.706879] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_subscriber.py\n'}
+[2.707478] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts\n'}
+[2.707992] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts/movement_command.py\n'}
+[2.708508] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log\n'}
+[2.709021] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest\n'}
+[2.709471] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00\n'}
+[2.709907] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/logger_all.log\n'}
+[2.710283] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/events.log\n'}
+[2.710714] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/COLCON_IGNORE\n'}
+[2.711401] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest_build\n'}
+[2.711810] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49\n'}
+[2.712127] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49/logger_all.log\n'}
+[2.712439] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49/events.log\n'}
+[2.712874] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/ik.py\n'}
+[2.713345] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install\n'}
+[2.713731] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.bash\n'}
+[2.714140] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.zsh\n'}
+[2.714499] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.sh\n'}
+[2.714909] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_ps1.py\n'}
+[2.715307] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/COLCON_IGNORE\n'}
+[2.715674] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/.colcon_install_layout\n'}
+[2.716136] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.bash\n'}
+[2.716952] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.sh\n'}
+[2.717696] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.zsh\n'}
+[2.718882] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.ps1\n'}
+[2.719510] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_sh.py\n'}
+[2.720170] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.ps1\n'}
+[2.720931] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build\n'}
+[2.721617] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build/COLCON_IGNORE\n'}
+[2.722226] (-) TimerEvent: {}
+[2.723717] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build/.built_by\n'}
+[2.724558] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus.py\n'}
+[2.725318] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_publisher.py\n'}
+[2.726077] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/step_publisher.py\n'}
+[2.726849] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py\n'}
+[2.822410] (-) TimerEvent: {}
+[2.866804] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control'...\n"}
+[2.868584] (inchworm_control) StdoutLine: {'line': b"Compiling '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...\n"}
+[2.869745] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build'...\n"}
+[2.871910] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install'...\n"}
+[2.873244] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus'...\n"}
+[2.874340] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log'...\n"}
+[2.876288] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00'...\n"}
+[2.877825] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49'...\n"}
+[2.879018] (inchworm_control) StdoutLine: {'line': b"Compiling '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_controller.py'...\n"}
+[2.880021] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg'...\n"}
+[2.880962] (inchworm_control) StdoutLine: {'line': b"Listing '/home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts'...\n"}
+[2.890388] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/inchworm_control/motor_controller.py\n'}
+[2.891414] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/inchworm_control/motor_walking.py\n'}
+[2.891996] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/inchworm_control/motor_publisher.py\n'}
+[2.892495] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/lib/inchworm_control/step_publisher.py\n'}
+[2.893013] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/urdf\n'}
+[2.893739] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/urdf/one_inchworm.urdf\n'}
+[2.894377] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/urdf/r2d2.rviz\n'}
+[2.894950] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/ament_index/resource_index/package_run_dependencies/inchworm_control\n'}
+[2.895547] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/ament_index/resource_index/parent_prefix_path/inchworm_control\n'}
+[2.896090] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.sh\n'}
+[2.896611] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.dsv\n'}
+[2.897182] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/path.sh\n'}
+[2.897767] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/environment/path.dsv\n'}
+[2.898274] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/local_setup.bash\n'}
+[2.898712] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/local_setup.sh\n'}
+[2.899214] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/local_setup.zsh\n'}
+[2.899734] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/local_setup.dsv\n'}
+[2.900194] (inchworm_control) StdoutLine: {'line': b'-- Installing: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/package.dsv\n'}
+[2.900660] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/ament_index/resource_index/packages/inchworm_control\n'}
+[2.901197] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport.cmake\n'}
+[2.901786] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.902472] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.903145] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.909188] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport.cmake\n'}
+[2.909853] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.910985] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cppExport.cmake\n'}
+[2.911992] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.912550] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.913447] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport.cmake\n'}
+[2.913953] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.914474] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake-extras.cmake\n'}
+[2.915033] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.915535] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.916001] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.916476] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.916985] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.917456] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.917954] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig.cmake\n'}
+[2.918434] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig-version.cmake\n'}
+[2.918894] (inchworm_control) StdoutLine: {'line': b'-- Up-to-date: /home/ubuntu/robot_ws/src/MQP/install/inchworm_control/share/inchworm_control/package.xml\n'}
+[2.922613] (-) TimerEvent: {}
+[2.924995] (inchworm_control) CommandEnded: {'returncode': 0}
+[3.022800] (-) TimerEvent: {}
+[3.124541] (-) TimerEvent: {}
+[3.226307] (-) TimerEvent: {}
+[3.327834] (-) TimerEvent: {}
+[3.429983] (-) TimerEvent: {}
+[3.530940] (-) TimerEvent: {}
+[3.632464] (-) TimerEvent: {}
+[3.733424] (-) TimerEvent: {}
+[3.834652] (-) TimerEvent: {}
+[3.935671] (-) TimerEvent: {}
+[4.036544] (-) TimerEvent: {}
+[4.137377] (-) TimerEvent: {}
+[4.238095] (-) TimerEvent: {}
+[4.339885] (-) TimerEvent: {}
+[4.440549] (-) TimerEvent: {}
+[4.542311] (-) TimerEvent: {}
+[4.642988] (-) TimerEvent: {}
+[4.743957] (-) TimerEvent: {}
+[4.846089] (-) TimerEvent: {}
+[4.948012] (-) TimerEvent: {}
+[5.049728] (-) TimerEvent: {}
+[5.139537] (inchworm_control) JobEnded: {'identifier': 'inchworm_control', 'rc': 0}
+[5.142283] (-) EventReactorShutdown: {}

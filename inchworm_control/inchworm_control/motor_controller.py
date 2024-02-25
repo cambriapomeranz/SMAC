@@ -46,8 +46,8 @@ class MotorController(Node):
         # MOTOR CANNOT GO NEGATIVE 
         # 
         print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-        release_servo(self.servo1)
-        release_servo(self.servo2) 
+        # release_servo(self.servo1)
+        # release_servo(self.servo2) 
 
         self.step_actions = {
             'STEP_FORWARD': self.step_forward_block,
@@ -69,22 +69,27 @@ class MotorController(Node):
         try:
             # initial motor configs
             print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-            release_servo(self.servo1)
-            release_servo(self.servo2)
+            self.step_forward()
+            self.step_left()
+            self.step_left()
+            self.step_forward()
+            self.step_left()
+            self.step_left()
+
             # get and deploy next step
-            action = self.step_actions.get(msg.data)
-            # action = self.step_actions.get(step)
+            # action = self.step_actions.get(msg.data)
+            # # action = self.step_actions.get(step)
             
-            if action:
-                action()
-            else:
-                self.get_logger().warn('Unknown command: %s' % msg.data)
+            # if action:
+            #     action()
+            # else:
+            #     self.get_logger().warn('Unknown command: %s' % msg.data)
             
-            # publish step status. 0.0 means step sucessful, 1.0 means step error
-            msg = Float32()
-            msg.data = 0.0
-            self.publisher_.publish(msg)
-            self.get_logger().info('Publishing: "%s"' % msg.data)
+            # # publish step status. 0.0 means step sucessful, 1.0 means step error
+            # msg = Float32()
+            # msg.data = 0.0
+            # self.publisher_.publish(msg)
+            # self.get_logger().info('Publishing: "%s"' % msg.data)
             
         except Exception as e:
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
@@ -96,37 +101,41 @@ class MotorController(Node):
         self.motor_4 = self.servo_bus.get_servo(4)
         self.motor_5 = self.servo_bus.get_servo(5)
 
-        self.time_to_move = 3
+        self.time_to_move = 2
 
     def move_to(self, theta1, theta2, theta3, theta4, theta5):
         # print(theta1, theta2, theta3, theta4, theta5)
-        self.motor_1.move_time_write(theta1, self.time_to_move)
+        # self.motor_1.move_time_write(theta1, self.time_to_move)
         self.motor_2.move_time_write(theta2, self.time_to_move)
         self.motor_3.move_time_write(theta3, self.time_to_move)
         self.motor_4.move_time_write(theta4, self.time_to_move)
-        self.motor_5.move_time_write(theta5, self.time_to_move)
-        sleep(3)
+        # self.motor_5.move_time_write(theta5, self.time_to_move)
+        sleep(2)
 
     # STEP DEFINITIONS 
     def step_forward(self):
         print('stepping forward')
+        release_servo(self.servo2)
         ##move first 
         # move up
         # this first part currently does not act well because the servo does not fully actuate and the leg gets caught on the other leg
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,4,1)
+        print("theta2: ", theta2)
         theta4 += 20
         activate_servo(self.servo1)
-        self.move_to(theta1, theta2, theta3, theta4)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
         
         # move forward
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,3,1)
+        print("theta2: ", theta2)
         theta4 += 20
-        self.move_to(theta1, theta2, theta3, theta4)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
 
         # move down
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,0,1)
+        print("theta2: ", theta2)
         theta4 += 0
-        self.move_to(theta1, theta2, theta3, theta4)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
         activate_servo(self.servo2)
       
         ## following leg
@@ -134,59 +143,72 @@ class MotorController(Node):
         release_servo(self.servo1)
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6.2,0,4,5)
         theta2 -= 30
-        self.move_to(theta1, theta2, theta3, theta4)
+        print("theta2: ", theta2)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
 
         # Take the step forward
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.6,0,2,5)
         theta2 -= 20
-        self.move_to(theta1, theta2, theta3, theta4)
+        print("theta2: ", theta2)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
 
         # Get ready to put the step down 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.6,0,0,5)
-        self.move_to(theta1, theta2, theta3, theta4)
+        print("theta2: ", theta2)
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
         activate_servo(self.servo1)
 
     
     def step_left(self):
         # still needs testing
         print('stepping left')
-        activate_servo(self.servo1)
         release_servo(self.servo2)
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,5,1)
-        theta2 -= 35
-        theta4 += 35
+        activate_servo(self.servo1)
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,1)
+        theta4 += 20
         # theta5 += 40
         print("theta values", theta1, theta2, theta3, theta4, theta5)
         self.move_to(theta1, theta2, theta3, theta4, theta5)
 
-        sleep(2)
 
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,3,3,1)
-        theta2 -= 25
         theta3 -= 10
         print("theta values", theta1, theta2, theta3, theta4, theta5)
         self.move_to(theta1, theta2, theta3, theta4,theta5)
         release_servo(self.servo2)
 
-        self.move_to(theta1, theta2, theta3, theta4, (theta5-60))
+        # Rotate just the end-effector
+        # self.move_to(theta1, theta2, theta3, theta4, (theta5-60))
+        self.motor_1.move_time_write(theta1, self.time_to_move)
+        self.motor_5.move_time_write(theta5-60, self.time_to_move)
 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,3,-0.45,1)
-        # theta5 += 90
+        # mid-step allign
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.2,3.2,1,1)
         self.move_to(theta1, theta2, theta3, theta4,(theta5-60))
-        sleep(1)
+
+        # Place the EE to final pose 
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.2,3.2,0,1)
+        self.move_to(theta1, theta2, theta3, theta4,(theta5-60))
         activate_servo(self.servo2)
 
+        print("first part done")
         ## Second leg from here 
-        release_servo(self.servo2)
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,3,3,5)
-        self.move_to(theta1, theta2, theta3, theta4,theta5)
+        release_servo(self.servo1)
+        sleep(1)
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.2,-3.2,3,5)
+        theta2 -= 30
+        self.move_to(theta1, theta2, theta3, theta4, theta5)
 
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.1,0,3,5)
+        self.motor_1.move_time_write(theta1, self.time_to_move)
+        # self.move_to(theta1, theta2, theta3, theta4,theta5)
+        self.motor_5.move_time_write(theta5, self.time_to_move)
 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,3,5)
-        self.move_to(theta1, theta2, theta3, theta4,theta5)
+        # self.move_to(theta1, theta2, theta3, theta4,theta5)
 
-        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(-3,0,0,5)
+        theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,0,5)
         self.move_to(theta1, theta2, theta3, theta4,theta5)
+        activate_servo(self.servo1)
 
     def step_right(self):
         pass
@@ -247,7 +269,7 @@ class MotorController(Node):
     def place_forward_block(self):
         pass
 
-# servo angle of 180 is activated, 0 released
+# servo angle of 0 is activated, 180 released
 def activate_servo(servo_id):
     servo_id.ChangeDutyCycle(2+(0/18))
     print("servo activated")
