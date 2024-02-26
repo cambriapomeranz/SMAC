@@ -45,6 +45,7 @@ class MotorController(Node):
         self.servo2.start(0)
         # MOTOR CANNOT GO NEGATIVE 
         # 
+        # init motor angles
         print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
         # release_servo(self.servo1)
         # release_servo(self.servo2) 
@@ -67,18 +68,17 @@ class MotorController(Node):
         self.get_logger().info('Received command to "%s' % msg.data)
 
         try:
-            # initial motor configs
-            print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
-            self.grab_up_forward()
+            # self.grab_up_forward()
             # self.motor_2.angle_offset_adjust(-30, True)
             # get and deploy next step
-            # action = self.step_actions.get(msg.data)
+            action = self.step_actions.get(msg.data)
+            # print(msg.data)
             # # action = self.step_actions.get(step)
             
-            # if action:
-            #     action()
-            # else:
-            #     self.get_logger().warn('Unknown command: %s' % msg.data)
+            if action:
+                action()
+            else:
+                self.get_logger().warn('Unknown command: %s' % msg.data)
             
             # # publish step status. 0.0 means step sucessful, 1.0 means step error
             # msg = Float32()
@@ -98,7 +98,7 @@ class MotorController(Node):
 
         self.time_to_move = 2
 
-    def move_to(self, theta2, theta3, theta4,time):
+    def move_to(self, theta2, theta3, theta4, time):
         # print(theta2, theta3, theta4)
         # self.motor_1.move_time_write(theta1, self.time_to_move)
         self.motor_2.move_time_write(theta2, time)

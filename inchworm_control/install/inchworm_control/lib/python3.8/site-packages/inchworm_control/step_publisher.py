@@ -12,7 +12,7 @@ class StepPublisher(Node):
         # subscription to receive when a step is completed
         self.subscription = self.create_subscription(
             Float32,
-            'motor_status',
+            'step_status',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -20,7 +20,7 @@ class StepPublisher(Node):
         self.get_logger().info('Node starting')
 
         # FOR ROBOT_WS:
-        self.file_path =  'src/MQP/inchworm_control/block_simulation/steps.txt'
+        self.file_path = 'src/MQP/inchworm_control/block_simulation/steps.txt'
         # FOR DEV_WS:
         # self.file_path = '~/MQP/dev_ws/src/inchworm_control/block_simulation/steps.txt'
         self.file_path = os.path.expanduser(self.file_path)
@@ -30,6 +30,9 @@ class StepPublisher(Node):
         
         msg = String()
         step = self.steps.pop(0)[0]
+        holding_block = self.steps.pop(0)[1]
+        if holding_block:
+            step += "_BLOCK"
         msg.data = step
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing in INIT: "%s"' % step)
@@ -47,6 +50,9 @@ class StepPublisher(Node):
                 #TODO: have it publish entire tuple
                 msg = String()
                 step = self.steps.pop(0)[0]
+                holding_block = self.steps.pop(0)[1]
+                if holding_block:
+                    step += "_BLOCK"
                 msg.data = step
                 self.publisher_.publish(msg)
                 self.get_logger().info('Publishing: "%s"' % step)

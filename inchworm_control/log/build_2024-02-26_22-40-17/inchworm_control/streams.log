@@ -1,0 +1,297 @@
+[0.808s] Invoking command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control -- -j4 -l4
+[1.204s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[1.316s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[1.316s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.132s] -- Found rclpy: 1.0.13 (/opt/ros/foxy/share/rclpy/cmake)
+[2.135s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[2.294s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.318s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[3.336s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.567s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[3.627s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[4.605s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[5.056s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[6.225s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.530s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.637s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[6.642s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[6.766s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.767s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[6.768s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[6.944s] -- Added test 'copyright' to check source files copyright and LICENSE
+[7.425s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.432s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_generator_c>;/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_generator_c;/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_generator_cpp;/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_typesupport_fastrtps_c;/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_typesupport_fastrtps_cpp;$<BUILD_INTERFACE:/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_typesupport_introspection_c>;$<BUILD_INTERFACE:/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_typesupport_c>;$<BUILD_INTERFACE:/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_generator_cpp>;/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control/rosidl_generator_py
+[7.433s] -- Configured cppcheck exclude dirs and/or files: 
+[7.914s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[7.915s] -- Configured cpplint exclude dirs and/or files: 
+[7.980s] -- Added test 'flake8' to check Python code syntax and style conventions
+[8.106s] -- Added test 'lint_cmake' to check CMake code style
+[8.173s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[8.652s] -- Added test 'uncrustify' to check C / C++ code style
+[8.653s] -- Configured uncrustify additional arguments: 
+[8.720s] -- Added test 'xmllint' to check XML markup files
+[8.787s] -- Configuring done
+[9.163s] -- Generating done
+[9.185s] -- Build files have been written to: /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control
+[9.317s] [35m[1mScanning dependencies of target inchworm_control__cpp[0m
+[9.323s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[9.365s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.685s] [  5%] Built target inchworm_control__cpp
+[10.742s] [  7%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[10.745s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[10.748s] [ 12%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[10.762s] [35m[1mScanning dependencies of target inchworm_control__rosidl_generator_c[0m
+[10.885s] [ 15%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/thruple__functions.c.o[0m
+[11.931s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_cpp[0m
+[11.984s] [ 17%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_generator_c.dir/rosidl_generator_c/inchworm_control/msg/detail/tuple__functions.c.o[0m
+[12.029s] [ 20%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inchworm_control/msg/thruple__type_support.cpp.o[0m
+[12.148s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_introspection_cpp[0m
+[12.169s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_fastrtps_cpp[0m
+[12.221s] [ 23%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inchworm_control/msg/detail/thruple__type_support.cpp.o[0m
+[12.251s] [ 25%] [32m[1mLinking C shared library libinchworm_control__rosidl_generator_c.so[0m
+[12.267s] [ 28%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inchworm_control/msg/detail/dds_fastrtps/thruple__type_support.cpp.o[0m
+[12.691s] [ 28%] Built target inchworm_control__rosidl_generator_c
+[12.745s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[14.178s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_introspection_c[0m
+[14.285s] [ 33%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inchworm_control/msg/detail/thruple__type_support.c.o[0m
+[14.488s] [ 35%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inchworm_control/msg/tuple__type_support.cpp.o[0m
+[14.532s] [ 38%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inchworm_control/msg/detail/tuple__type_support.cpp.o[0m
+[14.556s] [ 41%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inchworm_control/msg/detail/tuple__type_support.c.o[0m
+[14.754s] [ 43%] [32m[1mLinking C shared library libinchworm_control__rosidl_typesupport_introspection_c.so[0m
+[14.951s] [ 43%] Built target inchworm_control__rosidl_typesupport_introspection_c
+[15.011s] [ 46%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[15.433s] [ 48%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inchworm_control/msg/detail/dds_fastrtps/tuple__type_support.cpp.o[0m
+[16.290s] [ 51%] [32m[1mLinking CXX shared library libinchworm_control__rosidl_typesupport_introspection_cpp.so[0m
+[16.348s] [ 53%] [32m[1mLinking CXX shared library libinchworm_control__rosidl_typesupport_cpp.so[0m
+[16.491s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_c[0m
+[16.606s] [ 56%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/inchworm_control/msg/thruple__type_support.cpp.o[0m
+[16.619s] [ 56%] Built target inchworm_control__rosidl_typesupport_cpp
+[16.676s] [ 58%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_c.dir/rosidl_typesupport_c/inchworm_control/msg/tuple__type_support.cpp.o[0m
+[16.694s] [ 58%] Built target inchworm_control__rosidl_typesupport_introspection_cpp
+[16.847s] [ 61%] [32m[1mLinking CXX shared library libinchworm_control__rosidl_typesupport_c.so[0m
+[17.009s] [ 61%] Built target inchworm_control__rosidl_typesupport_c
+[17.764s] [ 64%] [32m[1mLinking CXX shared library libinchworm_control__rosidl_typesupport_fastrtps_cpp.so[0m
+[18.153s] [ 64%] Built target inchworm_control__rosidl_typesupport_fastrtps_cpp
+[18.198s] [ 66%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[19.168s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_fastrtps_c[0m
+[19.235s] [ 71%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inchworm_control/msg/detail/tuple__type_support_c.cpp.o[0m
+[19.236s] [ 71%] [32mBuilding CXX object CMakeFiles/inchworm_control__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inchworm_control/msg/detail/thruple__type_support_c.cpp.o[0m
+[20.848s] [ 74%] [32m[1mLinking CXX shared library libinchworm_control__rosidl_typesupport_fastrtps_c.so[0m
+[21.184s] [ 74%] Built target inchworm_control__rosidl_typesupport_fastrtps_c
+[21.272s] [ 74%] Built target inchworm_control
+[21.321s] [35m[1mScanning dependencies of target inchworm_control__py[0m
+[21.372s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[23.612s] [ 76%] Built target inchworm_control__py
+[23.666s] [35m[1mScanning dependencies of target inchworm_control__python[0m
+[23.747s] [ 79%] [32mBuilding C object CMakeFiles/inchworm_control__python.dir/rosidl_generator_py/inchworm_control/msg/_thruple_s.c.o[0m
+[23.757s] [ 82%] [32mBuilding C object CMakeFiles/inchworm_control__python.dir/rosidl_generator_py/inchworm_control/msg/_tuple_s.c.o[0m
+[24.360s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/inchworm_control/libinchworm_control__python.so[0m
+[24.587s] [ 84%] Built target inchworm_control__python
+[24.650s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_c__pyext[0m
+[24.659s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_introspection_c__pyext[0m
+[24.683s] [35m[1mScanning dependencies of target inchworm_control__rosidl_typesupport_fastrtps_c__pyext[0m
+[24.786s] [ 87%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[24.798s] [ 89%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_c.c.o[0m
+[24.994s] [ 92%] [32mBuilding C object CMakeFiles/inchworm_control__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/inchworm_control/_inchworm_control_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[25.556s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/inchworm_control/inchworm_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[25.626s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/inchworm_control/inchworm_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[25.818s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/inchworm_control/inchworm_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[25.881s] [100%] Built target inchworm_control__rosidl_typesupport_introspection_c__pyext
+[25.907s] [100%] Built target inchworm_control__rosidl_typesupport_c__pyext
+[26.279s] [100%] Built target inchworm_control__rosidl_typesupport_fastrtps_c__pyext
+[26.337s] Invoked command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control -- -j4 -l4
+[26.931s] Invoking command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --install /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control
+[26.981s] -- Install configuration: ""
+[26.987s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/ament_index/resource_index/rosidl_interfaces/inchworm_control
+[26.987s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control
+[26.988s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[26.988s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[26.989s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__functions.h
+[26.989s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.h
+[26.990s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.h
+[26.994s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.h
+[27.007s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__struct.h
+[27.007s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__functions.c
+[27.008s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__functions.c
+[27.009s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.h
+[27.010s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_c__visibility_control.h
+[27.011s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/tuple.h
+[27.012s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/thruple.h
+[27.013s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/library_path.sh
+[27.013s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/library_path.dsv
+[27.015s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_generator_c.so
+[27.016s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_generator_c.so" to ""
+[27.017s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control
+[27.020s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[27.021s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[27.022s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[27.023s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_fastrtps_c.h
+[27.030s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_c.h
+[27.034s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_c.so
+[27.035s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_c.so" to ""
+[27.035s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control
+[27.036s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[27.037s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[27.037s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[27.038s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/dds_fastrtps
+[27.039s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_fastrtps_cpp.hpp
+[27.044s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_fastrtps_cpp.hpp
+[27.053s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_cpp.so
+[27.054s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_fastrtps_cpp.so" to ""
+[27.056s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control
+[27.060s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[27.062s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[27.070s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_c.h
+[27.071s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.c
+[27.072s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.c
+[27.073s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_introspection_c.h
+[27.074s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[27.081s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_c.so
+[27.081s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_c.so" to ""
+[27.095s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_c.so
+[27.096s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_c.so" to ""
+[27.097s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control
+[27.097s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[27.098s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[27.099s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__builder.hpp
+[27.100s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__struct.hpp
+[27.101s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.hpp
+[27.102s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__traits.hpp
+[27.103s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.hpp
+[27.104s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__builder.hpp
+[27.105s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__struct.hpp
+[27.106s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__traits.hpp
+[27.108s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/rosidl_generator_cpp__visibility_control.hpp
+[27.109s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/tuple.hpp
+[27.111s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/thruple.hpp
+[27.113s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control
+[27.113s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg
+[27.114s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail
+[27.115s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__rosidl_typesupport_introspection_cpp.hpp
+[27.116s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__rosidl_typesupport_introspection_cpp.hpp
+[27.116s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/thruple__type_support.cpp
+[27.117s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/include/inchworm_control/msg/detail/tuple__type_support.cpp
+[27.126s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_cpp.so
+[27.127s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_introspection_cpp.so" to ""
+[27.128s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_cpp.so
+[27.131s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__rosidl_typesupport_cpp.so" to ""
+[27.133s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/pythonpath.sh
+[27.134s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/pythonpath.dsv
+[27.143s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py
+[27.333s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...
+[27.364s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg
+[27.365s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_tuple_s.c
+[27.366s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_tuple.py
+[27.368s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple_s.c
+[27.369s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple.py
+[27.370s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/__init__.py
+[27.391s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[27.394s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[27.397s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[27.402s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[27.404s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[27.408s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/inchworm_control_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[27.411s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__python.so
+[27.414s] -- Set runtime path of "/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/libinchworm_control__python.so" to ""
+[27.415s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/msg/Thruple.idl
+[27.416s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/msg/Tuple.idl
+[27.417s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/msg/Thruple.msg
+[27.417s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/msg/Tuple.msg
+[27.419s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control
+[27.420s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_walking.py
+[27.421s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_controller.py
+[27.422s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg
+[27.423s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/Thruple.msg
+[27.424s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/Tuple.msg
+[27.425s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_subscriber.py
+[27.427s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts
+[27.429s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts/movement_command.py
+[27.430s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log
+[27.431s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest
+[27.450s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00
+[27.451s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/logger_all.log
+[27.452s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00/events.log
+[27.453s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/COLCON_IGNORE
+[27.454s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/latest_build
+[27.455s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49
+[27.456s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49/logger_all.log
+[27.458s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49/events.log
+[27.459s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/ik.py
+[27.461s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install
+[27.463s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.bash
+[27.464s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.zsh
+[27.465s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.sh
+[27.466s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_ps1.py
+[27.467s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/COLCON_IGNORE
+[27.468s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/.colcon_install_layout
+[27.469s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.bash
+[27.470s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.sh
+[27.483s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.zsh
+[27.484s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/setup.ps1
+[27.485s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/_local_setup_util_sh.py
+[27.486s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install/local_setup.ps1
+[27.487s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build
+[27.488s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build/COLCON_IGNORE
+[27.489s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build/.built_by
+[27.490s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/lewansoul_servo_bus.py
+[27.491s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_publisher.py
+[27.492s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/step_publisher.py
+[27.493s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py
+[27.681s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control'...
+[27.682s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/__init__.py'...
+[27.683s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/build'...
+[27.685s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/ik.py'...
+[27.686s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/install'...
+[27.687s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log'...
+[27.689s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2023-11-15_15-40-00'...
+[27.697s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/log/build_2024-02-13_19-54-49'...
+[27.698s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_controller.py'...
+[27.699s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_publisher.py'...
+[27.700s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/motor_walking.py'...
+[27.703s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg'...
+[27.704s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/__init__.py'...
+[27.705s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_thruple.py'...
+[27.706s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/msg/_tuple.py'...
+[27.707s] Listing '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/scripts'...
+[27.708s] Compiling '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages/inchworm_control/step_publisher.py'...
+[27.711s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/inchworm_control/motor_controller.py
+[27.711s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/inchworm_control/motor_walking.py
+[27.712s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/inchworm_control/motor_publisher.py
+[27.713s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/inchworm_control/step_publisher.py
+[27.728s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/urdf
+[27.732s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/urdf/one_inchworm.urdf
+[27.733s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/urdf/r2d2.rviz
+[27.735s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/ament_index/resource_index/package_run_dependencies/inchworm_control
+[27.736s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/ament_index/resource_index/parent_prefix_path/inchworm_control
+[27.736s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.sh
+[27.737s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/ament_prefix_path.dsv
+[27.737s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/path.sh
+[27.737s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/environment/path.dsv
+[27.738s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.bash
+[27.739s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.sh
+[27.739s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.zsh
+[27.740s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/local_setup.dsv
+[27.741s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.dsv
+[27.741s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/ament_index/resource_index/packages/inchworm_control
+[27.742s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport.cmake
+[27.743s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cExport-noconfig.cmake
+[27.744s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport.cmake
+[27.745s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[27.748s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport.cmake
+[27.748s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cExport-noconfig.cmake
+[27.751s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_generator_cppExport.cmake
+[27.754s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport.cmake
+[27.754s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[27.774s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport.cmake
+[27.776s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_control__rosidl_typesupport_cppExport-noconfig.cmake
+[27.777s] -- Installing: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake-extras.cmake
+[27.778s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.780s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_libraries-extras.cmake
+[27.785s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_targets-extras.cmake
+[27.785s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.786s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[27.786s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[27.787s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig.cmake
+[27.787s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/cmake/inchworm_controlConfig-version.cmake
+[27.788s] -- Up-to-date: /home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.xml
+[27.789s] Invoked command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --install /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control
