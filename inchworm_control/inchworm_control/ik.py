@@ -58,13 +58,13 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         # read motor positions and fill our accordingly
 
         #offset
-        theta3 *= -1
-        theta1 += 135
-        theta2 -= 202.32 # added -30
-        theta3 += 24
-        theta4 += 6
+        theta1 += 138.48
+        theta2 -= 196.8
         theta2 *= -1
-        theta5 += 143.52
+        theta3 *= -1
+        theta3 += 24.0
+        theta4 += 13.92
+        theta5 += 150
 
         return theta1, theta2, theta3, theta4, theta5
     
@@ -110,12 +110,12 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
 
         # adjusted for offset
         theta3 *= -1
-        theta1 += 135
-        theta2 -= 202.32 # added -30
-        theta3 += 24
-        theta4 += 6
+        theta1 += 138.48
+        theta2 -= 203.28 # added -30
+        theta3 += 25.92
+        theta4 += 10.08
         theta2 *= -1
-        theta5 += 143.52
+        theta5 += 150
 
         return theta1, theta2, theta3, theta4, theta5
    
