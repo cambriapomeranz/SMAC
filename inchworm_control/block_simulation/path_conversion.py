@@ -476,30 +476,29 @@ def determine_helper_blocks(grid, path_start, path_end):
     grid, path_coords, num_steps = bfs_vertical_path(grid, path_start, path_end)
     return grid, path_coords, num_steps
 
-# once a block is placed, this function undates the 
+# once a block is placed, this function manually changes the current location to a block next to the current location, 
+# and adds the step to get there to complete_steps
 def simplify_steps(PAST_LOC, complete_path, complete_steps):
+    global CURRENT_LOC, CURRENT_ORIENTATION
     print("Past location coord:", PAST_LOC)
     # Case 1 and 3 
     if CURRENT_LOC[0] < BD_LOC[0]:
-        CURRENT_LOC = (PAST_LOC[0]+1, PAST_LOC[1], PAST_LOC[3])
-        if CURRENT_LOC[2] < BD_LOC[2]: # case 1 
-            # add the step 
-            pass
-        if CURRENT_LOC[2] > BD_LOC[2]: # case3
-            # add the step
-            pass
+        new_start = (PAST_LOC[0]+1, PAST_LOC[1], PAST_LOC[2])
     elif CURRENT_LOC[0] > BD_LOC[0]:
-        CURRENT_LOC = (PAST_LOC[0]-1, PAST_LOC[1], PAST_LOC[3])
-        if CURRENT_LOC[2] < BD_LOC[2]: # case 2
-            # add the step 
-            pass
-        if CURRENT_LOC[2] > BD_LOC[2]: # cas 4
-            # add the step
-            pass
+        new_start = (PAST_LOC[0]-1, PAST_LOC[1], PAST_LOC[2])
     else:
         print("you are already on the block depot") 
+        
+    movement_direction, new_orientation = get_direction(CURRENT_LOC, new_start)
+    # complete_steps.extend((update_steps(movement_direction), false))
+    complete_steps.extend(('this will be the new step', False))
+    if(new_orientation != "null"):
+        CURRENT_ORIENTATION = new_orientation
+    complete_path.extend(new_start)        
+    CURRENT_LOC = new_start
+    
+    return complete_path, complete_steps  
 
-    return CURRENT_LOC  
 
 def dev_total_path_coords(structures):
     grid = initialize_grid_with_structures(20)
@@ -569,7 +568,7 @@ def dev_total_path_steps(structures, misc_blocks):
             complete_steps.extend(bd_steps)
             complete_steps.extend(block_steps)
 
-            simplify_steps(PAST_LOC, complete_path, complete_steps)
+            complete_path, complete_steps = simplify_steps(PAST_LOC, complete_path, complete_steps)
 
     print("these blocks are left over: ", misc_blocks)
     # at this point, we have path for each strucuture but not the miscellanous blocks
