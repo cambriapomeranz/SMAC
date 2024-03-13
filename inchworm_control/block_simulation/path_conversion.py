@@ -4,10 +4,12 @@ from path_planning import *
 from config import BD_LOC, CURRENT_LOC, CURRENT_ORIENTATION, InchwormOrientation
 
 # Converts the list of coords from bfs to a list of inchworm movements
+# returns the list of path coordinates and the list of steps from start to end
 def convert_path_coords_to_steps(grid, path_start, path_end):
     global CURRENT_LOC, CURRENT_ORIENTATION
     print('BFS start in CONVERT ', path_start)
     print('BFS goal in CONVERT', path_end)
+
     path_coords, num_steps = bfs_3d(grid, path_start, path_end)
 
     # if no path was found, check to see if you'll need a helper block
@@ -43,6 +45,8 @@ def convert_path_coords_to_steps(grid, path_start, path_end):
             next_coord = [x, z+1, y]
         else:
             steps.append((update_steps(movement_direction), holding_block))
+
+        
         CURRENT_LOC = next_coord
         if(new_orientation != "null"):
             CURRENT_ORIENTATION = new_orientation
@@ -472,10 +476,30 @@ def determine_helper_blocks(grid, path_start, path_end):
     grid, path_coords, num_steps = bfs_vertical_path(grid, path_start, path_end)
     return grid, path_coords, num_steps
 
-# looks at the last couple steps in path and simiplifies block placement movement
-def simplify_steps(bd_path, bd_steps):
-    
-    pass 
+# once a block is placed, this function undates the 
+def simplify_steps(PAST_LOC, complete_path, complete_steps):
+    print("Past location coord:", PAST_LOC)
+    # Case 1 and 3 
+    if CURRENT_LOC[0] < BD_LOC[0]:
+        CURRENT_LOC = (PAST_LOC[0]+1, PAST_LOC[1], PAST_LOC[3])
+        if CURRENT_LOC[2] < BD_LOC[2]: # case 1 
+            # add the step 
+            pass
+        if CURRENT_LOC[2] > BD_LOC[2]: # case3
+            # add the step
+            pass
+    elif CURRENT_LOC[0] > BD_LOC[0]:
+        CURRENT_LOC = (PAST_LOC[0]-1, PAST_LOC[1], PAST_LOC[3])
+        if CURRENT_LOC[2] < BD_LOC[2]: # case 2
+            # add the step 
+            pass
+        if CURRENT_LOC[2] > BD_LOC[2]: # cas 4
+            # add the step
+            pass
+    else:
+        print("you are already on the block depot") 
+
+    return CURRENT_LOC  
 
 def dev_total_path_coords(structures):
     grid = initialize_grid_with_structures(20)
@@ -545,9 +569,12 @@ def dev_total_path_steps(structures, misc_blocks):
             complete_steps.extend(bd_steps)
             complete_steps.extend(block_steps)
 
+            simplify_steps(PAST_LOC, complete_path, complete_steps)
+
     print("these blocks are left over: ", misc_blocks)
     # at this point, we have path for each strucuture but not the miscellanous blocks
-    # search for path/steps for each miscellanous block, check if a helper block is needed
+    # search for path/steps for each miscellanous block, 
+    # TODO check if a helper block is needed
     for coord in misc_blocks:
         PAST_LOC = copy.deepcopy(CURRENT_LOC)
 
