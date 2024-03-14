@@ -1,7 +1,7 @@
 import copy
 from enum import Enum
 from path_planning import *
-from config import BD_LOC, CURRENT_LOC, CURRENT_ORIENTATION, InchwormOrientation
+from config import BD_LOC, CURRENT_LOC, CURRENT_ORIENTATION, InchwormOrientation, DEMO
 
 # Converts the list of coords from bfs to a list of inchworm movements
 # returns the list of path coordinates and the list of steps from start to end
@@ -144,8 +144,6 @@ def update_steps(movement_direction):
             return "STEP_DOWN_2_RIGHT"
         # elif(movement_direction == 'DIAGONAL_DOWN_2_FORWARD'):
         #     return STEP_DOWN_2
-        elif(movement_direction == 'DIAGONAL_DOWN_2_BACK'):
-            return "STEP_DOWN_2"
         
     elif(CURRENT_ORIENTATION == InchwormOrientation.EAST):
         if(movement_direction == 'FORWARD'):
@@ -460,6 +458,25 @@ def get_direction(current_coord, next_coord):
         return 'DIAGONAL_DOWN_2_FORWARD', InchwormOrientation.NORTH
     elif delta_x == 0 and delta_z == -2 and delta_y == -1:
         return 'DIAGONAL_DOWN_2_BACK', InchwormOrientation.SOUTH
+    # Horizontal down 1 movements
+    elif delta_x == 2 and delta_z == -1 and delta_y == 1:
+        return 'SIMPLIFIED_POS_1_DOWN_1', InchwormOrientation.EAST
+    elif delta_x == -2 and delta_z == -1 and delta_y == 1:
+        return 'SIMPLIFIED_POS_2_DOWN_1', InchwormOrientation.WEST
+    elif delta_x == 2 and delta_z == -1 and delta_y == -1:
+        return 'SIMPLIFIED_POS_3_DOWN_1', InchwormOrientation.EAST
+    elif delta_x == -2 and delta_z == -1 and delta_y == -1:
+        return 'SIMPLIFIED_POS_4_DOWN_1', InchwormOrientation.WEST
+    # Horizontal down 2 movements
+    elif delta_x == 2 and delta_z == -2 and delta_y == 1:
+        return 'SIMPLIFIED_POS_1_DOWN_2', InchwormOrientation.EAST
+    elif delta_x == -2 and delta_z == -2 and delta_y == 1:
+        return 'SIMPLIFIED_POS_2_DOWN_2', InchwormOrientation.WEST
+    elif delta_x == 2 and delta_z == -2 and delta_y == -1:
+        return 'SIMPLIFIED_POS_3_DOWN_2', InchwormOrientation.EAST
+    elif delta_x == -2 and delta_z == -2 and delta_y == -1:
+        return 'SIMPLIFIED_POS_4_DOWN_2', InchwormOrientation.WEST
+    # TODO Horizontal down 3 movements
     else:
         return 'error', InchwormOrientation.SOUTH
 
@@ -483,22 +500,22 @@ def simplify_steps(PAST_LOC, complete_path, complete_steps):
     print("Past location coord:", PAST_LOC)
     # Case 1 and 3 
     if CURRENT_LOC[0] < BD_LOC[0]:
-        new_start = (PAST_LOC[0]+1, PAST_LOC[1], PAST_LOC[2])
+        new_start = [PAST_LOC[0]+2, PAST_LOC[1], PAST_LOC[2]]
     elif CURRENT_LOC[0] > BD_LOC[0]:
-        new_start = (PAST_LOC[0]-1, PAST_LOC[1], PAST_LOC[2])
+        new_start = [PAST_LOC[0]-2, PAST_LOC[1], PAST_LOC[2]]
     else:
         print("you are already on the block depot") 
-        
+
+    print("new start: ", new_start)
     movement_direction, new_orientation = get_direction(CURRENT_LOC, new_start)
     # complete_steps.extend((update_steps(movement_direction), false))
-    complete_steps.extend(('this will be the new step', False))
+    complete_steps.append((movement_direction, False))
     if(new_orientation != "null"):
         CURRENT_ORIENTATION = new_orientation
-    complete_path.extend(new_start)        
+    complete_path.append((new_start, False))        
     CURRENT_LOC = new_start
     
     return complete_path, complete_steps  
-
 
 def dev_total_path_coords(structures):
     grid = initialize_grid_with_structures(20)
@@ -556,10 +573,12 @@ def dev_total_path_steps(structures, misc_blocks):
             block_path, block_steps = convert_path_coords_to_steps(grid, CURRENT_LOC, new_coord)
             grid = update_grid_with_structure(grid, coord)
 
-            # block_path[-1] = (new_coord)
-
             # pop the first value in list of path coords to remove repeat coords
             block_path.pop(0)
+            
+            PAST_LOC = block_path[-2][0]
+            print("UPDATED PAST_LOC: ", PAST_LOC)
+
             print("Steps from Block Depot to %s: %s" % (new_coord, block_steps))
 
             complete_path.extend(bd_path)
@@ -568,7 +587,8 @@ def dev_total_path_steps(structures, misc_blocks):
             complete_steps.extend(bd_steps)
             complete_steps.extend(block_steps)
 
-            complete_path, complete_steps = simplify_steps(PAST_LOC, complete_path, complete_steps)
+            if DEMO == True and coord != list_of_structure_coords[-1]:
+                complete_path, complete_steps = simplify_steps(PAST_LOC, complete_path, complete_steps)
 
     print("these blocks are left over: ", misc_blocks)
     # at this point, we have path for each strucuture but not the miscellanous blocks
@@ -603,5 +623,8 @@ def dev_total_path_steps(structures, misc_blocks):
 
         complete_steps.extend(bd_steps)
         complete_steps.extend(block_steps)  
+
+        if DEMO == True and coord != list_of_structure_coords[-1]:
+            complete_path, complete_steps = simplify_steps(PAST_LOC, complete_path, complete_steps)
 
     return complete_path, complete_steps, list_of_goals

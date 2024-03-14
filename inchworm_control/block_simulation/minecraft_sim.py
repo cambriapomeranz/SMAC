@@ -146,12 +146,10 @@ def update():
         # If there is a previously colored block, restore to original texture
 
         elif last_colored_block is not None:
-
             # if (last_colored_block.position.x, last_colored_block.position.y, last_colored_block.position.z) in blocks_placed:
             #     last_colored_block.texture = smart_block_texture  # Set to black if it's in blocks_placed
             # else:
                 last_colored_block.texture = last_block_original_texture
-
         if already_placed_block:
 
 
@@ -239,13 +237,14 @@ def show_structures():
         for block in structure_pos:
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], structure_name[-1])
+            print('structure_name:', structure_name[-1])
             #WHEN WE ARE IMPLEMENTING THE COLORS  spawn_cube(block[0], block[1], block[2], color_index)
         for block in misc_blocks:
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], 'misc')
-        else:
-            delete_cube(block[0], block[1], block[2])
-            spawn_cube(block[0], block[1], block[2], 'misc')
+        # else:
+        #     delete_cube(block[0], block[1], block[2])
+        #     spawn_cube(block[0], block[1], block[2], 'misc')
     return found_structures, misc_blocks
 
 # Voxel (block) properties
