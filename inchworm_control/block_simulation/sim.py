@@ -3,27 +3,19 @@
 # What are you doing here?!
 
 # Imports
-from turtle import position, pu
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 import random 
-import numpy as np
 from search import search
 from path_conversion import * 
-from config import BD_LOC
-import time
+from config import CURRENT_LOC, BD_LOC
 import copy 
 
 app = Ursina()
 
 # Variables
-grass_texture = load_texture("Assets/Textures/white_block.png")
-stone_texture = load_texture("Assets/Textures/Stone_Block.png")
-brick_texture = load_texture("Assets/Textures/Brick_Block.png")
-dirt_texture = load_texture("Assets/Textures/Dirt_Block.png")
-wood_texture = load_texture("Assets/Textures/Wood_Block.png")
-sky_texture = load_texture("Assets/Textures/Skybox.png")
-arm_texture = load_texture("Assets/Textures/Arm_Texture.png")
+sky_texture = load_texture("Assets/Textures/skybox.png")
+white_block_texture = load_texture("Assets/Textures/white_block.png")
 smart_block_texture = load_texture("Assets/Textures/smart_block.png")
 smart_block_texture_step = load_texture("Assets/Textures/smart_block_step.png")
 smart_block_texture_red = load_texture("Assets/Textures/smart_block_red_outline.png")
@@ -31,56 +23,39 @@ smart_block_texture_blue = load_texture("Assets/Textures/smart_block_blue_outlin
 smart_block_texture_yellow = load_texture("Assets/Textures/smart_block_yellow_outline.png")
 smart_block_texture_green = load_texture("Assets/Textures/smart_block_neon_green_outline.png")
 smart_block_outline = load_texture("Assets/Textures/smart_block_outline.png")
-arrow_block = load_texture("Assets/Textures/arrow_block.png")
 
-#Color Steps
+# Color Steps
 smart_block_texture_step_red = load_texture("Assets/Textures/smart_block_red_step.png")
 smart_block_texture_step_blue = load_texture("Assets/Textures/smart_block_blue_step.png")
 smart_block_texture_step_yellow = load_texture("Assets/Textures/smart_block_yellow_step.png")
 smart_block_texture_step_green = load_texture("Assets/Textures/smart_block_green_step.png") 
 
-color_index_1 = smart_block_texture_red
-color_index_2 = smart_block_texture_blue
-color_index_3 = smart_block_texture_yellow
-color_index_4 = smart_block_texture_green
+# More Variables
 last_colored_block = None
 last_block_original_texture = None
 last_colored_block_2 = None
 last_block_original_texture_2 = None
-
 window.exit_button.visible = False
-block_pick = 1
-index = 0
-key_9_pressed = False  
 key_6_pressed = False  
 key_n_pressed = False 
 key_p_pressed = False
 placed_block = None 
 spawned = False
 spawn_x, spawn_y, spawn_z = 0, 0, 0
-
 blocks_placed = []
 found_structures = []
 coords_to_spawn = []
 misc_blocks = []
 complete_steps = []
 path_steps = None 
-
-
 number = 0 
-
-point = [1, 0, 1]
-prev_point = [1, 0, 1]
+# Leg locations for the inchworm. Point is the position of the leading leg and prev_point is the position of the second leg
+point = CURRENT_LOC
+prev_point = point
 
 # Updates every frame
 def update():
-    global blocks_placed, block_pick, key_9_pressed, key_6_pressed, key_p_pressed, key_n_pressed, coords_to_spawn, last_colored_block, last_block_original_texture, last_colored_block_2, last_block_original_texture_2, found_structures, misc_blocks, prev_point, point, placed_block, spawned, spawn_x, spawn_y, spawn_z, goal, number , path_steps
-
-    if held_keys["1"]: block_pick = 1
-    if held_keys["2"]: block_pick = 2
-    if held_keys["3"]: block_pick = 3
-    if held_keys["4"]: block_pick = 4
-    if held_keys["5"]: block_pick = 5
+    global blocks_placed, key_6_pressed, key_p_pressed, key_n_pressed, coords_to_spawn, last_colored_block, last_block_original_texture, last_colored_block_2, last_block_original_texture_2, found_structures, misc_blocks, prev_point, point, placed_block, spawned, spawn_x, spawn_y, spawn_z, goal, number, path_steps
 
     # Generate the pyramid coordinates
     if held_keys["6"] and not key_6_pressed:
@@ -90,14 +65,10 @@ def update():
             spawn_cube(x, y, z,'')  # Replace
             cube = Voxel(position=Vec3(x, y, z),  texture=smart_block_texture)
             blocks_placed.append(cube.position) 
-
         key_6_pressed = True  # Set the flag to True after printing
     
     if not held_keys["6"]:
         key_6_pressed = False
-    
-    if held_keys["7"]: 
-        test_bfs()
 
     # Search(Look) for structures
     if held_keys["l"]:
@@ -106,12 +77,8 @@ def update():
     if held_keys["p"] and not key_p_pressed:
         #delete_cube(BD_LOC[0], BD_LOC[1], BD_LOC[2])
         spawn_cube(BD_LOC[0], BD_LOC[1], BD_LOC[2], 'n')
-       # test_structure =  [((10, 1, 12), (10, 1, 11), (10, 1, 10), (10, 2, 10), (10, 2, 11),(10, 3, 10))]
-        print("leftover blocks: ", misc_blocks)
         coords_to_spawn, path_steps , goal= dev_total_path_steps(found_structures, misc_blocks)
         step_getter(path_steps)
-        print("coords_to_spawn:")
-        print(coords_to_spawn)
 
         for point in goal:
             point[1] += 1  # Increment the second value
@@ -133,50 +100,31 @@ def update():
                 already_placed_block = e
                 break
 
-        print("spawned_block?", spawned)
         # first check if the last_colored_block was spawned bc we need to delete that block from blocks_placed and despawn it
         if spawned:
-            print("trying to delete block")
-            print("x: ", spawn_x)
-            print("y: ", spawn_y)
-            print("z: ", spawn_z)
             delete_cube(spawn_x, spawn_z, spawn_y)
             spawned = False
 
         # If there is a previously colored block, restore to original texture
-
         elif last_colored_block is not None:
-            # if (last_colored_block.position.x, last_colored_block.position.y, last_colored_block.position.z) in blocks_placed:
-            #     last_colored_block.texture = smart_block_texture  # Set to black if it's in blocks_placed
-            # else:
                 last_colored_block.texture = last_block_original_texture
         if already_placed_block:
 
-
             # Store the original texture before changing it
             last_block_original_texture = already_placed_block.texture
-            print('goal in main is:', tuple(map(float, goal[number])))
-            print((already_placed_block.position.x , already_placed_block.position.y , already_placed_block.position.z))
             if (already_placed_block.position.x, already_placed_block.position.y, already_placed_block.position.z) == tuple(map(float, goal[number])):
-            # if (already_placed_block.position.x , already_placed_block.position.y , already_placed_block.position.z) in blocks_placed and last_block_original_texture in [smart_block_texture_step_blue, smart_block_texture_step_red, smart_block_texture_step_yellow, smart_block_texture_step_green]:
-                print('goal reached')
                 last_block_original_texture = smart_block_texture
                 new_texture = smart_block_texture 
                 number += 1
             else:
                 new_texture = check_block_color(already_placed_block.position.x, already_placed_block.position.y, already_placed_block.position.z)
-                print('new_texture:',new_texture)
             already_placed_block.texture = new_texture
             last_colored_block = already_placed_block
 
         else:
-            print("spawning smart block cube")
             spawned = True
             spawned_block = spawn_cube(x, z, y,'step')
             spawn_x, spawn_y, spawn_z = x, y, z
-            print("x: ", spawn_x)
-            print("y: ", spawn_y)
-            print("z: ", spawn_z)
             last_colored_block = spawned_block
             last_block_original_texture = smart_block_texture
 
@@ -192,9 +140,6 @@ def update():
 
         # If there is a previously colored block, restore to original texture
         if last_colored_block_2 is not None:
-            # if (last_colored_block_2.position.x, last_colored_block_2.position.z, last_colored_block_2.position.y) in blocks_placed:
-            #     last_colored_block_2.texture = smart_block_texture  # Set to black if it's in blocks_placed
-            # else:
             last_colored_block_2.texture = last_block_original_texture_2
         
         if already_placed_block_2:
@@ -211,12 +156,7 @@ def update():
         prev_point = point
         key_n_pressed = False
                     
-    if held_keys["9"] and not key_9_pressed:
-        print(blocks_placed)
-        key_9_pressed = True  # Set the flag to True after printing
-    # Reset the flag when '9' is no longer held down
-    if not held_keys["9"]:
-        key_9_pressed = False
+
 
 
 def step_getter(steps):
@@ -237,19 +177,15 @@ def show_structures():
         for block in structure_pos:
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], structure_name[-1])
-            print('structure_name:', structure_name[-1])
             #WHEN WE ARE IMPLEMENTING THE COLORS  spawn_cube(block[0], block[1], block[2], color_index)
         for block in misc_blocks:
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], 'misc')
-        # else:
-        #     delete_cube(block[0], block[1], block[2])
-        #     spawn_cube(block[0], block[1], block[2], 'misc')
     return found_structures, misc_blocks
 
 # Voxel (block) properties
 class Voxel(Button):
-    def __init__(self, position = (0, 0, 0), texture = grass_texture):
+    def __init__(self, position = (0, 0, 0), texture = white_block_texture):
         super().__init__(
             parent = scene,
             position = position,
@@ -269,8 +205,6 @@ class Voxel(Button):
                 # only add blocks above field
                 if(voxel.position[1] > 0):
                     blocks_placed.append(voxel.position) 
-                    # print(new_voxel.position)
-                print(blocks_placed)
             if key == "right mouse down":
                 try: 
                     blocks_placed.remove(self.position)
@@ -289,23 +223,10 @@ class Sky(Entity):
             double_sided = True
         )
 
-# Arm
-class Hand(Entity):
-    def __init__(self):
-        super().__init__(
-            parent = camera.ui,
-            model = "Assets/Models/Arm",
-            scale = 0.2,
-            rotation = Vec3(150, -10, 0),
-            position = Vec2(0.4, -0.6)
-        )
-    
-    def active(self):
-        self.position = Vec2(0.3, -0.5)
 
-    def passive(self):
-        self.position = Vec2(0.4, -0.6)
-
+# HELPER FUNCTIONS
+        
+# Generates a quarter section of a 10-by-10 pyramid of blocks
 def generate_pyramid(base_size):
     pyramid = []
     # Each layer
@@ -317,6 +238,8 @@ def generate_pyramid(base_size):
                 pyramid.append((x+10, y+1, z+10))
     return pyramid
 
+# Checks the color of the block at the specified position
+# This is used to simulate the steping on a already placed block and def check_block_color(x, y, z):
 def check_block_color(x, y, z):
     block_color = None
     target_position = Vec3(x, y, z)
@@ -325,16 +248,14 @@ def check_block_color(x, y, z):
         if hasattr(e, 'position') and e.position == target_position:
             if hasattr(e, 'texture'):  # Assuming entities have a 'texture' attribute
                 existing_cube_texture = e.texture
-                print(f"Found texture: {existing_cube_texture}")  
             break  # Stop searching once a block at the target position is found
 
     # If the position is occupied for stepping 
     if existing_cube_texture is not None:
         if existing_cube_texture == smart_block_texture: 
                 block_color = smart_block_texture_step
-        elif existing_cube_texture == grass_texture: 
+        elif existing_cube_texture == white_block_texture: 
                 block_color = smart_block_texture_step_red
-                print('here')
         elif existing_cube_texture == smart_block_texture_red: 
                 block_color = smart_block_texture_step_red
         elif existing_cube_texture == smart_block_texture_green: 
@@ -356,24 +277,22 @@ def check_block_color(x, y, z):
         else:
                 print(f"Unexpected texture: {existing_cube_texture}")  # Debugging line
 
-    
-    print('RETURNING block_color as:', block_color)
     return block_color
 
-
+# spawns a cude in the simulation at the specified position and with the specified color
 def spawn_cube(x, y, z, color_index):
-    # First, check if the position is already occupied
+    # check if the position is already occupied
     target_position = Vec3(x, y, z)
 
     # Assign color_index based on the input
     if color_index == 'n':
-        color_index = color_index_1
+        color_index = smart_block_texture_red
     elif color_index == 's':
-        color_index = color_index_2
+        color_index = smart_block_texture_blue
     elif color_index == 'e':
-        color_index = color_index_3
+        color_index = smart_block_texture_yellow
     elif color_index == 'w':
-        color_index = color_index_4
+        color_index = smart_block_texture_green
     elif color_index == 'step':
         color_index = smart_block_texture_step
     elif color_index == 'misc':
@@ -385,6 +304,7 @@ def spawn_cube(x, y, z, color_index):
     new_cube = Voxel(position=target_position, texture=color_index)
     blocks_placed.append(target_position)  # Optionally update the blocks_placed list
 
+# delete a block from the simulation at the specified position
 def delete_cube(x, y, z):
     target_position = Vec3(x, y, z)
     for e in scene.entities:
@@ -394,7 +314,7 @@ def delete_cube(x, y, z):
                 blocks_placed.remove(target_position)
             break
 
-# Increase the numbers for more cubes. For exapmle: for z in range(20)
+# Increase the numbers for a bigger field. 
 for z in range(20):
     for x in range(20):
         voxel = Voxel(position = (x, 0, z))

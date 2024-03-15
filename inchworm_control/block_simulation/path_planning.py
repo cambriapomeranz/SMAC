@@ -20,7 +20,6 @@ def initialize_grid_with_structures(grid_size):
 def update_grid_with_structure(grid, structure):
     global blocks_no_longer_walkable
     # for structure in structures:        
-    print("received structure: ", structure)    
     x, z, y = structure  # Ensure the order matches your design
 
     if 0 <= x < grid_size and 0 <= y < grid_size and 0 <= z < grid_size:
@@ -33,7 +32,6 @@ def update_grid_with_structure(grid, structure):
 def bfs_vertical_path(grid, path_start, path_end):
     global blocks_no_longer_walkable
     # for structure in structures:        
-    print("calculating vertical bfs")
     x, z, y = path_end  # Ensure the order matches your design
 
     # add all the blocks directly under path_end in blocks_no_longer_walkable to the grid as walkable
@@ -57,7 +55,6 @@ def bfs_vertical_path(grid, path_start, path_end):
 
 def update_grid_with_structure_not_walkable(grid, structure):
     # for structure in structures:        
-    print("received structure: ", structure)    
     x, z, y = structure  # Ensure the order matches your design
 
     if 0 <= x < grid_size and 0 <= y < grid_size and 0 <= z < grid_size:
@@ -107,9 +104,6 @@ def start_search_3d(grid, start, goal):
 # Calculates BFS search to find path from start_coords to end_coord on grid
 # Returns a list of coordinates of each block of the path
 def bfs_3d(grid, start, goal):
-    print('BFS start: ', start)
-    print('BFS goal: ', goal)
-
     # if it goal is the Block Depot then it is not holding a block
     holding_block = True
     if goal == BD_LOC:
@@ -129,7 +123,6 @@ def bfs_3d(grid, start, goal):
         steps += 1
 
         if is_goal_reached_3d(current_node, goal_node):
-            print(f"It takes {steps} steps to find a path using BFS in 3D")
             return rework_path_3d(current_node, holding_block), steps
 
         # This is no diagonal movement
@@ -159,9 +152,10 @@ def bfs_3d(grid, start, goal):
     print("No path found using BFS in 3D")
     return [], -1
 
+# Calculates BFS search to find path from start_coords to end_coord on grid
+# Returns a list of coordinates of each block of the path
+# this BFS will look for vertical paths
 def bfs_3d_vertical(grid, start, goal):
-    print('BFS start: ', start)
-    print('BFS goal: ', goal)
 
     # if it goal is the Block Depot then it is not holding a block
     holding_block = True
@@ -183,7 +177,6 @@ def bfs_3d_vertical(grid, start, goal):
         steps += 1
 
         if is_goal_reached_3d(current_node, goal_node):
-            print(f"It takes {steps} steps to find a path using BFS in 3D")
             return rework_path_3d(current_node, holding_block), steps
 
         # This is no diagonal movement
@@ -212,42 +205,3 @@ def bfs_3d_vertical(grid, start, goal):
     # return a negative number if no path found
     print("No path found using BFS in 3D")
     return [], -1
-
-
-
-def test_bfs():
-    # Define the 3D grid based on your environment
-    grid_size = 20  # Define the size of your grid
-    grid = [[[0 for _ in range(grid_size)] for _ in range(grid_size)] for _ in range(grid_size)]
-
-    # Marking placed blocks as obstacles in the grid
-    for block in blocks_placed:
-        x, y, z = map(int, block)
-        if 0 <= x < grid_size and 0 <= y < grid_size and 0 <= z < grid_size:
-            grid[y][x][z] = 1  # Marking the block position as an obstacle
-
-    # Define start and goal points
-    start = (1, 0, 1)  # Example start point
-    goal = (12, 3, 13)  # Example goal point
-
-    # Call the BFS function
-    path, steps = bfs_3d(grid, start, goal)
-
-    print(path) 
-
-    # Do something with the path, like visualizing it in your game
-    # for point in path:
-    #     x, y, z = point
-    #     # Check if there is already a block at this position
-    #     already_placed_block = None
-    #     for e in scene.entities:
-    #         if hasattr(e, 'position') and e.position == Vec3(x, y, z):
-    #             already_placed_block = e
-    #             break
-
-    #     if already_placed_block:
-    #         # Change the texture of the existing block
-    #         already_placed_block.texture = smart_block_texture_green
-    #     else:
-    #         # Spawn a new block if there isn't one already
-    #         spawn_cube(x, y, z, arrow_block)

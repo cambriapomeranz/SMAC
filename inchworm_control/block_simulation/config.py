@@ -4,6 +4,7 @@ from enum import Enum
 
 BD_LOC = [8, 1, 8]
 CURRENT_LOC = [1, 0, 1]
+# if the simulation is for the demo, set this to True
 DEMO = True
 
 # Define the possible orientations of the inchworm

@@ -1,3 +1,7 @@
+# Hello, you achieved the deepest and most advanced part of this code. This code is for people who don't have any grahpic design experince. 
+# It bascially converts the black color in the image to any color you want. 
+# Use it wisely and with caution. 
+
 from PIL import Image
 
 def convert_black_to_color(image_path, tolerance=30):

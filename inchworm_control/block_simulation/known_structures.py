@@ -1,6 +1,6 @@
 ## KNOWN STRUCTURES DEFINED HERE 
 ## CANNOT BE NEGATIVE
-#TODO: adjust order of blocks so that it's in order of how blocks will be placed
+# the order of blocks is order of how the blocks will be placed
 known_structures = {
     'stair_6_n': [(0, 0, 2), (0, 0, 1), (0, 0, 0), (0, 1, 1), (0, 1, 0), (0, 2, 0)],
     'stair_6_s': [(0, 0, 0), (0, 0, 1), (0, 0, 2), (0, 1, 1), (0, 1, 2), (0, 2, 2)],
