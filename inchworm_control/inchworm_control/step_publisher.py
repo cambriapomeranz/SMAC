@@ -47,7 +47,6 @@ class StepPublisher(Node):
                 self.get_logger().info("movement complete")
                 # steps is a list of tuples like (<step type>, holding_block)
                 # if holding block is true, it is holding a block for this step
-                #TODO: have it publish entire tuple
                 msg = String()
                 step = self.steps.pop(0)[0]
                 holding_block = self.steps.pop(0)[1]
