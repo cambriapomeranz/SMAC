@@ -68,7 +68,8 @@ class MotorController(Node):
         self.get_logger().info('Received command to "%s' % msg.data)
 
         try:
-            self.grab_up_forward(5)
+            # self.grab_up_forward(1)
+            self.step_forward()
             # activate_servo(self.servo1)
 
             # self.step_forward_block(5)
@@ -284,7 +285,7 @@ class MotorController(Node):
 
             # move above block
             theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,5,1)
-            theta4 += 10
+            # theta4 += 10
             self.move_to(theta2, theta3, theta4, self.time_to_move)
 
             # move on top block
