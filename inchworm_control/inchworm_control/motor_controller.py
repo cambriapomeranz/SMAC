@@ -69,14 +69,12 @@ class MotorController(Node):
         try:
             # self.grab_up_forward(1)
             # self.lift_block(1)
-            # release_servo(self.servo1)
-            # sleep(1)
-            # activate_servo(self.servo1)
-            self.step_forward()
             # self.step_left()
-            # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,4,1)
-            # activate_servo(self.servo1)
-            # self.move_to(theta2, theta3, theta4, self.time_to_move)
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,4,1)
+            theta4 += 20
+            print(theta2,theta3,theta4)
+            activate_servo(self.servo1)
+            self.move_to(theta2, theta3, theta4, self.time_to_move)
             action = self.step_actions.get(msg.data)
 
             # print(msg.data)
@@ -103,34 +101,39 @@ class MotorController(Node):
         self.motor_4 = self.servo_bus.get_servo(4)
         self.motor_5 = self.servo_bus.get_servo(5)
 
-        self.time_to_move = 2
-
-    # def move_to(self, theta2, theta3, theta4, time):
-    #     self.motor_2.move_time_write(theta2, time)
-    #     self.motor_3.move_time_write(theta3, time)
-    #     self.motor_4.move_time_write(theta4, time)
-    #     sleep(time)
+        self.time_to_move = 3
 
     def move_to(self, theta2, theta3, theta4, time):
-        threshold=5
-        current = [self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read()]
-        target = [theta2, theta3, theta4]
-        while (abs(current[0] - target[0]) > threshold) or (abs(current[1] - target[1]) > threshold) or (abs(current[2] - target[2]) > threshold):
-            current = [self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read()]
-            self.motor_2.move_time_write(theta2, time)
-            self.motor_3.move_time_write(theta3, time)
-            self.motor_4.move_time_write(theta4, time)
+        self.motor_2.move_time_write(theta2, time)
+        self.motor_3.move_time_write(theta3, time)
+        self.motor_4.move_time_write(theta4, time)
+        sleep(time)
+    
+    # def move_to(self, tt2, tt3, tt4, time):
+    #     print("move to")
+    #     threshold = 5
+    #     self.motor_2.move_time_write(tt2, time)
+    #     while not self.is_within_range(self.motor_2.pos_read(), tt2, threshold):
+    #         sleep(0.01)
+    #         pass
+    #     print('theta2 done')
+    #     print('theta3', self.motor_3.pos_read())
+    #     self.motor_3.move_time_write(tt3, time)
 
+    #     while not self.is_within_range(self.motor_3.pos_read(), tt3, threshold):
+    #         pass
+    #     self.motor_4.move_time_write(tt4, time)
+    #     while not self.is_within_range(self.motor_4.pos_read(), tt4, threshold):
+    #         pass
     def is_within_range(self, current_pos, target_pos, threshold):
-        return all(abs(current - target) <= threshold for current, target in zip(current_pos, target_pos))
-
+        if abs(current_pos - target_pos) <= threshold:
+            return True
+        else: return False
 
     # STEP DEFINITIONS 
     def step_forward(self):
-        print('stepping forward')
         activate_servo(self.servo1)
         release_servo(self.servo2)
-        print("done releasing")
         # move up
         theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3,0,2,1)
         theta4 += 20
@@ -384,12 +387,18 @@ class MotorController(Node):
             theta2 = self.motor_2.pos_read()
             self.motor_2.move_time_write(theta2-50, self.time_to_move)
             print(theta2)
+            sleep(self.time_to_move)
 
+            print("done moving theta2")
+            theta3 = self.motor_3.pos_read()
+            print(theta3)
+            self.motor_3.move_time_write(theta3-50, self.time_to_move)
             sleep(self.time_to_move)
 
             # move up 
             theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(4,0,6,1)
-            self.move_to(theta2, theta3, theta4, 4)
+            self.move_to(theta2, theta3, theta4, self.time_to_move)
+            print("done moving")
 
             # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6,0,6,1)
             # self.move_to(theta2, theta3, theta4, self.time_to_move)

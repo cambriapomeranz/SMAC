@@ -25,6 +25,7 @@ function _colcon_prefix_chain_powershell_source_script {
 _colcon_prefix_chain_powershell_source_script "/opt/ros/foxy\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/ubuntu/robot_ws/src/MQP/inchworm_control/inchworm_control/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/ubuntu/robot_ws/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/ubuntu/robot_ws/src/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)
