@@ -110,43 +110,19 @@ class MotorController(Node):
     #     self.motor_3.move_time_write(theta3, time)
     #     self.motor_4.move_time_write(theta4, time)
     #     sleep(time)
-    
-    # def move_to(self, theta2, theta3, theta4, time):
-    #     theta2old = self.motor_2.pos_read()
-    #     while theta2old != theta2:
-    #         self.motor_2.move_time_write(theta2, time)
-    #     self.motor_3.move_time_write(theta3, time)
-    #     self.motor_4.move_time_write(theta4, time)
-    #     sleep(time)
-    
-    def moveTheta2(self, theta2, threshold, time):
-        while not self.is_within_range(self.motor_2.pos_read(), theta2, threshold):
-            self.motor_2.move_time_write(theta2, time)
-
-    def moveTheta3(self, theta3, threshold, time):
-        while not self.is_within_range(self.motor_3.pos_read(), theta3, threshold):
-            self.motor_3.move_time_write(theta3, time)
-
-    def moveTheta4(self, theta4, threshold, time):
-        while not self.is_within_range(self.motor_4.pos_read(), theta4, threshold):
-            self.motor_4.move_time_write(theta4, time)
 
     def move_to(self, theta2, theta3, theta4, time):
         threshold=5
-        t1 = Thread(target = self.moveTheta2, args=(theta2, threshold, time))
-        t2 = Thread(target = self.moveTheta3, args=(theta3, threshold, time))
-        t3 = Thread(target = self.moveTheta4, args=(theta4, threshold, time))
-        t1.start()
-        t2.start()
-        t3.start()
-        t1.join()
-        t2.join()
-        t3.join()
-        # current = [self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read()]
-        # while not self.is_within_range(current, [theta2, theta3, theta4], threshold):
+        current = [self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read()]
+        target = [theta2, theta3, theta4]
+        while (abs(current[0] - target[0]) > threshold) or (abs(current[1] - target[1]) > threshold) or (abs(current[2] - target[2]) > threshold):
+            current = [self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read()]
+            self.motor_2.move_time_write(theta2, time)
+            self.motor_3.move_time_write(theta3, time)
+            self.motor_4.move_time_write(theta4, time)
 
     def is_within_range(self, current_pos, target_pos, threshold):
-        return abs(current_pos - target_pos) <= threshold
+        return all(abs(current - target) <= threshold for current, target in zip(current_pos, target_pos))
 
 
     # STEP DEFINITIONS 
