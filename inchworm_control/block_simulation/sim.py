@@ -316,7 +316,69 @@ for z in range(20):
     for x in range(20):
         voxel = Voxel(position = (x, 0, z))
 
-player = FirstPersonController()
+def look_at(target_pos, player_pos):
+    if isinstance(target_pos, tuple):
+        target_pos = Vec3(*target_pos)
+    if isinstance(player_pos, tuple):
+        player_pos = Vec3(*player_pos)
+
+    direction = target_pos - player_pos
+    yaw = math.atan2(direction.x, direction.z)
+    yaw_degrees = math.degrees(yaw)
+    
+    distance_horizontal = math.sqrt(direction.x**2 + direction.z**2)
+    pitch = math.atan2(direction.y, distance_horizontal)
+    pitch_degrees = -math.degrees(pitch) 
+    
+    return pitch_degrees, yaw_degrees
+
+
+class FlyingFirstPersonController(FirstPersonController):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.flying_enabled = False  
+
+    def update(self):
+        super().update()  
+        self.handle_flying_input()
+
+    def handle_flying_input(self):
+        # Toggle flying mode with a specific key (e.g., 'f')
+        if held_keys['f']:
+            print("Flying enabled" if self.flying_enabled else "Flying disabled")
+            self.flying_enabled = not self.flying_enabled
+            self.gravity = 0 if self.flying_enabled else 1  
+
+        # Handle vertical movement when flying is enabled
+        if self.flying_enabled:
+            # Change the psotion of the player here: 
+            if held_keys['q']:  
+                self.position += Vec3(0, 0.1, 0)  
+            if held_keys['e']:  # Move down
+                self.position += Vec3(0, -0.1, 0)
+            if held_keys['1']:  
+                self.position = Vec3(10, 15, -10)  
+                pitch_degrees, yaw_degrees = look_at((5,1,5), (10, 15, -10))
+                player.rotation_y = yaw_degrees
+                player.camera_pivot.rotation_x = pitch_degrees
+            if held_keys['2']:  
+                self.position = Vec3(10, 15, 10) 
+                pitch_degrees, yaw_degrees = look_at((5,1,5), (10, 15, 10))
+                player.rotation_y = yaw_degrees
+                player.camera_pivot.rotation_x = pitch_degrees
+            if held_keys['3']:  
+                self.position = Vec3(-10,15, -20)  
+                pitch_degrees, yaw_degrees = look_at((5,1,5), (-10,15, -10))
+                player.rotation_y = yaw_degrees
+                player.camera_pivot.rotation_x = pitch_degrees
+            if held_keys['4']:  
+                self.position = Vec3(-20, 15, 20)  
+                pitch_degrees, yaw_degrees = look_at((5,1,5), (-10, 15, 10))
+                player.rotation_y = yaw_degrees
+                player.camera_pivot.rotation_x = pitch_degrees
+
+
+player = FlyingFirstPersonController()
 sky = Sky()
 
 app.run()
