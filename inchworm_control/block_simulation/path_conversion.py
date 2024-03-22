@@ -532,10 +532,10 @@ def dev_total_path_steps(structures, misc_blocks):
         list_of_structure_coords = structure[1]
         for coord in list_of_structure_coords:
             PAST_LOC = copy.deepcopy(CURRENT_LOC)
-
+            print("corod: ", coord)
             # get path and steps from current location to block depot
             bd_path, bd_steps = convert_path_coords_to_steps(grid, CURRENT_LOC, BD_LOC)
-
+            print("bd_path: ", bd_path)
             # pop the first value in list of path coords to remove repeat coords
             bd_path.pop(0)
 

@@ -74,8 +74,8 @@ def update():
     if held_keys["l"]:
         found_structures, misc_blocks = show_structures()
 
+    # Generate paths and inchworm steps
     if held_keys["p"] and not key_p_pressed:
-        #delete_cube(BD_LOC[0], BD_LOC[1], BD_LOC[2])
         spawn_cube(BD_LOC[0], BD_LOC[1], BD_LOC[2], 'n')
         coords_to_spawn, path_steps , goal= dev_total_path_steps(found_structures, misc_blocks)
         step_getter(path_steps)
@@ -155,10 +155,8 @@ def update():
 
         prev_point = point
         key_n_pressed = False
-                    
 
-
-
+# writes steps to a txt file              
 def step_getter(steps):
     complete_steps = copy.deepcopy(steps)
     file_path = "steps.txt"
@@ -166,7 +164,6 @@ def step_getter(steps):
     with open(file_path, 'w') as file:
         for step in complete_steps:
             file.write(f"{step}\n")
-    
 
 # Searches for known structures and changes the color of strucutres found 
 def show_structures():

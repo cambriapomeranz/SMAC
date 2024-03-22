@@ -7,7 +7,6 @@ This simulation was developed using Python 3. Python 3.12 is strongly recommened
 Required packages: 
 1. ursina 
 2. numpy 
-3. random 
 
 # How to Download and Run ⬇
 1. Make sure you have Python installed and Ursina too. If you have Python, go to the Command Line and type `pip install ursina`.
@@ -15,13 +14,16 @@ Required packages:
 3. Extract the ZIP file (not required it's cloned) and run the `sim.py` file.
 
 ### How to edit the simulation ?
-congif.py file includes the location of Block Depot, initial position and orientation of the inchworm's leading leg. There is an additional parameter called DEMO. If True, the simulation will simplfy the steps to build the desired structure. 
+congif.py file includes the location of Block Depot, initial position and orientation of the inchworm's leading leg. There is an additional parameter called DEMO. If True, the simulation will simplfy the steps to build the desired structure. This should only be true when building a 3-block column.
 
 ## Controls ⌨
 | Key | Description |
 | :---: | :---: |
 | `WASD` | Movement |
 | `Mouse` | Camera Rotation |
+| `Space` | Jump |
+| `Left Click` | Place Block |
+| `Right Click` | Remove Block |
 | `L` | Identify known substructures |
 | `N` | Move the inchworm to next block |
 | `P` | Calculate entire path and steps for inchworm to build given structure. Spawn Block Depot and leading inchworm foot. Write steps to steps.txt |
@@ -33,7 +35,8 @@ congif.py file includes the location of Block Depot, initial position and orient
 3. Calculate path a for inchworm (`P`) and spawn the Block Depot and inchworm foot. It will create or overwrite the steps.txt with the current list of steps.
 4. Press `N` and watch the inchworm move to next block!
 
-
+Note: You must press `L` then `P` (only once) for the simulation to work as intended.
+Note: If you walk off the edge of the field you will fall and will need to restart the simulation
 Note: Each green surface represents each leg of the inchworm
 
 ![Simulation Demo](Demosimulation-ezgif.com-video-to-gif-converter.gif)
