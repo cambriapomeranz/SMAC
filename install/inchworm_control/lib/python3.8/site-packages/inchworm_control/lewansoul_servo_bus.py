@@ -324,7 +324,7 @@ class ServoBus:
                                                   parameters)
             if checksum != actual_checksum:
                 raise ServoBusError(
-                    f'Checksum failed for received packet! '
+                    f'Checksum for received packet! '
                     f'Received checksum = {checksum}. '
                     f'Actual checksum = {actual_checksum}.'
                 )

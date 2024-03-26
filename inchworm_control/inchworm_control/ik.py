@@ -59,7 +59,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta2 *= -1
         theta3 *= -1
         theta3 += 23.52
-        theta4 += 7.2
+        theta4 += 37.2
         theta5 += 150.24
 
         return theta1, theta2, theta3, theta4, theta5
@@ -110,7 +110,7 @@ def inverseKinematicsMQP(Px, Py, Pz, which_leg):
         theta2 *= -1
         theta3 *= -1
         theta3 += 23.52
-        theta4 += 7.2
+        theta4 += 37.2
         theta5 += 150.24
 
         return theta1, theta2, theta3, theta4, theta5
