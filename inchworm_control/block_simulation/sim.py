@@ -312,8 +312,8 @@ def delete_cube(x, y, z):
             break
 
 # Increase the numbers for a bigger field. 
-for z in range(20):
-    for x in range(20):
+for z in range(5):
+    for x in range(6):
         voxel = Voxel(position = (x, 0, z))
 
 def look_at(target_pos, player_pos):
