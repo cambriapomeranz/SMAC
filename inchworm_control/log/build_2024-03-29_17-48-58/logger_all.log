@@ -1,0 +1,123 @@
+[8.732s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[8.732s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff877a9c10>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff877a9c10>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff873d4af0>)
+[9.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[9.101s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[9.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[9.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[9.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[9.102s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[9.102s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/robot_ws/src/MQP/inchworm_control'
+[9.103s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[9.103s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[9.103s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[9.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[9.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[9.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[9.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[9.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[9.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[9.153s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'inchworm_control'
+[9.153s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[9.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[9.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[9.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[9.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[9.923s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[9.924s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[10.250s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ubuntu/robot_ws/src/MQP/inchworm_control/install
+[10.397s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /home/ubuntu/robot_ws/install
+[10.543s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/ubuntu/robot_ws/src/MQP/inchworm_control/inchworm_control/install
+[10.695s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 256 installed packages in /opt/ros/foxy
+[10.701s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[11.284s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_args' from command line to 'None'
+[11.284s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_target' from command line to 'None'
+[11.284s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[11.284s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_clean_cache' from command line to 'False'
+[11.285s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_clean_first' from command line to 'False'
+[11.285s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'cmake_force_configure' from command line to 'False'
+[11.285s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'ament_cmake_args' from command line to 'None'
+[11.285s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'catkin_cmake_args' from command line to 'None'
+[11.285s] Level 5:colcon.colcon_core.verb:set package 'inchworm_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[11.285s] DEBUG:colcon.colcon_core.verb:Building package 'inchworm_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control', 'merge_install': False, 'path': '/home/ubuntu/robot_ws/src/MQP/inchworm_control', 'symlink_install': False, 'test_result_base': None}
+[11.431s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[11.593s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[11.595s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuntu/robot_ws/src/MQP/inchworm_control' with build type 'ament_cmake'
+[11.595s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuntu/robot_ws/src/MQP/inchworm_control'
+[11.762s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[11.763s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.763s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control -- -j4 -l4
+[13.677s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control -- -j4 -l4
+[14.176s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --install /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control
+[14.631s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(inchworm_control)
+[14.632s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --install /home/ubuntu/robot_ws/src/MQP/inchworm_control/build/inchworm_control
+[14.794s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control' for CMake module files
+[14.798s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control' for CMake config files
+[14.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'cmake_prefix_path')
+[14.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.ps1'
+[14.962s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.dsv'
+[14.964s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.sh'
+[14.968s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib'
+[14.969s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'ld_library_path_lib')
+[15.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.ps1'
+[15.121s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.dsv'
+[15.122s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.sh'
+[15.124s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/bin'
+[15.125s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/pkgconfig/inchworm_control.pc'
+[15.126s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages'
+[15.126s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'pythonpath')
+[15.278s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.ps1'
+[15.280s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.dsv'
+[15.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.sh'
+[15.284s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/bin'
+[15.435s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.ps1'
+[15.439s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.dsv'
+[15.442s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.sh'
+[15.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.bash'
+[15.448s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.zsh'
+[15.451s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/colcon-core/packages/inchworm_control)
+[16.059s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(inchworm_control)
+[16.212s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control' for CMake module files
+[16.216s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control' for CMake config files
+[16.221s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'cmake_prefix_path')
+[16.380s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.ps1'
+[16.382s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.dsv'
+[16.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/cmake_prefix_path.sh'
+[16.387s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib'
+[16.387s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'ld_library_path_lib')
+[16.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.ps1'
+[16.541s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.dsv'
+[16.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/ld_library_path_lib.sh'
+[16.544s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/bin'
+[16.544s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/pkgconfig/inchworm_control.pc'
+[16.545s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/lib/python3.8/site-packages'
+[16.546s] Level 1:colcon.colcon_core.shell:create_environment_hook('inchworm_control', 'pythonpath')
+[16.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.ps1'
+[16.700s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.dsv'
+[16.702s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/hook/pythonpath.sh'
+[16.704s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/bin'
+[16.857s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.ps1'
+[16.860s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.dsv'
+[16.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.sh'
+[16.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.bash'
+[16.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/inchworm_control/package.zsh'
+[16.868s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/inchworm_control/share/colcon-core/packages/inchworm_control)
+[16.870s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[16.871s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[16.871s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[16.872s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[17.040s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[17.040s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[17.040s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[42.068s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.NoReply: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken.
+[42.069s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[42.225s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/local_setup.ps1'
+[42.228s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/_local_setup_util_ps1.py'
+[42.233s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/setup.ps1'
+[42.382s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/local_setup.sh'
+[42.385s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/_local_setup_util_sh.py'
+[42.387s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/setup.sh'
+[42.537s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/local_setup.bash'
+[42.539s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/setup.bash'
+[42.690s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/local_setup.zsh'
+[42.692s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/robot_ws/src/MQP/inchworm_control/install/setup.zsh'

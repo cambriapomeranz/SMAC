@@ -31,6 +31,7 @@ class MotorController(Node):
         self.subscription  # prevent unused variable warning
 
         self.servo_bus = ServoBus('/dev/ttyUSB0')  # /dev/ttyUSB0 is port for RP /dev/ttylUSB0 or USB1 for cambria(switches randomly)
+        # self.servo_bus = ServoBus('/dev/ttyS0')  
         self.get_logger().info('Node starting')
 
         # init motors
@@ -70,12 +71,19 @@ class MotorController(Node):
         self.get_logger().info('Received command to "%s' % msg.data)
 
         try:
+            # self.step_forward(1)
+            # self.step_forward(1)
+            # self.step_forward(1)
+            self.grab_up_left(1)
+            # activate_servo(self.servo1)
+            # sleep(1)
+            # release_servo(self.servo1)
             action = self.step_actions.get(msg.data)
             
-            if action:
-                action(1)
-            else:
-                self.get_logger().warn('Unknown command: %s' % msg.data)
+            # if action:
+            #     action(1)
+            # else:
+            #     self.get_logger().warn('Unknown command: %s' % msg.data)
             
             # publish step status. 0.0 means step sucessful, 1.0 means step error
             msg = Float32()
@@ -299,15 +307,6 @@ class MotorController(Node):
         else:
             ValueError('are you stupid there is only 1 and 5????')
 
-    def grab_up_left(self, foot):
-        print('grabbing up left')
-
-        if foot == 1: 
-            pass
-
-        elif foot == 5:
-           pass
-
     def place_forward(self,foot):
         print("placing forward")
         if foot == 1:
@@ -361,10 +360,67 @@ class MotorController(Node):
         elif foot == 5:
             pass
 
+    def grab_up_left(self, foot):
+        print("grabbing up left")
+        if foot == 1:
+            #lift up
+            #turn
+            release_servo(self.servo2)
+            activate_servo(self.servo1)
+
+            self.lift_up(5)
+            self.turn_block("left")
+            self.motor_4.move_time_write(10, self.time_to_move)
+            
+
+            # mid-step allign
+            # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.5,3.5,5,1)
+            # self.move_to(theta2, theta3, theta4+5, 1)
+
+            # Place the EE to final pose 
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3, 4.3, 2.85,1)
+            self.move_to(theta2, theta3, theta4, 1)
+            # self.motor_1.move_time_write(theta1-10, self.time_to_move) 
+            sleep(1)
+            activate_servo(self.servo2)
+            release_servo(self.servo1)
+
+            # Second leg from here 
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.3, -3.3, 1, 5)
+            self.move_to(theta2-10, theta3, theta4, 1)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.1, -3, 3, 5)
+            self.move_to(theta2-10, theta3, theta4, 1)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.3, 0, 4, 5)
+            self.move_to(theta2, theta3, theta4, self.time_to_move)
+            self.motor_1.move_time_write(theta1, self.time_to_move)
+            self.motor_5.move_time_write(theta5-2, self.time_to_move)
+            sleep(self.time_to_move)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.5, 0, 1.5, 5)
+            self.move_to(theta2-5, theta3, theta4, self.time_to_move)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.5, 0, -3.2, 5)
+            self.move_to(theta2, theta3, theta4, self.time_to_move)
+            activate_servo(self.servo1)
+
+        elif foot == 5:
+            pass
+
     def step_down_1(self, foot):
         print("stepping down 1")
         if foot == 1:
-            pass
+            # lift up, turn left, outstretch 3 more inches, put down, turn the back leg and bring it in
+            activate_servo(self.servo2)
+            release_servo(self.servo1)
+            self.lift_up(4)
+            self.turn("left")
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6, 0, 5, 1)
+            self.move_to(theta2, theta3, theta4, self.time_to_move)
+
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6, 0, 0, 5)
+            self.move_to(theta2, theta3, theta4, self.time_to_move)
 
         elif foot == 5:
             pass
