@@ -1,5 +1,4 @@
 ('STEP_FORWARD', False)
-('STEP_FORWARD', False)
 ('GRAB_UP_FORWARD', False)
 ('STEP_LEFT', True)
 ('STEP_FORWARD', True)

@@ -20,7 +20,8 @@ class StepPublisher(Node):
         self.get_logger().info('Node starting')
 
         # FOR ROBOT_WS:
-        self.file_path = 'src/MQP/inchworm_control/block_simulation/steps.txt'
+        # inchworm_control/block_simulation/steps.txt
+        self.file_path = 'inchworm_control/block_simulation/steps.txt'
         # FOR DEV_WS:
         # self.file_path = '~/MQP/dev_ws/src/inchworm_control/block_simulation/steps.txt'
         self.file_path = os.path.expanduser(self.file_path)
@@ -29,8 +30,7 @@ class StepPublisher(Node):
         print('steps FROM STEP_PUBLISHER', self.steps)
         
         msg = String()
-        step = self.steps.pop(0)[0]
-        holding_block = self.steps.pop(0)[1]
+        (step, holding_block) = self.steps.pop(0)
         if holding_block:
             step += "_BLOCK"
         msg.data = step
@@ -48,8 +48,8 @@ class StepPublisher(Node):
                 # steps is a list of tuples like (<step type>, holding_block)
                 # if holding block is true, it is holding a block for this step
                 msg = String()
-                step = self.steps.pop(0)[0]
-                holding_block = self.steps.pop(0)[1]
+                (step, holding_block) = self.steps.pop(0)
+                # holding_block = self.steps.pop(0)[1]
                 if holding_block:
                     step += "_BLOCK"
                 msg.data = step
