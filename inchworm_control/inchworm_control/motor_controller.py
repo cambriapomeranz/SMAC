@@ -30,8 +30,8 @@ class MotorController(Node):
             10)
         self.subscription  # prevent unused variable warning
 
-        self.servo_bus = ServoBus('/dev/ttyUSB0')  # /dev/ttyUSB0 is port for RP /dev/ttylUSB0 or USB1 for cambria(switches randomly)
-        # self.servo_bus = ServoBus('/dev/ttyS0')  
+        # self.servo_bus = ServoBus('/dev/ttyUSB0')  # /dev/ttyUSB0 is port for RP /dev/ttylUSB0 or USB1 for cambria(switches randomly)
+        self.servo_bus = ServoBus('/dev/ttyAMA0')  
         self.get_logger().info('Node starting')
 
         # init motors
@@ -48,7 +48,8 @@ class MotorController(Node):
         # MOTOR CANNOT GO NEGATIVE 
         # 
         # init motor angles
-        print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
+        # print(self.motor_1.pos_read(), self.motor_2.pos_read(), self.motor_3.pos_read(), self.motor_4.pos_read(), self.motor_5.pos_read())
+        print(self.motor_5.pos_read())
 
         self.step_actions = {
             'STEP_FORWARD': self.step_forward,
@@ -100,10 +101,10 @@ class MotorController(Node):
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
 
     def init_motors(self):
-        self.motor_1 = self.servo_bus.get_servo(1)
-        self.motor_2 = self.servo_bus.get_servo(2)
-        self.motor_3 = self.servo_bus.get_servo(3)
-        self.motor_4 = self.servo_bus.get_servo(4)
+        # self.motor_1 = self.servo_bus.get_servo(1)
+        # self.motor_2 = self.servo_bus.get_servo(2)
+        # self.motor_3 = self.servo_bus.get_servo(3)
+        # self.motor_4 = self.servo_bus.get_servo(4)
         self.motor_5 = self.servo_bus.get_servo(5)
 
         self.time_to_move = 2
