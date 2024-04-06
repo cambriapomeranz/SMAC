@@ -5,7 +5,8 @@ from enum import Enum
 BD_LOC = [4, 1, 4]
 CURRENT_LOC = [4, 0, 1]
 # if the simulation is for the demo, set this to True
-DEMO = True
+
+DEMO = False
 
 # Define the possible orientations of the inchworm
 InchwormOrientation = Enum('InchwormOrientaton', ['NORTH', 'SOUTH', 'EAST', 'WEST'])

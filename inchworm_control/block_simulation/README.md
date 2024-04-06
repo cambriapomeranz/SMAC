@@ -27,17 +27,21 @@ congif.py file includes the location of Block Depot, initial position and orient
 | `L` | Identify known substructures |
 | `N` | Move the inchworm to next block |
 | `P` | Calculate entire path and steps for inchworm to build given structure. Spawn Block Depot and leading inchworm foot. Write steps to steps.txt |
-| `6` | Generate pyramid structure |
+| `G` | Generate pyramid structure |
+| `F` | Enable flying and different camera angles |
+| `QE` | Fly up/down |
+| `1234` | Switch cameras |
 
 ## Demo usage 
 1. Build any structure you want to display in the workspace. 
 2. Identify known substructures (`L`), if there is a known structure it will change the color of the substructure
 3. Calculate path a for inchworm (`P`) and spawn the Block Depot and inchworm foot. It will create or overwrite the steps.txt with the current list of steps.
-4. Press `N` and watch the inchworm move to next block!
+4. Press `N` and watch the inchworm move to the next block!
 
 Note: You must press `L` then `P` (only once) for the simulation to work as intended.
-Note: If you walk off the edge of the field you will fall and will need to restart the simulation
+Note: If you walk off the edge of the field you will fall and will need to either fly to get back up or restart the simulation
 Note: Each green surface represents each leg of the inchworm
+Note: Run press_n.py to automate pressing n. You must give permission to the environment that you are running on to allow keyboard press. 
 
 ![Simulation Demo](Demosimulation-ezgif.com-video-to-gif-converter.gif)
 

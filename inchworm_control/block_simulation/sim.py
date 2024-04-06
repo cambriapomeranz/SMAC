@@ -8,7 +8,7 @@ from ursina.prefabs.first_person_controller import FirstPersonController
 import random 
 from search import search
 from path_conversion import * 
-from config import CURRENT_LOC, BD_LOC
+from config import CURRENT_LOC, BD_LOC, DEMO
 import copy 
 
 app = Ursina()
@@ -36,7 +36,7 @@ last_block_original_texture = None
 last_colored_block_2 = None
 last_block_original_texture_2 = None
 window.exit_button.visible = False
-key_6_pressed = False  
+key_g_pressed = False  
 key_n_pressed = False 
 key_p_pressed = False
 placed_block = None 
@@ -55,20 +55,20 @@ prev_point = point
 
 # Updates every frame
 def update():
-    global blocks_placed, key_6_pressed, key_p_pressed, key_n_pressed, coords_to_spawn, last_colored_block, last_block_original_texture, last_colored_block_2, last_block_original_texture_2, found_structures, misc_blocks, prev_point, point, placed_block, spawned, spawn_x, spawn_y, spawn_z, goal, number, path_steps
+    global blocks_placed, key_g_pressed, key_p_pressed, key_n_pressed, coords_to_spawn, last_colored_block, last_block_original_texture, last_colored_block_2, last_block_original_texture_2, found_structures, misc_blocks, prev_point, point, placed_block, spawned, spawn_x, spawn_y, spawn_z, goal, number, path_steps
 
     # Generate the pyramid coordinates
-    if held_keys["6"] and not key_6_pressed:
+    if held_keys["g"] and not key_g_pressed:
         pyramid_coordinates = generate_pyramid(5)
         # Spawn cubes for each coordinate in the pyramid
         for x, y, z in pyramid_coordinates:
             spawn_cube(x, y, z,'')  # Replace
             cube = Voxel(position=Vec3(x, y, z),  texture=smart_block_texture)
             blocks_placed.append(cube.position) 
-        key_6_pressed = True  # Set the flag to True after printing
+        key_g_pressed = True  # Set the flag to True after printing
     
-    if not held_keys["6"]:
-        key_6_pressed = False
+    if not held_keys["g"]:
+        key_g_pressed = False
 
     # Search(Look) for structures
     if held_keys["l"]:
@@ -77,9 +77,9 @@ def update():
     # Generate paths and inchworm steps
     if held_keys["p"] and not key_p_pressed:
         spawn_cube(BD_LOC[0], BD_LOC[1], BD_LOC[2], 'n')
-        coords_to_spawn, path_steps , goal= dev_total_path_steps(found_structures, misc_blocks)
+        sorted_list = sorted(misc_blocks, key=lambda coordinate: coordinate[1])
+        coords_to_spawn, path_steps , goal= dev_total_path_steps(found_structures, sorted_list)
         step_getter(path_steps)
-
         for point in goal:
             point[1] += 1  # Increment the second value
 
@@ -175,7 +175,7 @@ def show_structures():
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], structure_name[-1])
             #WHEN WE ARE IMPLEMENTING THE COLORS  spawn_cube(block[0], block[1], block[2], color_index)
-        for block in misc_blocks:
+    for block in misc_blocks:
             delete_cube(block[0], block[1], block[2])
             spawn_cube(block[0], block[1], block[2], 'misc')
     return found_structures, misc_blocks
@@ -312,9 +312,14 @@ def delete_cube(x, y, z):
             break
 
 # Increase the numbers for a bigger field. 
-for z in range(5):
-    for x in range(6):
-        voxel = Voxel(position = (x, 0, z))
+if DEMO:
+    for z in range(5): 
+        for x in range(6): 
+            voxel = Voxel(position = (x, 0, z))
+else:
+     for z in range(20): # 5
+        for x in range(20): # 6 
+            voxel = Voxel(position = (x, 0, z))
 
 def look_at(target_pos, player_pos):
     if isinstance(target_pos, tuple):
@@ -357,23 +362,23 @@ class FlyingFirstPersonController(FirstPersonController):
             if held_keys['e']:  # Move down
                 self.position += Vec3(0, -0.1, 0)
             if held_keys['1']:  
-                self.position = Vec3(10, 15, -10)  
-                pitch_degrees, yaw_degrees = look_at((5,1,5), (10, 15, -10))
+                self.position = Vec3(20, 10, 0)  
+                pitch_degrees, yaw_degrees = look_at((10,1,10), (20, 10, 0))
                 player.rotation_y = yaw_degrees
                 player.camera_pivot.rotation_x = pitch_degrees
             if held_keys['2']:  
-                self.position = Vec3(10, 15, 10) 
-                pitch_degrees, yaw_degrees = look_at((5,1,5), (10, 15, 10))
+                self.position = Vec3(20, 10, 20) 
+                pitch_degrees, yaw_degrees = look_at((10,1,10), (20, 10, 20))
                 player.rotation_y = yaw_degrees
                 player.camera_pivot.rotation_x = pitch_degrees
             if held_keys['3']:  
-                self.position = Vec3(-10,15, -20)  
-                pitch_degrees, yaw_degrees = look_at((5,1,5), (-10,15, -10))
+                self.position = Vec3(0,10, 20)  
+                pitch_degrees, yaw_degrees = look_at((10,1,10), (0,10, 20))
                 player.rotation_y = yaw_degrees
                 player.camera_pivot.rotation_x = pitch_degrees
             if held_keys['4']:  
-                self.position = Vec3(-20, 15, 20)  
-                pitch_degrees, yaw_degrees = look_at((5,1,5), (-10, 15, 10))
+                self.position = Vec3(0, 10, 0)  
+                pitch_degrees, yaw_degrees = look_at((10,1,10), (0, 10, 0))
                 player.rotation_y = yaw_degrees
                 player.camera_pivot.rotation_x = pitch_degrees
 
