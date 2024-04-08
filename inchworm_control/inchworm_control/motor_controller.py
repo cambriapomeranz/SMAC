@@ -30,8 +30,8 @@ class MotorController(Node):
             10)
         self.subscription  # prevent unused variable warning
 
-        # self.servo_bus = ServoBus('/dev/ttyUSB0')  # /dev/ttyUSB0 is port for RP /dev/ttylUSB0 or USB1 for cambria(switches randomly)
-        self.servo_bus = ServoBus('/dev/ttyAMA0')  
+        self.servo_bus = ServoBus('/dev/ttyUSB0')  # /dev/ttyUSB0 is port for RP /dev/ttylUSB0 or USB1 for cambria(switches randomly)
+        # self.servo_bus = ServoBus('/dev/ttyAMA0')  
         self.get_logger().info('Node starting')
 
         # init motors

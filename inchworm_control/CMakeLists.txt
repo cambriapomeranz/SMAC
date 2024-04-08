@@ -41,7 +41,6 @@ endif()
 # ament_target_dependencies(motor_walking rclpy rclpy.node std_msgs)
 # Generate messages
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "inchworm_control/msg/Thruple.msg"
   "inchworm_control/msg/Tuple.msg"
   DEPENDENCIES std_msgs
 )
@@ -50,8 +49,6 @@ ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
 install(PROGRAMS
   inchworm_control/motor_controller.py
-  inchworm_control/motor_walking.py 
-  inchworm_control/motor_publisher.py 
   inchworm_control/step_publisher.py 
   DESTINATION lib/${PROJECT_NAME}
 )
@@ -70,7 +67,6 @@ install(DIRECTORY urdf
 
 # install(PROGRAMS
 #   inchworm_control/motor_controller.py
-#   inchworm_control/motor_walking.py
 #   DESTINATION lib/${PROJECT_NAME}
 # )
 
