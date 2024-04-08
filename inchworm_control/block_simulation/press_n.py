@@ -6,9 +6,8 @@ pyautogui.FAILSAFE = True
 
 try:
     while True:
+        pyautogui.PAUSE = 0.0
         pyautogui.keyDown('n')  # Press the "n" key down
-        time.sleep(0.1)  # hold
         pyautogui.keyUp('n')  # Release the "n" key
-        time.sleep(0.1)  # wait
 except KeyboardInterrupt:
     print("Program exited.")
