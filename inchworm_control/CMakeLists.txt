@@ -38,12 +38,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-# ament_target_dependencies(motor_walking rclpy rclpy.node std_msgs)
-# Generate messages
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "inchworm_control/msg/Tuple.msg"
-  DEPENDENCIES std_msgs
-)
+
 
 ament_python_install_package(${PROJECT_NAME})
 # Install Python executables
@@ -59,9 +54,6 @@ install(PROGRAMS
 #   DESTINATION share/${PROJECT_NAME}/
 # )
 
-install(DIRECTORY urdf
-  DESTINATION share/${PROJECT_NAME}
-)
 # install(DIRECTORY launch
 #   DESTINATION share/${PROJECT_NAME})
 

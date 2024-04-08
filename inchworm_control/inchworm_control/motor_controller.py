@@ -3,14 +3,11 @@ from inchworm_control.ik import inverseKinematicsMQP
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import Float32, String
-from inchworm_control.msg import Tuple 
 # for servo
 import RPi.GPIO as GPIO
 import time
 from inchworm_control.lewansoul_servo_bus import ServoBus
 from time import sleep 
-from threading import Thread
-
 
 class MotorController(Node):
     def __init__(self):
@@ -22,13 +19,6 @@ class MotorController(Node):
             self.listener_callback,
             10)
         self.subscription
-            # subscription for Tuple coming from step_publisher
-        self.subscription = self.create_subscription(
-            Tuple,
-            'motor_command',
-            self.listener_callback,
-            10)
-        self.subscription  # prevent unused variable warning
 
         self.servo_bus = ServoBus('/dev/ttyUSB0')  # /dev/ttyUSB0 is port for RP /dev/ttylUSB0 or USB1 for cambria(switches randomly)
         # self.servo_bus = ServoBus('/dev/ttyAMA0')  
