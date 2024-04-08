@@ -1,3 +1,0 @@
-[1.013s] Invoking command in '/home/ubuntu/robot_ws/src/MQP/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ubuntu/robot_ws/src/MQP/install/motor_control:/home/ubuntu/robot_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/ubuntu/robot_ws/src/MQP/build/inchworm_control -- -j4 -l4
-[1.252s] [  2%] Built target inchworm_control__cpp
-[1.269s] [ 12%] Built target inchworm_control__rosidl_generator_c

@@ -1,2 +1,0 @@
-Invoking command in '/home/cambria/dev_ws/src/build/inchworm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cambria/dev_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/dev_ws/src/build/inchworm_control -- -j4 -l4
-Invoked command in '/home/cambria/dev_ws/src/build/inchworm_control' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cambria/dev_ws/install/motor_control:/opt/ros/foxy /usr/bin/cmake --build /home/cambria/dev_ws/src/build/inchworm_control -- -j4 -l4
