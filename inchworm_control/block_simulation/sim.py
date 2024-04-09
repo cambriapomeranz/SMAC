@@ -18,8 +18,8 @@ app = Ursina()
 # Variables
 sky_texture = load_texture("Assets/Textures/skybox.png")
 white_block_texture = load_texture("Assets/Textures/white_block.png")
-smart_block_texture = load_texture("Assets/Textures/smart_block.png")
-smart_block_texture_step = load_texture("Assets/Textures/smart_block_step.png")
+smart_block_texture = load_texture("Assets/Textures/smart_block_new.png")
+smart_block_texture_step = load_texture("Assets/Textures/smart_block_step_new.png")
 smart_block_texture_red = load_texture("Assets/Textures/smart_block_red_outline.png")
 smart_block_texture_blue = load_texture("Assets/Textures/smart_block_blue_outline.png")
 smart_block_texture_yellow = load_texture("Assets/Textures/smart_block_yellow_outline.png")
@@ -76,13 +76,14 @@ def update():
     if held_keys["t"] and not key_t_pressed:
         # To use this function, just pass the path to your 'empire.xyz' file
         # file_path = '/Users/canguven/Downloads/yarrak.xyz'
-        simplify_and_ensure_connectivity('/Users/canguven/Downloads/yarrak.xyz', '/Users/canguven/Downloads/yarrak2.xyz', grid_size=10)
-        coordinates = read_and_place_voxels_from_file('/Users/canguven/Downloads/yarrak2.xyz')
+        # UPDATE THE FILES HERE
+        simplify_and_ensure_connectivity('/Users/canguven/Downloads/empire.xyz', '/Users/canguven/Downloads/empire2.xyz', grid_size=10)
+        coordinates = read_and_place_voxels_from_file('/Users/canguven/Downloads/empire2.xyz')
         # pyramid_coordinates = generate_pyramid(5)
         # # Spawn cubes for each coordinate in the pyramid
         # for x, y, z in pyramid_coordinates:
         #     spawn_cube(x, y, z,'')  # Replace
-        #     cube = Voxel(position=Vec3(x, y, z),  texture=smart_block_texture)
+        #     cube = Voxel(position=Vec3(x, y, z),  texture=smart_block_texture) 
         #     blocks_placed.append(cube.position) 
         for x, y, z in coordinates:
             spawn_cube(x, y, z,'')  # Replace
@@ -348,7 +349,7 @@ def check_block_color(x, y, z):
         elif existing_cube_texture == smart_block_texture_yellow: 
                 block_color = smart_block_texture_step_yellow
         elif existing_cube_texture == smart_block_texture_step: 
-                block_color = smart_block_outline
+                block_color = smart_block_texture
         elif existing_cube_texture == smart_block_texture_step_red:
                 block_color = smart_block_texture_step_red
         elif existing_cube_texture == smart_block_texture_step_green:
@@ -357,8 +358,8 @@ def check_block_color(x, y, z):
                 block_color = smart_block_texture_step_blue
         elif existing_cube_texture == smart_block_texture_step_yellow:      
                 block_color = smart_block_texture_step_yellow
-        elif existing_cube_texture == smart_block_outline.png:      
-                block_color = smart_block_outline.png
+        elif existing_cube_texture == smart_block_outline:      
+                block_color = smart_block_texture
 
         else:
                 print(f"Unexpected texture: {existing_cube_texture}")  # Debugging line
