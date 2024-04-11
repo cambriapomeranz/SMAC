@@ -13,7 +13,7 @@ theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0, 3, 3, 5)
 self.move_to(theta2-10, theta3, theta4, 1)
  
 **Known Errors **
-“Expected header b'UU'; received header b' '.":
+"Expected header b'UU'; received header b' '.":
 This issue indicates there is no communication (or improper communication) between the Pi and servos. The issue can be one of the followings: 
 This issue might be caused by a timeout error. Go to the library and change the ServoBus class’ timeout variable to be at least 5.0 seconds. 
 Check the wiring and see if everything is connected.
