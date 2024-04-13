@@ -69,13 +69,15 @@ class MotorController(Node):
             # print(self.motor_3.vin_read())
             # print(self.motor_2.vin_read())
             # print(self.motor_1.vin_read())
-            # self.step_forward(1)
-            self.place_up_forward(1)
-            # self.grab_up_left(1)
+            self.step_forward(1)
+            self.step_forward(1)
+            self.grab_up_left(1)
             # self.step_left_block(1)
-            # activate_servo(self.servo2)
+            # activate_servo(self.servo1)
             # sleep(1)
-            # release_servo(sel.servo2)
+            # release_servo(self.servo1)
+            # sleep(1)
+
             # self.step_dfown_2(1)
             action = self.step_actions.get(msg.data)
 
@@ -86,10 +88,10 @@ class MotorController(Node):
             sleep(1)
             
             # publish step status. 0.0 means step sucessful, 1.0 means step error
-            msg = Float32()
-            msg.data = 0.0
-            self.publisher_.publish(msg)
-            self.get_logger().info('Publishing: "%s"' % msg.data)
+            # msg = Float32()
+            # msg.data = 0.0
+            # self.publisher_.publish(msg)
+            # self.get_logger().info('Publishing: "%s"' % msg.data)
             
         except Exception as e:
             self.get_logger().error('Failed to move servo: "%s"' % str(e))
@@ -101,7 +103,7 @@ class MotorController(Node):
         self.motor_4 = self.servo_bus.get_servo(4)
         self.motor_5 = self.servo_bus.get_servo(5)
 
-        self.time_to_move = 2
+        self.time_to_move = 1
 
     def move_to(self, theta2, theta3, theta4, time):
         self.motor_2.move_time_write(theta2, time)
@@ -127,7 +129,7 @@ class MotorController(Node):
 
             # move down
             theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(6.2,0,0,1)
-            self.move_to(theta2, theta3, theta4+5, self.time_to_move)
+            self.move_to(theta2, theta3, theta4+5, 1.5)
             activate_servo(self.servo2)
         
             ## following leg
@@ -144,8 +146,8 @@ class MotorController(Node):
             self.move_to(theta2, theta3, theta4, self.time_to_move)
 
             # Get ready to put the step down 
-            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.1,0,0,5)
-            self.move_to(theta2-3, theta3, theta4-5, self.time_to_move)
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.1,0,-0.3,5)
+            self.move_to(theta2, theta3, theta4-5, self.time_to_move)
             activate_servo(self.servo1)
 
         elif foot == 5:
@@ -455,7 +457,7 @@ class MotorController(Node):
             theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0, 6, 1, 1)
             self.move_to(theta2, theta3, theta4, self.time_to_move)
 
-            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0, 6.7, 0, 1)
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0, 6.8, 0, 1)
             self.move_to(theta2, theta3, theta4+5, self.time_to_move)
 
             # theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0, 4, 2.5, 1)
@@ -657,7 +659,8 @@ class MotorController(Node):
         if direction == "left":
             if degree == 90:
                 theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(0.2,6,5,1)
-                turn = 0
+                theta1-=2
+                turn = 3
             elif degree == 50:
                 theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(4,3.3,2.5,1)
                 turn = 50
