@@ -61,30 +61,21 @@ class MotorController(Node):
 
     def listener_callback(self, msg):
         self.get_logger().info('Received command to "%s' % msg.data)
-
         try:
-            # release_servo(self.servo1)
-            # print(self.motor_5.vin_read())
-            # print(self.motor_4.vin_read())
-            # print(self.motor_3.vin_read())
-            # print(self.motor_2.vin_read())
-            # print(self.motor_1.vin_read())
-            self.step_forward(1)
-            self.step_forward(1)
-            self.grab_up_left(1)
+            # self.grab_up_left(1)
             # self.step_left_block(1)
             # activate_servo(self.servo1)
             # sleep(1)
             # release_servo(self.servo1)
             # sleep(1)
-
+            self.grab_up_left(1)
             # self.step_dfown_2(1)
             action = self.step_actions.get(msg.data)
 
-            if action:
-                action(1)
-            else:
-                self.get_logger().warn('Unknown command: %s' % msg.data)
+            # if action:
+            #     action(1)
+            # else:
+            #     self.get_logger().warn('Unknown command: %s' % msg.data)
             sleep(1)
             
             # publish step status. 0.0 means step sucessful, 1.0 means step error
@@ -146,8 +137,8 @@ class MotorController(Node):
             self.move_to(theta2, theta3, theta4, self.time_to_move)
 
             # Get ready to put the step down 
-            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.1,0,-0.3,5)
-            self.move_to(theta2, theta3, theta4-5, self.time_to_move)
+            theta1, theta2, theta3, theta4, theta5 = inverseKinematicsMQP(3.2,0,-0.3,5)
+            self.move_to(theta2+5, theta3, theta4-5, 1.5)
             activate_servo(self.servo1)
 
         elif foot == 5:
